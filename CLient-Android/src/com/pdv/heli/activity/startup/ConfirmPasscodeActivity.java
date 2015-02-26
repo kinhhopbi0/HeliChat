@@ -1,10 +1,5 @@
 package com.pdv.heli.activity.startup;
 
-import com.pdv.heli.R;
-import com.pdv.heli.manager.MessageQueueProcessor;
-import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
-
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,7 +7,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ConfirmPasscodeActivity extends Activity implements
+import com.pdv.heli.R;
+import com.pdv.heli.activity.BaseActivity;
+import com.pdv.heli.manager.MessageQueueProcessor;
+import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
+
+public class ConfirmPasscodeActivity extends BaseActivity implements
 		OnClickListener {
 	private Button btnOk;
 	private EditText edtPasscode;
@@ -35,7 +35,13 @@ public class ConfirmPasscodeActivity extends Activity implements
 			btnOk.setEnabled(false);
 			btnOk.setText("Submiting...");
 			ConfirmPasscodeMsg msg = new ConfirmPasscodeMsg();
-			msg.setPasscode(passcode);
+			try {
+				msg.setPasscode(passcode);
+			} catch (Exception e) {
+				edtPasscode.setError(e.toString());
+				edtPasscode.requestFocus();
+				return;
+			}
 			msg.setStatus(ConfirmPasscodeMsg.Status.CONFIRM);
 			MessageQueueProcessor.getInstance().offerOutMessage(msg);
 		}
@@ -46,9 +52,10 @@ public class ConfirmPasscodeActivity extends Activity implements
 		btnOk.setEnabled(true);
 		switch (detail.getStatus()) {
 		case ConfirmPasscodeMsg.Status.SUCCESS:
-			
+			// TODO start activity
 			break;
 		case ConfirmPasscodeMsg.Status.NOT_MATCHES:
+			btnOk.setText(getResources().getString(R.string.ok));
 			edtPasscode.setError(getResources().getString(R.string.passcode_not_matches));
 			edtPasscode.requestFocus();
 			break;

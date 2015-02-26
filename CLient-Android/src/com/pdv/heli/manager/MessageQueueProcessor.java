@@ -3,9 +3,8 @@ package com.pdv.heli.manager;
 import java.util.concurrent.ArrayBlockingQueue;
 
 import android.util.Log;
-import android.widget.Toast;
 
-import com.pdv.heli.app.HeliApplication;
+import com.pdv.heli.common.BytesUtil;
 import com.pdv.heli.message.base.IMessage;
 import com.pdv.heli.message.base.MessageBase;
 import com.pdv.heli.message.base.MessageNotCorrectExeption;
@@ -84,14 +83,15 @@ public class MessageQueueProcessor {
 		try {
 			IMessage message = goingOutMessageQueue.take();
 			if(message != null){							
-				byte[] dataSend = message.getBaseMessage().toSendBytes();
+				MessageBase base = (MessageBase) message.getBaseMessage();
+				Log.i(TAG, "receive MID:"+base.getMid()+" detail data: "+ BytesUtil.toDisplayString(base.getData()));				
+				byte[] dataSend = base.toSendBytes();
 				TcpIOManager.getInstance().sendBytes(dataSend);	
 			}
 		} catch (InterruptedException e) {			
 			e.printStackTrace();
 		} catch (MessageNotCorrectExeption e) {
-			Log.v(TAG, "encode error: "+e);
-			Toast.makeText(HeliApplication.getInstance(), "encocode message fail", Toast.LENGTH_SHORT).show();
+			Log.v(TAG, "encode error: "+e);			
 		}
 	}
 
@@ -102,6 +102,7 @@ public class MessageQueueProcessor {
 				MessageBase messageBase = new MessageBase(MessageMode.RECEIVE);
 				messageBase.fromBytes(buffer);
 				IMessage detail = messageBase.getDetailMessage();
+				Log.i(TAG, "receive MID:"+detail.getMid()+" detail data: "+ BytesUtil.toDisplayString(messageBase.getData()));
 				if(detail instanceof TextMessage){
 					MessageNavigation.navigationTextMessage((TextMessage)detail);
 					return;
@@ -114,13 +115,12 @@ public class MessageQueueProcessor {
 					MessageNavigation.navigationConfirmMsg((ConfirmPasscodeMsg)detail);
 					return;
 				}
-				
+				Log.i(TAG, "receive undefined message with MID: "+messageBase.getMid());
 			}
 		} catch (InterruptedException e) {			
 			e.printStackTrace();
 		} catch (MessageNotCorrectExeption e) {			
-			Log.v(TAG, "decode error: "+e);
-			Toast.makeText(HeliApplication.getInstance(), "decode message fail", Toast.LENGTH_SHORT).show();
+			Log.v(TAG, "decode error: "+e);			
 		}
 	}
 	

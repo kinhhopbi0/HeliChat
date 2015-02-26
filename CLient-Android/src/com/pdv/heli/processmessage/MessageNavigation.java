@@ -9,6 +9,7 @@ import com.pdv.heli.activity.startup.ConfirmPasscodeActivity;
 import com.pdv.heli.activity.startup.StartFirstActivity;
 import com.pdv.heli.app.ActivitiesManager;
 import com.pdv.heli.app.HeliApplication;
+import com.pdv.heli.common.BytesUtil;
 import com.pdv.heli.component.CustomNotification;
 import com.pdv.heli.message.common.MessageMode;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
@@ -62,11 +63,11 @@ public class MessageNavigation {
 
 	public static void navigationConfirmMsg(final ConfirmPasscodeMsg detail) {
 		Log.i(TAG, "Response passcode confirm from server");
+		
 		final Activity current = ActivitiesManager.getInstance().getCurrentActivity();
 		if(current != null && current instanceof ConfirmPasscodeActivity){
 			Handler handler = new Handler(current.getMainLooper());
-			handler.post(new Runnable() {
-				
+			handler.post(new Runnable() {				
 				@Override
 				public void run() {
 					((ConfirmPasscodeActivity) current).onConfirmFromServer(detail);				
