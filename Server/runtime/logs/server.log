@@ -1,0 +1,384 @@
+20150225002646038 |main                 |AloServer:56                  |I| Server is starting ...
+20150225002646225 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225012712382 |56.1:52371 |ServerManager:                    |I| receive 30bytes from /192.168.56.1:52371
+20150225091206369 |main                 |AloServer:56                  |I| Server is starting ...
+20150225091206483 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225091411690 |main                 |AloServer:56                  |I| Server is starting ...
+20150225091411708 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225091507228 |56.1:49794 |ServerManager:                    |I| receive 29bytes from /192.168.56.1:49794
+20150225091507242 |56.1:49794 |MessageProcess:                    |W| Client /192.168.56.1:49794 sent a undefied message
+20150225093903088 |56.1:49821 |ServerManager:                    |I| receive 28bytes from /192.168.56.1:49821
+20150225093903088 |56.1:49821 |MessageProcess:                    |W| Client /192.168.56.1:49821 sent a undefied message
+20150225094317470 |main                 |AloServer:56                  |I| Server is starting ...
+20150225094317482 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225094828372 |main                 |AloServer:56                  |I| Server is starting ...
+20150225094828383 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225094937102 |56.1:49861 |ServerManager:                    |I| receive 28bytes from /192.168.56.1:49861
+20150225094937165 |56.1:49861 |MessageProcess:                    |I| Client /192.168.56.1:49861 request create new account: usename:{}, phone:{}, 
+20150225094937377 |56.1:49861 |DbAccess:                    |I| Database ==> Login with MysqlDataSource
+20150225094940288 |56.1:49861 |DbAction:                    |E| com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException: Can't call rollback when autocommit=true
+20150225094940288 |56.1:49861 |DbAction:                    |E| java.sql.SQLException: Unable to retrieve metadata for procedure.
+20150225094959817 |56.1:49861 |MessageProcess:                    |W| Client /192.168.56.1:49861 send a undefined Account message status:1
+20150225095501776 |main                 |AloServer:56                  |I| Server is starting ...
+20150225095501796 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225095536335 |56.1:49874 |ServerManager:                    |I| receive 28bytes from /192.168.56.1:49874
+20150225095536343 |56.1:49874 |MessageProcess:                    |I| Client /192.168.56.1:49874 request create new account: usename:{}, phone:{}, 
+20150225095536386 |56.1:49874 |DbAccess:                    |I| Database ==> Login with MysqlDataSource
+20150225095536668 |56.1:49874 |DbAction:                    |E| com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException: Can't call rollback when autocommit=true
+20150225095536668 |56.1:49874 |DbAction:                    |E| java.sql.SQLException: Unable to retrieve metadata for procedure.
+20150225095536669 |56.1:49874 |MessageProcess:                    |W| Client /192.168.56.1:49874 send a undefined Account message status:1
+20150225095814509 |main                 |AloServer:56                  |I| Server is starting ...
+20150225095814521 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225095844412 |56.1:49880 |ServerManager:                    |I| receive 28bytes from /192.168.56.1:49880
+20150225095844420 |56.1:49880 |MessageProcess:                    |I| Client /192.168.56.1:49880 request create new account: usename:{}, phone:{}, 
+20150225095844459 |56.1:49880 |DbAccess:                    |I| Database ==> Login with MysqlDataSource
+20150225095844727 |56.1:49880 |DbAction:                    |E| com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException: Can't call rollback when autocommit=true
+20150225095844727 |56.1:49880 |DbAction:                    |E| java.sql.SQLException: Unable to retrieve metadata for procedure.
+20150225095844728 |56.1:49880 |MessageProcess:                    |W| Client /192.168.56.1:49880 send a undefined Account message status:1
+20150225100704036 |main                 |AloServer:56                  |I| Server is starting ...
+20150225100704045 |main                 |AloServer:65                  |E| java.net.BindException: Address already in use: JVM_Bind
+20150225100820823 |main                 |AloServer:56                  |I| Server is starting ...
+20150225100820835 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225100913494 |56.1:49911 |ServerManager:                    |I| receive 28bytes from /192.168.56.1:49911
+20150225100929035 |56.1:49911 |MessageProcess:                    |I| Client /192.168.56.1:49911 request create new account: phone:93,AF1678155662, 
+20150225101020201 |56.1:49911 |DbAccess:                    |I| Database ==> Login with MysqlDataSource
+20150225101212243 |56.1:49911 |DbAction:                    |E| Create account :java.sql.SQLException: Unable to retrieve metadata for procedure.
+20150225101239369 |56.1:49911 |MessageProcess:                    |W| Client /192.168.56.1:49911 send a undefined Account message status:1
+20150225101842671 |main                 |AloServer:56                  |I| Server is starting ...
+20150225101842692 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225101920998 |-/192.168.56.1:49994 |ServerManager:54                  |I| receive 28bytes from /192.168.56.1:49994
+20150225101926075 |-/192.168.56.1:49994 |MessageProcess:69                  |I| Client /192.168.56.1:49994 request create new account: phone:93,AF1678155662, 
+20150225101926637 |-/192.168.56.1:49994 |DbAccess:105                 |I| Database ==> Login with MysqlDataSource
+20150225101928225 |-/192.168.56.1:49994 |DbAction:114                 |E| Create account :java.sql.SQLException: Unable to retrieve metadata for procedure.
+20150225102105852 |main                 |AloServer:56                  |I| Server is starting ...
+20150225102105864 |main                 |AloServer:62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225102131001 |-/192.168.56.1:50008 |ServerManager:54                  |I| receive 28bytes from /192.168.56.1:50008
+20150225102156330 |-/192.168.56.1:50008 |MessageProcess:69                  |I| Client /192.168.56.1:50008 request create new account: phone:93,AF1678155662, 
+20150225102156385 |-/192.168.56.1:50008 |DbAccess:105                 |I| Database ==> Login with MysqlDataSource
+20150225102156662 |-/192.168.56.1:50008 |DbAction:114                 |E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+20150225102156663 |-/192.168.56.1:50008 |MessageProcess:95                  |W| Client /192.168.56.1:50008 send a undefined Account message status:1
+20150225102212376 |-/192.168.56.1:50008 |ServerManager:54                  |I| receive 28bytes from /192.168.56.1:50008
+20150225102212377 |-/192.168.56.1:50008 |MessageProcess:69                  |I| Client /192.168.56.1:50008 request create new account: phone:93,AF1678155662, 
+20150225102249455 |-/192.168.56.1:50008 |DbAction:114                 |E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'password' at row 1
+20150225102249456 |-/192.168.56.1:50008 |MessageProcess:95                  |W| Client /192.168.56.1:50008 send a undefined Account message status:1
+20150225102503179 |main                 |AloServer           :56                  |I| Server is starting ...
+20150225102503201 |main                 |AloServer           :62                  |I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225102557041 |-/192.168.56.1:50023 |ServerManager       :54                  |I| receive 28bytes from /192.168.56.1:50023
+20150225102557062 |-/192.168.56.1:50023 |MessageProcess      :69                  |I| Client /192.168.56.1:50023 request create new account: phone:93,AF1678155662, 
+20150225102557098 |-/192.168.56.1:50023 |DbAccess            :105                 |I| Database ==> Login with MysqlDataSource
+20150225102618429 |-/192.168.56.1:50023 |MessageProcess      :95                  |W| Client /192.168.56.1:50023 send a undefined Account message status:1
+20150225102839990 |main                 |AloServer           :56|I| Server is starting ...
+20150225102840001 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225103109438 |main                 |AloServer           :L|I| Server is starting ...
+20150225103109460 |main                 |AloServer           :L|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225103226891 |main                 |AloServer           :56|I| Server is starting ...
+20150225103226902 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225103313190 |main                 |AloServer           :56|I| Server is starting ...
+20150225103313201 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225103556633 |-/192.168.56.1:50116 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50116
+20150225103556647 |-/192.168.56.1:50116 |MessageProcess      :69|I| Client /192.168.56.1:50116 request create new account: phone:93,AF1678155662, 
+20150225103600388 |-/192.168.56.1:50116 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150225103612172 |-/192.168.56.1:50116 |MessageProcess      :95|W| Client /192.168.56.1:50116 send a undefined Account message status:1
+20150225103742561 |-/192.168.56.1:50116 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50116
+20150225103742562 |-/192.168.56.1:50116 |MessageProcess      :69|I| Client /192.168.56.1:50116 request create new account: phone:93,AF1678155662, 
+20150225103758249 |-/192.168.56.1:50116 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225105441404 |-/192.168.56.1:50142 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50142
+20150225105441405 |-/192.168.56.1:50142 |MessageProcess      :69|I| Client /192.168.56.1:50142 request create new account: phone:93,AF1678155662, 
+20150225105447638 |-/192.168.56.1:50142 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225105447642 |-/192.168.56.1:50142 |ServerManager       :59|E| Recevice error: {}
+java.lang.NullPointerException
+	at com.phamvinh.alo.server.ServerManager.sendMessage(ServerManager.java:72) ~[bin/:?]
+	at com.phamvinh.alo.server.proccess.MessageProcess.processCreateAcountMessage(MessageProcess.java:93) ~[bin/:?]
+	at com.phamvinh.alo.server.proccess.MessageProcess.processMessageBytes(MessageProcess.java:55) ~[bin/:?]
+	at com.phamvinh.alo.server.ServerManager.onReceiveFromClient(ServerManager.java:57) [bin/:?]
+	at com.phamvinh.network.server.transport.SSLTcpServer.onReceiveFromClient(SSLTcpServer.java:140) [bin/:?]
+	at com.phamvinh.network.server.transport.Client.receiveByte(Client.java:86) [bin/:?]
+	at com.phamvinh.network.server.transport.Client.receive(Client.java:67) [bin/:?]
+	at com.phamvinh.network.server.transport.Client.access$0(Client.java:58) [bin/:?]
+	at com.phamvinh.network.server.transport.Client$1.run(Client.java:45) [bin/:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_75]
+20150225105717257 |main                 |AloServer           :56|I| Server is starting ...
+20150225105717278 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225105904202 |-/192.168.56.1:50156 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50156
+20150225105904212 |-/192.168.56.1:50156 |MessageProcess      :69|I| Client /192.168.56.1:50156 request create new account: phone:93,AF1678155662, 
+20150225105904246 |-/192.168.56.1:50156 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150225105904485 |-/192.168.56.1:50156 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225105910107 |-/192.168.56.1:50156 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50156
+20150225105910108 |-/192.168.56.1:50156 |MessageProcess      :69|I| Client /192.168.56.1:50156 request create new account: phone:93,AF1678155662, 
+20150225105910137 |-/192.168.56.1:50156 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225105911296 |-/192.168.56.1:50156 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50156
+20150225105911297 |-/192.168.56.1:50156 |MessageProcess      :69|I| Client /192.168.56.1:50156 request create new account: phone:93,AF1678155662, 
+20150225105911337 |-/192.168.56.1:50156 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225105912267 |-/192.168.56.1:50156 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50156
+20150225105912268 |-/192.168.56.1:50156 |MessageProcess      :69|I| Client /192.168.56.1:50156 request create new account: phone:93,AF1678155662, 
+20150225105912341 |-/192.168.56.1:50156 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225110231206 |-/192.168.56.1:50171 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50171
+20150225110231207 |-/192.168.56.1:50171 |MessageProcess      :69|I| Client /192.168.56.1:50171 request create new account: phone:93,AF1678155662, 
+20150225110231267 |-/192.168.56.1:50171 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225110258929 |-/192.168.56.1:50171 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50171
+20150225110258930 |-/192.168.56.1:50171 |MessageProcess      :69|I| Client /192.168.56.1:50171 request create new account: phone:93,AF1678155662, 
+20150225110258960 |-/192.168.56.1:50171 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225110401941 |-/192.168.56.1:50171 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50171
+20150225110401941 |-/192.168.56.1:50171 |MessageProcess      :69|I| Client /192.168.56.1:50171 request create new account: phone:93,AF1678155662, 
+20150225110401988 |-/192.168.56.1:50171 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225110540066 |-/192.168.56.1:50189 |ServerManager       :54|I| receive 29bytes from /192.168.56.1:50189
+20150225110540067 |-/192.168.56.1:50189 |MessageProcess      :69|I| Client /192.168.56.1:50189 request create new account: phone:93,AF16781558662, 
+20150225111309304 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111309305 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111309342 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111323584 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111323585 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111323645 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111326487 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111326488 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111326514 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111329705 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111329706 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111329746 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111443000 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111443002 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111443036 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111444667 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111444668 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111444712 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111445062 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111445063 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111445127 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111445499 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111445499 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111445532 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111445675 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111445675 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111445728 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111445822 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111445822 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111445833 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111445985 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111445986 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446006 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446133 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446134 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446146 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446264 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446264 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446279 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446413 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446414 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446428 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446609 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446610 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446629 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446777 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446778 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446792 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111446892 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111446892 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111446905 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111447034 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111447035 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111447049 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111447202 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111447203 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111447214 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111447742 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111447742 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111447764 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111448114 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111448115 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111448124 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111448783 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111448784 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111448801 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111449426 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111449427 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111449497 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111450655 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111450656 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111450681 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111451310 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111451311 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111451327 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111452514 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111452514 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111452551 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111455977 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111455978 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111455993 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111502757 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111502758 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111502781 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111646637 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111646638 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111646690 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111710140 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111710141 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111710190 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111714092 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111714092 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111714105 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225111817591 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225111817592 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225111817622 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225112800013 |-/192.168.56.1:50206 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50206
+20150225112800014 |-/192.168.56.1:50206 |MessageProcess      :69|I| Client /192.168.56.1:50206 request create new account: phone:93,AF1678155662, 
+20150225112800065 |-/192.168.56.1:50206 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113216063 |-/192.168.56.1:50338 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50338
+20150225113216065 |-/192.168.56.1:50338 |MessageProcess      :69|I| Client /192.168.56.1:50338 request create new account: phone:93,AF1678155662, 
+20150225113216117 |-/192.168.56.1:50338 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113408261 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113408262 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113408276 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113430097 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113430098 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113430133 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113454795 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113454797 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113454847 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113512853 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113512856 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113512876 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113538892 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113538893 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113538923 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225113556879 |-/192.168.56.1:50349 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50349
+20150225113556879 |-/192.168.56.1:50349 |MessageProcess      :69|I| Client /192.168.56.1:50349 request create new account: phone:93,AF1678155662, 
+20150225113556889 |-/192.168.56.1:50349 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225121932444 |-/192.168.56.1:50579 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50579
+20150225121932444 |-/192.168.56.1:50579 |MessageProcess      :69|I| Client /192.168.56.1:50579 request create new account: phone:93,AF1678155662, 
+20150225121932494 |-/192.168.56.1:50579 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225125656642 |-/192.168.56.1:50607 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50607
+20150225125656643 |-/192.168.56.1:50607 |MessageProcess      :69|I| Client /192.168.56.1:50607 request create new account: phone:93,AF1678155662, 
+20150225125656698 |-/192.168.56.1:50607 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225125659456 |-/192.168.56.1:50607 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50607
+20150225125659458 |-/192.168.56.1:50607 |MessageProcess      :69|I| Client /192.168.56.1:50607 request create new account: phone:93,AF1678155662, 
+20150225125659502 |-/192.168.56.1:50607 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225125844996 |-/192.168.56.1:50623 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50623
+20150225125844997 |-/192.168.56.1:50623 |MessageProcess      :69|I| Client /192.168.56.1:50623 request create new account: phone:93,AF1678155662, 
+20150225125845034 |-/192.168.56.1:50623 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225125857656 |-/192.168.56.1:50623 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50623
+20150225125857657 |-/192.168.56.1:50623 |MessageProcess      :69|I| Client /192.168.56.1:50623 request create new account: phone:93,AF1678155662, 
+20150225125857678 |-/192.168.56.1:50623 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130056760 |-/192.168.56.1:50635 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50635
+20150225130056762 |-/192.168.56.1:50635 |MessageProcess      :69|I| Client /192.168.56.1:50635 request create new account: phone:93,AF1678155662, 
+20150225130056776 |-/192.168.56.1:50635 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130105628 |-/192.168.56.1:50635 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50635
+20150225130105629 |-/192.168.56.1:50635 |MessageProcess      :69|I| Client /192.168.56.1:50635 request create new account: phone:93,AF1678155662, 
+20150225130105682 |-/192.168.56.1:50635 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130209279 |-/192.168.56.1:50635 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50635
+20150225130209280 |-/192.168.56.1:50635 |MessageProcess      :69|I| Client /192.168.56.1:50635 request create new account: phone:93,AF1678155662, 
+20150225130209319 |-/192.168.56.1:50635 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130254246 |-/192.168.56.1:50649 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50649
+20150225130254248 |-/192.168.56.1:50649 |MessageProcess      :69|I| Client /192.168.56.1:50649 request create new account: phone:93,AF1678155662, 
+20150225130254272 |-/192.168.56.1:50649 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130308446 |-/192.168.56.1:50649 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50649
+20150225130308447 |-/192.168.56.1:50649 |MessageProcess      :69|I| Client /192.168.56.1:50649 request create new account: phone:93,AF1678155662, 
+20150225130308474 |-/192.168.56.1:50649 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130327109 |-/192.168.56.1:50649 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:50649
+20150225130327110 |-/192.168.56.1:50649 |MessageProcess      :69|I| Client /192.168.56.1:50649 request create new account: phone:93,AF1678155662, 
+20150225130327136 |-/192.168.56.1:50649 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225130932998 |-/192.168.56.1:50714 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:50714
+20150225130932999 |-/192.168.56.1:50714 |MessageProcess      :69|I| Client /192.168.56.1:50714 request create new account: phone:93,AF1678155662, 
+20150225130933079 |-/192.168.56.1:50714 |MessageProcess      :88|I| phone number:93,AF1678155662 is realdy exist
+20150225144417351 |main                 |AloServer           :56|I| Server is starting ...
+20150225144417371 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225144632560 |main                 |AloServer           :56|I| Server is starting ...
+20150225144632571 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind
+20150225144655891 |main                 |AloServer           :56|I| Server is starting ...
+20150225144655902 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225144722249 |-/192.168.56.1:51428 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51428
+20150225144722256 |-/192.168.56.1:51428 |MessageProcess      :69|I| Client /192.168.56.1:51428 request create new account: phone:93,AF1678155662, 
+20150225144722301 |-/192.168.56.1:51428 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150225144722878 |-/192.168.56.1:51428 |DbAction            :115|E| Create account :com.mysql.jdbc.exceptions.MySQLSyntaxErrorException: Unknown column 'a.id' in 'field list'
+20150225144756140 |-/192.168.56.1:51428 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51428
+20150225144756142 |-/192.168.56.1:51428 |MessageProcess      :69|I| Client /192.168.56.1:51428 request create new account: phone:93,AF1678155662, 
+20150225144800736 |-/192.168.56.1:51428 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51428
+20150225144800737 |-/192.168.56.1:51428 |MessageProcess      :69|I| Client /192.168.56.1:51428 request create new account: phone:93,AF1678155662, 
+20150225150512850 |-/192.168.56.1:51511 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51511
+20150225150512851 |-/192.168.56.1:51511 |MessageProcess      :69|I| Client /192.168.56.1:51511 request create new account: phone:93,AF1678155662, 
+20150225151042579 |-/192.168.56.1:51511 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51511
+20150225151042580 |-/192.168.56.1:51511 |MessageProcess      :69|I| Client /192.168.56.1:51511 request create new account: phone:93,AF1678155662, 
+20150225151806732 |-/192.168.56.1:51536 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51536
+20150225151806733 |-/192.168.56.1:51536 |MessageProcess      :69|I| Client /192.168.56.1:51536 request create new account: phone:93,AF1678155662, 
+20150225152357412 |-/192.168.56.1:51550 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51550
+20150225152357413 |-/192.168.56.1:51550 |MessageProcess      :69|I| Client /192.168.56.1:51550 request create new account: phone:93,AF1678155662, 
+20150225152406653 |-/192.168.56.1:51550 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51550
+20150225152406654 |-/192.168.56.1:51550 |MessageProcess      :69|I| Client /192.168.56.1:51550 request create new account: phone:93,AF1678155662, 
+20150225152734540 |-/192.168.56.1:51550 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51550
+20150225152734541 |-/192.168.56.1:51550 |MessageProcess      :69|I| Client /192.168.56.1:51550 request create new account: phone:93,AF1678155662, 
+20150225154612288 |-/192.168.56.1:51582 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:51582
+20150225154612288 |-/192.168.56.1:51582 |MessageProcess      :69|I| Client /192.168.56.1:51582 request create new account: phone:93,AF1678155662, 
+20150225160033489 |-/192.168.56.1:51601 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51601
+20150225160033490 |-/192.168.56.1:51601 |MessageProcess      :69|I| Client /192.168.56.1:51601 request create new account: phone:93,AF1678155662, 
+20150225160317994 |-/192.168.56.1:51615 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51615
+20150225160317995 |-/192.168.56.1:51615 |MessageProcess      :69|I| Client /192.168.56.1:51615 request create new account: phone:93,AF1678155662, 
+20150225160753866 |-/192.168.56.1:51615 |ServerManager       :54|I| receive 27bytes from /192.168.56.1:51615
+20150225160753867 |-/192.168.56.1:51615 |MessageProcess      :69|I| Client /192.168.56.1:51615 request create new account: phone:297,AW1678155662, 
+20150225161309903 |-/192.168.56.1:51632 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51632
+20150225161309904 |-/192.168.56.1:51632 |MessageProcess      :69|I| Client /192.168.56.1:51632 request create new account: phone:93,AF1678155662, 
+20150225161310135 |-/192.168.56.1:51632 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51632
+20150225161310136 |-/192.168.56.1:51632 |MessageProcess      :69|I| Client /192.168.56.1:51632 request create new account: phone:93,AF1678155662, 
+20150225161531679 |-/192.168.56.1:51647 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51647
+20150225161531682 |-/192.168.56.1:51647 |MessageProcess      :69|I| Client /192.168.56.1:51647 request create new account: phone:93,AF1678155662, 
+20150225161542277 |-/192.168.56.1:51647 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51647
+20150225161542278 |-/192.168.56.1:51647 |MessageProcess      :69|I| Client /192.168.56.1:51647 request create new account: phone:93,AF1678155662, 
+20150225161545997 |-/192.168.56.1:51647 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51647
+20150225161545998 |-/192.168.56.1:51647 |MessageProcess      :69|I| Client /192.168.56.1:51647 request create new account: phone:93,AF1678155662, 
+20150225161554566 |-/192.168.56.1:51647 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51647
+20150225161554567 |-/192.168.56.1:51647 |MessageProcess      :69|I| Client /192.168.56.1:51647 request create new account: phone:93,AF1678155662, 
+20150225161605128 |-/192.168.56.1:51647 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51647
+20150225161605129 |-/192.168.56.1:51647 |MessageProcess      :69|I| Client /192.168.56.1:51647 request create new account: phone:93,AF1678155662, 
+20150225161752757 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:51667
+20150225161752758 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225161752885 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:51667
+20150225161752886 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225161902648 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51667
+20150225161902650 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225161910240 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51667
+20150225161910240 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225161910336 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51667
+20150225161910337 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225162018790 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51667
+20150225162018791 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225162038338 |-/192.168.56.1:51667 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:51667
+20150225162038339 |-/192.168.56.1:51667 |MessageProcess      :69|I| Client /192.168.56.1:51667 request create new account: phone:93,AF1678155662, 
+20150225183708063 |main                 |AloServer           :56|I| Server is starting ...
+20150225183708074 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225183710211 |main                 |AloServer           :56|I| Server is starting ...
+20150225183710221 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind
+20150225230014291 |main                 |AloServer           :56|I| Server is starting ...
+20150225230014503 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225230115732 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230115738 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230115985 |-/192.168.56.1:52547 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150225230124437 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 7bytes from /192.168.56.1:52547
+20150225230124438 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230143056 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230143057 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230147055 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 3bytes from /192.168.56.1:52547
+20150225230147056 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230150254 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230150254 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230154002 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52547
+20150225230154003 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230207516 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230207516 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230233395 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 6bytes from /192.168.56.1:52547
+20150225230233396 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230237980 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230238011 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230240563 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 3bytes from /192.168.56.1:52547
+20150225230240563 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230243447 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230243448 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230259824 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 3bytes from /192.168.56.1:52547
+20150225230259824 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230341182 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52547
+20150225230341182 |-/192.168.56.1:52547 |MessageProcess      :104|I| Client /192.168.56.1:52547 request create new account: phone:93,AF1678155662, 
+20150225230511780 |-/192.168.56.1:52547 |ServerManager       :54|I| receive 3bytes from /192.168.56.1:52547
+20150225230511781 |-/192.168.56.1:52547 |MessageProcess      :63|W| Client /192.168.56.1:52547 sent a undefied message
+20150225230650805 |main                 |AloServer           :56|I| Server is starting ...
+20150225230650817 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
+20150225230653214 |main                 |AloServer           :56|I| Server is starting ...
+20150225230653225 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind
+20150225231652172 |main                 |AloServer           :56|I| Server is starting ...
+20150225231652187 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind

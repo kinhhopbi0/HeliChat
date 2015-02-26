@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%date{COMPACT} |%-20.20thread |%-20.20logger{1}:%L|%level{length=1}| %message%n"/>
+        </Console>
+        <RollingFile name="server" fileName="runtime/logs/server.log"
+                     filePattern="runtime/logs/server-%d{yyyy-MM-dd}-%i.log.zip">
+            <PatternLayout pattern="%date{COMPACT} |%-20.20thread |%-20.20logger{1}:%L|%level{length=1}| %message%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="1 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>
+        <RollingFile name="external" fileName="runtime/logs/external.log"
+                     filePattern="runtime/logs/external-%d{yyyy-MM-dd}-%i.log.zip">
+            <PatternLayout pattern="%date{COMPACT} |%-20.20thread |%logger{1}:%-20.20L|%level{length=1}| %message%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="1 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>
+
+	<RollingFile name="access" fileName="runtime/logs/access.log"
+                     filePattern="runtime/logs/access-%d{yyyy-MM-dd}-%i.log.zip">
+            <PatternLayout pattern="%date{COMPACT} |%-20.30thread |%logger{1}:%-20.20L|%level{length=1}| %message%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="1 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="4"/>
+        </RollingFile>
+
+        <Async name="async">
+            <AppenderRef ref="server"/>
+            <AppenderRef ref="stdout"/>
+	    	
+        </Async>
+    </Appenders>
+    <Loggers>
+                
+        <logger name="AloServer" level="all" additivity="false">
+            <appender-ref ref="server"/>
+            <appender-ref ref="stdout"/>
+        </logger>
+		<logger name="Access" level="info" additivity="false">
+            <appender-ref ref="access"/>
+            <appender-ref ref="stdout"/>
+        </logger>
+        <Root level="all" additivity="false">
+            <AppenderRef ref="server"/>
+            <AppenderRef ref="stdout"/>
+        </Root>
+    </Loggers>
+</Configuration>
