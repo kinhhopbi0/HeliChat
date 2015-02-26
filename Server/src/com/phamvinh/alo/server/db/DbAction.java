@@ -165,16 +165,16 @@ public class DbAction {
 
 	public int checkConfirmPasscode(String phone_number, String passcode) {
 		Connection connection = null;
-		java.sql.CallableStatement pstm = null;		
+		java.sql.CallableStatement cstm = null;		
 		try{
 			connection = DbAccess.getInstance(LOGGER).getConn();
 			String sql = "{call confirmPasscode(?,?,?)}";
-			pstm = connection.prepareCall(sql);
-			pstm.setString(1, phone_number);
-			pstm.setString(2, passcode);			
-			pstm.registerOutParameter(3, java.sql.Types.INTEGER);
-			int rs = pstm.executeUpdate();
-			int rs2 = pstm.getInt(3);
+			cstm = connection.prepareCall(sql);
+			cstm.setString(1, phone_number);
+			cstm.setString(2, passcode);			
+			cstm.registerOutParameter(3, java.sql.Types.INTEGER);
+			int rs = cstm.executeUpdate();
+			int rs2 = cstm.getInt(3);
 			return rs2;
 		}catch(SQLException sqlex){
 			try {
@@ -185,7 +185,7 @@ public class DbAction {
 			}
 			LOGGER.error("Create account :{}",sqlex.toString());
 		}finally{			
-			DbAccess.getInstance(LOGGER).closePreparedStatement(pstm);
+			DbAccess.getInstance(LOGGER).closePreparedStatement(cstm);
 			DbAccess.getInstance(LOGGER).closeConn(connection);			
 		}		
 		return -1;

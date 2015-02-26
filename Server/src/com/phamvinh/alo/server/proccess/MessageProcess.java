@@ -40,6 +40,7 @@ public class MessageProcess {
     public void processMessageBytes(Client client, byte[] buffer){
         MessageBase messageBase = new MessageBase(MessageMode.RECEIVE);
         messageBase.fromBytes(buffer);
+        LOG.info("new message with MID:{}",messageBase.getMid());
         messageBase.setSocketAddress(client.toString());
         IMessage detail;
 		try {
@@ -70,7 +71,7 @@ public class MessageProcess {
 		if(detail.getStatus() == ConfirmPasscodeMsg.Status.CONFIRM){
 			String phone_number;
 			if ( (phone_number = (String) client.getSessionExtras().get("phone_number")) != null ) {
-				LOG.info("phone number {} request confirm passcode");
+				LOG.info("phone number {} request confirm passcode",phone_number);
 				ConfirmPasscodeMsg response = new ConfirmPasscodeMsg();
 				response.setSocketAddress(detail.getSocketAddress());
 				
