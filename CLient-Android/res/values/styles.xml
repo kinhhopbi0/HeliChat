@@ -1,0 +1,37 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    	Any API
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="Heli.Theme.Light" parent="Theme.AppCompat.Light"></style>
+
+    <style name="Heli.Theme.StartFirstActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar.Button.Navigation</item>
+        <item name="colorPrimary">@color/ForestGreen</item>
+        <item name="colorPrimaryDark">#1B5E20</item>
+        <item name="colorAccent">#E65100</item>
+    </style>
+
+    <style name="Heli.Theme.PinkButton" parent="@style/Heli.Theme.Light">
+        <item name="android:background">@color/DeepPink</item>
+        <item name="android:textColor">@color/WhiteSmoke</item>
+    </style>
+
+    <style name="Heli.Button" parent="@android:style/Widget.Button"></style>
+
+    <style name="Heli.Button.Primary" parent="@style/Heli.Button"></style>
+
+    <style name="Heli.Button.Small" parent="@android:style/Widget.Button.Small"></style>
+
+    <style name="Heli.Button.Borderless.Small" parent="@android:style/Widget.Button.Small"></style>
+
+    <style name="Viepagertitlestrip">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>

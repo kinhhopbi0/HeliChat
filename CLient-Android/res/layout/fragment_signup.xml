@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lbUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lb_user_name"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lb_phone_number"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:text="@string/lbphone_number_hint"
+            android:textColor="@color/DodgerBlue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbcountry_code" />
+
+        <Spinner
+            android:id="@+id/spnContryCode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="15dp"
+            android:entries="@array/CountryCodes"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/lb_phone_number"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lb_password"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:hint="@string/lb_password"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/edtRePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/lb_repassword"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            style="@style/Heli.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="@string/lb_sign_up"
+            android:theme="@style/Heli.Theme.PinkButton" />
+    </LinearLayout>
+
+</ScrollView>

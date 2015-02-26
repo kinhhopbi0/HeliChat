@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="phone_number_readly_exist">phone number is readly exist</string>
+    <string name="sign_up_undefied_error">sign up error</string>
+    <string name="sign_up_success">sign up success</string>
+    <string name="please_wait">Please wait server</string>
+    <string name="requesting_create_account">requesting create account</string>
+    <string name="passcode_not_matches">passcode not matches</string>
+</resources>

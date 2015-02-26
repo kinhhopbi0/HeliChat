@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Heli Chat</string>
+    <string name="wellcome">Wellcome!</string>
+    <string name="title_activity_home">Home</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_demo">DemoActivity</string>
+    <string name="title_activity_create_account_actitity">Create new account</string>
+    <string name="title_activity_create_account">CreateAccountActivity</string>
+    
+    <string name="lb_sign_up">Sign up</string>
+    <string name="lb_user_name">User name</string>
+    <string name="lb_password">password</string>
+    <string name="lb_repassword">repeat password</string>
+    <string name="lb_phone_number">phone number</string>   
+    <string name="lb_by">"By"</string>
+    <string name="lb_or">"or"</string>
+    <string name="lb_sign_in">Sign In</string>
+    <string name="ok">OK</string>
+
+    <string name="connection_error">Connection error</string>
+    <string name="phone_number_not_empty">phone number must not empty</string>
+    <string name="password_not_empty">password must not empty</string>
+    <string name="password_not_">password no equal</string>
+    <string name="phone_number_notcorrect">length of phone number not correct</string>
+    <string name="password_not_correct">password from 6 to 32, a-Z, 0-9, one special symbols in the list "@#$%"</string>
+    <string name="lb_for_edtpasscode">Enter 6 number digit passcode to confirm</string>
+    <string name="lbcountry_code">Country code</string>
+    <string name="lbphone_number_hint">Enter your phone number.</string>
+    
+</resources>
