@@ -15,12 +15,12 @@ import com.pdv.heli.message.base.MessageNotCorrectExeption;
 import com.pdv.heli.message.common.MessageMode;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
 import com.pdv.heli.message.detail.SignUpMessage;
-import com.pdv.heli.message.detail.TextMessage;
 import com.pdv.heli.message.detail.SignUpMessage.FailType;
-import com.phamvinh.alo.server.ServerManager;
+import com.pdv.heli.message.detail.TextMessage;
 import com.phamvinh.alo.server.common.PasswordUtil;
 import com.phamvinh.alo.server.common.RandomString;
 import com.phamvinh.alo.server.db.DbAction;
+import com.phamvinh.alo.server.main.HeliServerStart;
 import com.phamvinh.network.server.transport.Client;
 
 /**
@@ -37,10 +37,10 @@ public class MessageProcess {
     private MessageProcess() {
     	saltGeneratetor = new RandomString(6);
     }
-    public void processMessageBytes(Client client, byte[] buffer){
+    public void readMessageBytes(Client client, byte[] buffer){
         MessageBase messageBase = new MessageBase(MessageMode.RECEIVE);
-        messageBase.fromBytes(buffer);
-        LOG.info("new message with MID:{}",messageBase.getMid());
+        messageBase.fromBytes(buffer);      
+        LOG.debug("Receive MID={} detail data :{}",messageBase.getMid(),messageBase.getData());
         messageBase.setSocketAddress(client.toString());
         IMessage detail;
 		try {
@@ -88,7 +88,7 @@ public class MessageProcess {
 					client.getSessionExtras().remove("phone_number");
 					break;
 				}
-				ServerManager.getInstance().sendMessage(response); 
+				sendMessage(response); 
 	    		
 			}else{
 				LOG.warn("client not request sign up before confirm passcode");
@@ -128,7 +128,7 @@ public class MessageProcess {
     			response.setFailType(FailType.PHONE_EXIST);
 				break;						
 			}   	
-    		ServerManager.getInstance().sendMessage(response); 
+    		sendMessage(response); 
     		return;
     	}
     	LOG.warn("Client {} send a undefined Account message status:{}",client,msg.getStatus());
@@ -138,4 +138,16 @@ public class MessageProcess {
     public static MessageProcess getInstance() {    	
         return instance;
     }
+    public void sendMessage(IMessage response) {
+		try {
+			IMessage base = response.getBaseMessage();
+			LOG.debug("Sending MID={} detail data :{}",base.getMid(),((MessageBase)base).getData());
+			HeliServerStart.getInstance().getServerTcp()
+					.sendBytes(base.toSendBytes(),
+							response.getSocketAddress());
+		} catch (MessageNotCorrectExeption e) {
+			LOG.error("create byte from message to send to {} error:{}",
+					response.getSocketAddress(), e);
+		}
+	}
 }

@@ -3,9 +3,6 @@ package com.phamvinh.alo.server;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.pdv.heli.message.base.IMessage;
-import com.pdv.heli.message.base.MessageNotCorrectExeption;
-import com.phamvinh.alo.server.main.HeliServerStart;
 import com.phamvinh.alo.server.proccess.MessageProcess;
 import com.phamvinh.network.server.transport.Client;
 import com.phamvinh.network.server.transport.ServerNetworkInterface;
@@ -13,19 +10,19 @@ import com.phamvinh.network.server.transport.ServerNetworkInterface;
 /**
  * Created by via on 2/4/15.
  */
-public class ServerManager implements ServerNetworkInterface {
+public class ServerIOManager implements ServerNetworkInterface {
 	private static final Logger LOG = LogManager.getLogger();
 	private static final Logger ACCESS_LOG = LogManager.getLogger("Access");
-	private static ServerManager ourInstance = new ServerManager();
+	private static ServerIOManager ourInstance = new ServerIOManager();
 
 	/**
 	 * @return ServerManager
 	 */
-	public static ServerManager getInstance() {
+	public static ServerIOManager getInstance() {
 		return ourInstance;
 	}
 
-	private ServerManager() {
+	private ServerIOManager() {
 
 	}
 
@@ -54,7 +51,7 @@ public class ServerManager implements ServerNetworkInterface {
 		LOG.info("receive {}bytes from {}", buffer.length, sender);
 		try {
 			Client client = (Client) sender;
-			MessageProcess.getInstance().processMessageBytes(client, buffer);
+			MessageProcess.getInstance().readMessageBytes(client, buffer);
 		} catch (Exception ex) {
 			LOG.error("Recevice error: {}",ex);
 			ex.printStackTrace();
@@ -65,15 +62,6 @@ public class ServerManager implements ServerNetworkInterface {
 	public void onSent(Object sender) {
 		LOG.info("Sent data to {} success ",sender);
 	}
-
-	public void sendMessage(IMessage response) {
-		try {
-			HeliServerStart.getInstance().getServerTcp()
-					.sendBytes(response.getBaseMessage().toSendBytes(),
-							response.getSocketAddress());
-		} catch (MessageNotCorrectExeption e) {
-			LOG.error("create byte from message to send to {} error:{}",
-					response.getSocketAddress(), e);
-		}
-	}
+	
+	
 }

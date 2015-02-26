@@ -11,7 +11,7 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.phamvinh.alo.server.ServerManager;
+import com.phamvinh.alo.server.ServerIOManager;
 import com.phamvinh.alo.server.constant.ServerInfo;
 import com.phamvinh.network.server.transport.SSLTcpServer;
 
@@ -57,7 +57,7 @@ public class HeliServerStart {
 			//System.setProperty("javax.net.ssl.keyStore","res/clientKeyStore.key");
 	    	//System.setProperty("javax.net.ssl.keyStorePassword","123456");
 			serverTcp = new SSLTcpServer(ServerInfo.SERVER_PORT_TCP, ServerInfo.MAX_CLIENT);
-			serverTcp.setNetworkInterfaceCallBack(ServerManager.getInstance());
+			serverTcp.setNetworkInterfaceCallBack(ServerIOManager.getInstance());
 			serverTcp.startServer();			
 			LOG.info("Server listening on: {} ",serverTcp.getServerSocket().getLocalSocketAddress());					
 			
