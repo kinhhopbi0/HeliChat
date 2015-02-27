@@ -29,7 +29,7 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 	public static final String TAG = SignUpFragment.class.getSimpleName();
 	private EditText edtPhone;
 	private Spinner spnContryCode;
-//	private EditText edtUsername;
+	// private EditText edtUsername;
 	private EditText edtPassword;
 	private EditText edtRePassword;
 	private Button btnSignUp;
@@ -47,7 +47,7 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 	private void initializeComponent(View pLayout) {
 		edtPhone = (EditText) pLayout.findViewById(R.id.edtPhone);
 		spnContryCode = (Spinner) pLayout.findViewById(R.id.spnContryCode);
-//		edtUsername = (EditText) pLayout.findViewById(R.id.edtUsername);
+		// edtUsername = (EditText) pLayout.findViewById(R.id.edtUsername);
 		edtPassword = (EditText) pLayout.findViewById(R.id.edtPassword);
 		edtRePassword = (EditText) pLayout.findViewById(R.id.edtRePassword);
 		btnSignUp = (Button) pLayout.findViewById(R.id.btnSignUp);
@@ -73,19 +73,25 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 		}
 	}
 
+	private String user_phone;
+	private String user_pass;
 	private void doSignUp() {
 		if (validate()) {
 			progressDialog = ProgressDialog.show(this.getActivity(),
-					getResources().getString(R.string.please_wait), getResources().getString(R.string.requesting_create_account),
+					getResources().getString(R.string.please_wait),
+					getResources()
+							.getString(R.string.requesting_create_account),
 					true, false);
 			String password = edtPassword.getText().toString();
 			String phone = edtPhone.getText().toString();
 			String code = spnContryCode.getSelectedItem().toString();
 
 			SignUpMessage accountMessage = new SignUpMessage(MessageMode.SEND);
-			accountMessage.setPhone(code + phone);
+			user_phone = code + phone;
+			accountMessage.setPhone(user_phone);
 			accountMessage.setStatus(SignUpMessage.Status.CREATE_NEW);
-			accountMessage.setPassword(password);
+			user_pass = password;
+			accountMessage.setPassword(user_pass);
 			MessageQueueProcessor.getInstance().offerOutMessage(accountMessage);
 
 		}
@@ -133,26 +139,32 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 
 		return true;
 	}
-	
-	
+
 	public void showPhoneExist() {
-		if(progressDialog != null){
+		if (progressDialog != null) {
 			progressDialog.dismiss();
 		}
 		edtPhone.setError(getResources().getString(
 				R.string.phone_number_readly_exist));
 		edtPhone.requestFocus();
 	}
-	public void doResponseOtherError(){
-		if(progressDialog != null){
+
+	public void doResponseOtherError() {
+		if (progressDialog != null) {
 			progressDialog.dismiss();
 		}
 	}
-	public void createStepOneSuccess(){
-		if(progressDialog != null){
+
+	public void createStepOneSuccess() {
+		if (progressDialog != null) {
 			progressDialog.dismiss();
 		}
-		Intent intent = new Intent(this.getActivity(),ConfirmPasscodeActivity.class);
+		Intent intent = new Intent(this.getActivity(),
+				ConfirmPasscodeActivity.class);
+		Bundle bundle = new Bundle();
+		bundle.putString(ConfirmPasscodeActivity.PHONE_KEY, user_phone);
+		bundle.putString(ConfirmPasscodeActivity.PASSWORD_KEY,this.user_pass);
+		intent.putExtras(bundle);
 		startActivity(intent);
 	}
 }

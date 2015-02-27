@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.pdv.heli.R;
 import com.pdv.heli.manager.TcpIOManager;
-import com.pdv.heli.message.detail.LoginRequestMessage;
+import com.pdv.heli.message.detail.SignInMessage;
 
 
 
@@ -114,7 +114,7 @@ public class SignInFragment extends android.support.v4.app.Fragment implements
 		String username = edtUsername.getText().toString();
 		spnContryCode.getSelectedItem();
 		String phone = edtPhone.getText().toString();
-		LoginRequestMessage loginRequestMessage = new LoginRequestMessage(
+		SignInMessage loginRequestMessage = new SignInMessage(
 				username, password);
 
 	}

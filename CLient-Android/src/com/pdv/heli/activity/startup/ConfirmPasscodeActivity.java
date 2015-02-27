@@ -11,21 +11,30 @@ import com.pdv.heli.R;
 import com.pdv.heli.activity.BaseActivity;
 import com.pdv.heli.manager.MessageQueueProcessor;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
+import com.pdv.heli.message.detail.SignInMessage;
 
 public class ConfirmPasscodeActivity extends BaseActivity implements
 		OnClickListener {
+	public static final String PHONE_KEY = "phone";
+	public static final String PASSWORD_KEY = "password";
 	private Button btnOk;
 	private EditText edtPasscode;
-
+	private String password;
+	private String phoneNumber;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_confirm_passcode);
 		edtPasscode = (EditText) findViewById(R.id.edtPasscode);
 		btnOk = (Button) findViewById(R.id.btnOk);
-
 		btnOk.setOnClickListener(this);
+		Bundle bundle = getIntent().getExtras();
+		if(bundle != null){
+			phoneNumber = bundle.getString(PHONE_KEY,"");
+			password = bundle.getString(PASSWORD_KEY,"");
+		}
 	}
 
 	@Override
@@ -52,7 +61,7 @@ public class ConfirmPasscodeActivity extends BaseActivity implements
 		btnOk.setEnabled(true);
 		switch (detail.getStatus()) {
 		case ConfirmPasscodeMsg.Status.SUCCESS:
-			// TODO start activity
+			doSignIn();
 			break;
 		case ConfirmPasscodeMsg.Status.NOT_MATCHES:
 			btnOk.setText(getResources().getString(R.string.ok));
@@ -65,6 +74,12 @@ public class ConfirmPasscodeActivity extends BaseActivity implements
 		default:
 			break;
 		}
+	}
+
+	private void doSignIn() {
+			SignInMessage msg = new SignInMessage(phoneNumber, password);
+			msg.setStatus(SignInMessage.Status.REQUEST_NEW);
+			MessageQueueProcessor.getInstance().offerOutMessage(msg);
 	}
 
 }
