@@ -5,14 +5,15 @@ import java.util.concurrent.ArrayBlockingQueue;
 import android.util.Log;
 
 import com.pdv.heli.common.BytesUtil;
+import com.pdv.heli.message.MessageNavigation;
 import com.pdv.heli.message.base.IMessage;
 import com.pdv.heli.message.base.MessageBase;
 import com.pdv.heli.message.base.MessageNotCorrectExeption;
 import com.pdv.heli.message.common.MessageMode;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
+import com.pdv.heli.message.detail.SignInMessage;
 import com.pdv.heli.message.detail.SignUpMessage;
 import com.pdv.heli.message.detail.TextMessage;
-import com.pdv.heli.processmessage.MessageNavigation;
 
 public class MessageQueueProcessor {
 	private static final String TAG = MessageQueueProcessor.class.getName();
@@ -40,13 +41,14 @@ public class MessageQueueProcessor {
 
 	private Thread deInCommingQueueThread;
 	private Thread deGoingOutQueueThread;
-
+	private volatile boolean isInCommingRun = true; 
+	private volatile boolean isGoingOutgRun = true; 
 	public void startDeQueueTask() {
 		if(deInCommingQueueThread == null || !deInCommingQueueThread.isAlive()){
 			deInCommingQueueThread = new Thread(new Runnable() {
 				@Override
 				public void run() {
-					while (true) {
+					while (isInCommingRun) {
 						doTakeIncommingBytesQueue();
 					}
 				}
@@ -58,7 +60,7 @@ public class MessageQueueProcessor {
 			deGoingOutQueueThread = new Thread(new Runnable() {
 				@Override
 				public void run() {
-					while (true) {
+					while (isGoingOutgRun) {
 						doTakeGoingOutMessageQueue();
 					}
 				}
@@ -69,9 +71,11 @@ public class MessageQueueProcessor {
 	}
 
 	public void stopDeQueueTask() {
-		if (deGoingOutQueueThread != null && deGoingOutQueueThread.isAlive()) {
+		isGoingOutgRun = false;
+		if (deGoingOutQueueThread != null && deGoingOutQueueThread.isAlive()) {			
 			deGoingOutQueueThread.interrupt();
 		}
+		isInCommingRun = false;
 		if (deInCommingQueueThread != null && deInCommingQueueThread.isAlive()) {
 			deInCommingQueueThread.interrupt();
 		}
@@ -86,7 +90,7 @@ public class MessageQueueProcessor {
 				MessageBase base = (MessageBase) message.getBaseMessage();
 				Log.i(TAG, "receive MID:"+base.getMid()+" detail data: "+ BytesUtil.toDisplayString(base.getData()));				
 				byte[] dataSend = base.toSendBytes();
-				TcpIOManager.getInstance().sendBytes(dataSend);	
+				TcpClientManager.getInstance().sendBytes(dataSend);	
 			}
 		} catch (InterruptedException e) {			
 			e.printStackTrace();
@@ -115,6 +119,11 @@ public class MessageQueueProcessor {
 					MessageNavigation.navigationConfirmMsg((ConfirmPasscodeMsg)detail);
 					return;
 				}
+				if(detail instanceof SignInMessage){
+					MessageNavigation.navigateSignIn((SignInMessage)detail);
+					return;
+				}
+				// TODO ANDROID update code after defined new message
 				Log.i(TAG, "receive undefined message with MID: "+messageBase.getMid());
 			}
 		} catch (InterruptedException e) {			

@@ -13,185 +13,212 @@ import android.util.Log;
  */
 
 public class TcpClient {
-    private static final String TAG = TcpClient.class.getSimpleName();
-    private Socket socket;
-    private int connectTimeout = 2000;
-    private int bufferSize = 1024;
-    private OutputStream outputStream;
-    private InputStream inputStream;
-    private String serverHost;
-    private int serverPort = 9090;
-    private ClientNetworkingInterface callBack;
+	private static final String TAG = TcpClient.class.getSimpleName();
+	private Socket socket;
+	private int connectTimeout = 2000;
+	private int bufferSize = 1024;
+	private OutputStream outputStream = null;
+	private InputStream inputStream;
+	private String serverHost;
+	private int serverPort = 9090;
+	private ClientNetworkingInterface callBack;
+	private Thread connectThread;
+	private Thread receiveThread;
+	private volatile boolean flagReceive = true;
 
-    public TcpClient() {
+	public TcpClient() {
+		connectThread = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				connectFn();
+			}
+		});
+	}
 
-    }
+	public void start() {
+		connectThread.start();
+	}
 
+	public boolean isConnect() {
+		if (socket != null) {
+			if (socket.isConnected() && !socket.isClosed()) {
+				// socket connecting
+				return true;
+			}
+		}
+		return false;
+	}
 
-    public void start(){
-        if(!isConnect()){
-            connectFn();
-        }
-        receiveFn();
-    }
-    public boolean isConnect() {
-        if (socket != null) {
-            if (socket.isConnected() && !socket.isClosed()) {
-                //socket connecting
-                return true;
-            }
-        }
-        return false;
-    }
-    private boolean connectFn() {
-        Log.v(TAG, "Connecting to server...");
-        if (socket != null) {
-            try {
-                socket.close();
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-            socket = null;
-        }
-        //System.setProperty("javax.net.ssl.trustStore","clientTrustStore.key");
-        //System.setProperty("javax.net.ssl.trustStorePassword","qwerty");
-       // SSLSocketFactory ssf = (SSLSocketFactory) SSLSocketFactory.getDefault();
-       
-        socket = new Socket();
-        try {
-            if(callBack != null)  callBack.onConnecting(TcpClient.this);            
-          // socket = ssf.createSocket(serverHost, serverPort);            
-            socket.connect(new InetSocketAddress(this.serverHost, this.serverPort), connectTimeout);
+	private boolean connectFn() {
+		Log.v(TAG, "Connecting to server...");
+		if (callBack != null)
+			callBack.onConnecting(TcpClient.this);
+		if (socket != null) {
+			try {
+				socket.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+			socket = null;
+		}
+		// System.setProperty("javax.net.ssl.trustStore","clientTrustStore.key");
+		// System.setProperty("javax.net.ssl.trustStorePassword","qwerty");
+		// SSLSocketFactory ssf = (SSLSocketFactory)
+		// SSLSocketFactory.getDefault();
 
-            Log.v(TAG, "Connected success to server");
-            if(callBack != null)  callBack.onConnectSuccess(TcpClient.this); 
-            inputStream = socket.getInputStream();
-            outputStream = socket.getOutputStream();
-           // startThreadReceive();
-            return  true;
-        } catch (IOException e) {
-            Log.v(TAG,"connect fail");
-            if(callBack != null)  callBack.onConnectFail(TcpClient.this); 
-            e.printStackTrace();
+		socket = new Socket();
+		try {
+			// socket = ssf.createSocket(serverHost, serverPort);
+			socket.connect(new InetSocketAddress(this.serverHost,
+					this.serverPort), connectTimeout);
 
-        }
-        return false;
-    }
+			Log.v(TAG, "Connected success to server");
+			if (callBack != null)
+				callBack.onConnectSuccess(TcpClient.this);
+			inputStream = socket.getInputStream();
+			outputStream = socket.getOutputStream();
+			receiveThread = new Thread(new Runnable() {
+				@Override
+				public void run() {
+					while (flagReceive) {
+						receiveFn();
+					}
+				}
+			});
+			receiveThread.start();
+			return true;
+		} catch (IOException e) {
+			Log.v(TAG, "connect fail");
+			if (callBack != null) {
+				callBack.onConnectFail(TcpClient.this, e);
+			}
+			e.printStackTrace();
 
-    private void receiveFn() {
-        if(inputStream == null){
-            return;
-        }
-        byte[] buffer;
-        while (true) {
-            try {
-                buffer = new byte[bufferSize];
-                Log.v(TAG,"wait data from server "+socket.getRemoteSocketAddress());
-                int readSize = inputStream.read(buffer);
-                if (readSize > 0) {
-                    byte[] realRead = new byte[readSize];
-                    System.arraycopy(buffer, 0, realRead, 0, readSize);
-                    Log.v(TAG,"receive "+readSize+"byte from server "+socket.getRemoteSocketAddress());
-                    if(callBack != null) {
-                        callBack.onReceiveBytes(TcpClient.this, realRead);
-                    }
-                } else {
-                    Log.v(TAG,"0 byte data from server "+socket.getRemoteSocketAddress());
-                    if(callBack != null) {
-                        callBack.onServerCloseConnection(TcpClient.this);
-                    }
-                    break;
-                }
-            } catch (IOException ex) {
-                Log.v(TAG,"close from server:"+socket.getRemoteSocketAddress());
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    socket = null;
-                }
-                if(callBack != null) {
-                    callBack.onDisconnect(TcpClient.this);
-                }
-                break;
-            }
-        }
-    }
+		}
+		return false;
+	}
 
-    public void release() {
-        Log.v(TAG,"release");
-        try {
-            outputStream.close();
-            inputStream.close();
-            outputStream = null;
-            inputStream = null;
-            socket.close();
-            socket = null;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+	private void receiveFn() {		
+		byte[] buffer;
+		try {
+			buffer = new byte[bufferSize];
+			int readSize = inputStream.read(buffer);
+			if (readSize > 0) {
+				byte[] realRead = new byte[readSize];
+				System.arraycopy(buffer, 0, realRead, 0, readSize);				
+				if (callBack != null) {
+					callBack.onReceiveBytes(TcpClient.this, realRead);
+				}
+			} else {
+				Log.v(TAG,
+						"0 byte data from server "
+								+ socket.getRemoteSocketAddress());
+				flagReceive = false;
+				if (callBack != null) {
+					callBack.onServerCloseConnection(TcpClient.this);
+				}				
+			}
+		} catch (IOException ex) {
+			Log.v(TAG, "disconnect from server:" + socket.getRemoteSocketAddress());
+			flagReceive = false;
+			if (callBack != null) {
+				callBack.onDisconnect(TcpClient.this);
+			}			
+		}
 
-    }
+	}
 
-    public void setNetworkingListener(ClientNetworkingInterface pCallBack) {
-        callBack = pCallBack;
-    }
+	public void stop() {
+		Log.v(TAG, "release");
+		try {
+			flagReceive = false;
+			if(inputStream !=null ){				
+				inputStream.close();
+				inputStream = null;
+			}
+			if(outputStream !=null){
+				outputStream.close();
+				outputStream = null;
+			}			
+			
+			if(connectThread != null && connectThread.isAlive()){
+				connectThread.interrupt();
+			}
+			if(receiveThread != null && receiveThread.isAlive()){
+				receiveThread.interrupt();
+			}
+			if(socket != null){
+				socket.shutdownOutput();
+				socket = null;
+			}			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-    public void sendAsync(final byte[] buff) {
-        Thread sendThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                	 if(callBack != null) {
-                        callBack.onSending(TcpClient.this);
-                    }
-                    outputStream.write(buff);
-                    outputStream.flush();
+	}
 
-                    if(callBack != null) {
-                        callBack.onSentSuccess(TcpClient.this);
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    if(callBack != null) {
-                        callBack.onSentFail(TcpClient.this);
-                    }
-                }
+	public void setNetworkingEventListener(ClientNetworkingInterface pCallBack) {
+		callBack = pCallBack;
+	}
 
-            }
-        }, "Send thread");
-        sendThread.start();
-    }
+	public void sendAsync(final byte[] buff) {
+		if(buff==null){
+			return;
+		}
+		Thread sendThread = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					if (callBack != null) {
+						callBack.onSending(TcpClient.this);
+					}
+					outputStream.write(buff);
+					outputStream.flush();
 
-    public int getBufferSize() {
-        return bufferSize;
-    }
+					if (callBack != null) {
+						callBack.onSentSuccess(TcpClient.this);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+					if (callBack != null) {
+						callBack.onSentFail(TcpClient.this);
+					}
+				}
 
-    public void setBufferSize(int bufferSize) {
-        this.bufferSize = bufferSize;
-    }
+			}
+		}, "Send thread");
+		sendThread.start();
+	}
 
-    public int getServerPort() {
-        return serverPort;
-    }
+	public int getBufferSize() {
+		return bufferSize;
+	}
 
-    public void setServerPort(int serverPort) {
-        this.serverPort = serverPort;
-    }
+	public void setBufferSize(int bufferSize) {
+		this.bufferSize = bufferSize;
+	}
 
-    public String getServerHost() {
-        return serverHost;
-    }
+	public int getServerPort() {
+		return serverPort;
+	}
 
-    public void setServerHost(String serverHost) {
-        this.serverHost = serverHost;
-    }
+	public void setServerPort(int serverPort) {
+		this.serverPort = serverPort;
+	}
 
-    public int getConnectTimeout() {
-        return connectTimeout;
-    }
+	public String getServerHost() {
+		return serverHost;
+	}
 
-    public void setConnectTimeout(int connectTimeout) {
-        this.connectTimeout = connectTimeout;
-    }
+	public void setServerHost(String serverHost) {
+		this.serverHost = serverHost;
+	}
+
+	public int getConnectTimeout() {
+		return connectTimeout;
+	}
+
+	public void setConnectTimeout(int connectTimeout) {
+		this.connectTimeout = connectTimeout;
+	}
 }

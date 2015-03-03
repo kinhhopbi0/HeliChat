@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import com.pdv.heli.R;
 import com.pdv.heli.manager.MessageQueueProcessor;
-import com.pdv.heli.manager.TcpIOManager;
+import com.pdv.heli.manager.TcpClientManager;
 import com.pdv.heli.message.common.MessageMode;
 import com.pdv.heli.message.detail.SignUpMessage;
 import com.pdv.heli.util.PasswordValidator;
@@ -87,7 +87,7 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 			String code = spnContryCode.getSelectedItem().toString();
 
 			SignUpMessage accountMessage = new SignUpMessage(MessageMode.SEND);
-			user_phone = code + phone;
+			user_phone = phone;
 			accountMessage.setPhone(user_phone);
 			accountMessage.setStatus(SignUpMessage.Status.CREATE_NEW);
 			user_pass = password;
@@ -98,7 +98,7 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 	}
 
 	private boolean validate() {
-		if (TcpIOManager.getInstance().getConnectState() != TcpIOManager.State.READY) {
+		if (TcpClientManager.getInstance().getConnectState() != TcpClientManager.State.READY) {
 			Toast.makeText(getActivity(),
 					getResources().getString(R.string.connection_error),
 					Toast.LENGTH_SHORT).show();
@@ -160,10 +160,10 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 			progressDialog.dismiss();
 		}
 		Intent intent = new Intent(this.getActivity(),
-				ConfirmPasscodeActivity.class);
+				ConfirmVerifyActivity.class);
 		Bundle bundle = new Bundle();
-		bundle.putString(ConfirmPasscodeActivity.PHONE_KEY, user_phone);
-		bundle.putString(ConfirmPasscodeActivity.PASSWORD_KEY,this.user_pass);
+		bundle.putString(ConfirmVerifyActivity.PHONE_KEY, user_phone);
+		bundle.putString(ConfirmVerifyActivity.PASSWORD_KEY,this.user_pass);
 		intent.putExtras(bundle);
 		startActivity(intent);
 	}

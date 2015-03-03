@@ -1,5 +1,6 @@
 package com.pdv.heli.activity.startup;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,16 +12,14 @@ import com.pdv.heli.R;
 import com.pdv.heli.activity.BaseActivity;
 import com.pdv.heli.manager.MessageQueueProcessor;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
-import com.pdv.heli.message.detail.SignInMessage;
 
-public class ConfirmPasscodeActivity extends BaseActivity implements
+public class ConfirmVerifyActivity extends BaseActivity implements
 		OnClickListener {
 	public static final String PHONE_KEY = "phone";
 	public static final String PASSWORD_KEY = "password";
 	private Button btnOk;
 	private EditText edtPasscode;
-	private String password;
-	private String phoneNumber;
+	
 	
 	
 	@Override
@@ -30,11 +29,7 @@ public class ConfirmPasscodeActivity extends BaseActivity implements
 		edtPasscode = (EditText) findViewById(R.id.edtPasscode);
 		btnOk = (Button) findViewById(R.id.btnOk);
 		btnOk.setOnClickListener(this);
-		Bundle bundle = getIntent().getExtras();
-		if(bundle != null){
-			phoneNumber = bundle.getString(PHONE_KEY,"");
-			password = bundle.getString(PASSWORD_KEY,"");
-		}
+		
 	}
 
 	@Override
@@ -59,27 +54,36 @@ public class ConfirmPasscodeActivity extends BaseActivity implements
 
 	public void onConfirmFromServer(ConfirmPasscodeMsg detail) {
 		btnOk.setEnabled(true);
+		btnOk.setText(getResources().getString(R.string.ok));
 		switch (detail.getStatus()) {
 		case ConfirmPasscodeMsg.Status.SUCCESS:
-			doSignIn();
+			Intent intent = new Intent(this,FinishSignUpActivity.class);
+			Bundle bundle = getIntent().getExtras();
+			if(bundle != null){				
+				intent.putExtras(bundle);
+				startActivity(intent);
+			}else{
+				Toast.makeText(this, "Error", Toast.LENGTH_SHORT);
+			}
+			
+			this.finish();
 			break;
-		case ConfirmPasscodeMsg.Status.NOT_MATCHES:
-			btnOk.setText(getResources().getString(R.string.ok));
+		case ConfirmPasscodeMsg.Status.NOT_MATCHES:			
 			edtPasscode.setError(getResources().getString(R.string.passcode_not_matches));
 			edtPasscode.requestFocus();
+			edtPasscode.selectAll();
 			break;
 		case ConfirmPasscodeMsg.Status.OTHER_ERROR:
 			Toast.makeText(this, "Unknow error", Toast.LENGTH_SHORT).show();
+			break;
+		case ConfirmPasscodeMsg.Status.ACCOUNT_EXIST:
+			Toast.makeText(this, "Phone number is exist", Toast.LENGTH_SHORT).show();			
 			break;
 		default:
 			break;
 		}
 	}
 
-	private void doSignIn() {
-			SignInMessage msg = new SignInMessage(phoneNumber, password);
-			msg.setStatus(SignInMessage.Status.REQUEST_NEW);
-			MessageQueueProcessor.getInstance().offerOutMessage(msg);
-	}
+	
 
 }

@@ -4,11 +4,9 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.app.Service;
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
 
 import com.pdv.heli.app.HeliApplication;
-import com.pdv.heli.app.service.NetworkService;
 
 
 /**
@@ -26,21 +24,11 @@ public class BackgroundManager {
         return instance;
     }
 
-    public void startService(){
-        if(!isServiceRunning(NetworkService.class)){
-            Intent intent = new Intent(HeliApplication.getInstance(), NetworkService.class);
-            intent.setAction(NetworkService.START_FOREGROUND);
-            HeliApplication.getInstance().startService(intent);
-        }
+    public void startClientService(){
+       
     }
 
-    public void stopService(){
-        if(isServiceRunning(NetworkService.class)){
-            HeliApplication.getInstance().stopService(NetworkService.class);
-        }
-    }
-
-
+    
     public static boolean isServiceRunning(Class<? extends Service> serviceClass) {
         ActivityManager manager = (ActivityManager) HeliApplication.getInstance().getSystemService(Context.ACTIVITY_SERVICE);
         for (RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {

@@ -11,6 +11,6 @@ import android.widget.Toast;
 public class NetworkServiceReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        Toast.makeText(NetworkService.getInstance(),"call broacast",Toast.LENGTH_SHORT).show();
+    
     }
 }

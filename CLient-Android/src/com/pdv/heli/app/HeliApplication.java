@@ -8,6 +8,7 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.pdv.heli.activity.startup.StartFirstActivity;
 import com.pdv.heli.component.CustomNotification;
 import com.pdv.heli.message.detail.TextMessage;
 
@@ -26,11 +27,11 @@ public class HeliApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		Log.i("AppCore", "Application core starting");
-		handler = new Handler(Looper.getMainLooper());
+		handler = new Handler(Looper.getMainLooper());		
+		_instance = this;	
 		
-		_instance = this;
 	}
-
+	
 	@Override
 	public void onTerminate() {		
 		super.onTerminate();

@@ -1,4 +1,4 @@
-package com.pdv.heli.processmessage;
+package com.pdv.heli.message;
 
 import com.pdv.heli.R;
 import com.pdv.heli.app.HeliApplication;
@@ -29,6 +29,8 @@ public class ProcessMsgInBackground {
 				break;
 			}
 			break;
+		
+			// TODO Android process background
 		default:
 			break;
 		}
