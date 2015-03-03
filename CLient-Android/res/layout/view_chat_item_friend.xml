@@ -16,7 +16,7 @@
 
         android:textColor="@android:color/white"
 
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/DarkGreen"
         android:layout_gravity="right"
 
         android:text="sdsdsfdf sd as as sdasd sad ds s dasdasd dfdf  f dfdfdfdfdfdfdf"
