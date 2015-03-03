@@ -9,6 +9,7 @@ import com.pdv.heli.message.base.AbstractMessage;
 import com.pdv.heli.message.base.IMessage;
 import com.pdv.heli.message.base.MessageBase;
 import com.pdv.heli.message.base.MessageNotCorrectExeption;
+import com.pdv.heli.message.common.Constant;
 import com.pdv.heli.message.common.MessageId;
 import com.pdv.heli.message.common.MessageMode;
 
@@ -25,9 +26,7 @@ public final class SignUpMessage extends AbstractMessage {
 	private String phone = "";
 
 	private final byte mMid = MessageId.SIGN_UP_MID;
-	public static final int USERNAME_MAX_SIZE = 50;
-	public static final int PASSWORD_MAX_SIZE = 32;
-	public static final int PHONE_MAX_SIZE = 20;
+	
 
 	public static class Status {
 		public static final byte CREATE_NEW = 0x01;
@@ -85,7 +84,7 @@ public final class SignUpMessage extends AbstractMessage {
 			byte[] dataPhone;
 
 			for (int i = index; i < pData.length; i++) {
-				if (i == (index + USERNAME_MAX_SIZE)) {
+				if (i == (index + Constant.USERNAME_MAX_SIZE)) {
 					throw new MessageNotCorrectExeption("username too long");
 				}
 				if (pData[i] == 0) {
@@ -97,10 +96,10 @@ public final class SignUpMessage extends AbstractMessage {
 
 			}
 			for (int i = index; i < pData.length; i++) {
-				if (i == (index + PASSWORD_MAX_SIZE)) {
+				if (i == (index + Constant.PASSWORD_MAX_SIZE)) {
 					throw new MessageNotCorrectExeption(
 							"bytes of password too long than "
-									+ PASSWORD_MAX_SIZE);
+									+ Constant.PASSWORD_MAX_SIZE);
 				}
 				if (pData[i] == 0) {
 					dataPassword = Arrays.copyOfRange(pData, index, i);
@@ -110,9 +109,9 @@ public final class SignUpMessage extends AbstractMessage {
 				}
 			}
 			for (int i = index; i < pData.length; i++) {
-				if (i == (index + PHONE_MAX_SIZE)) {
+				if (i == (index + Constant.PHONE_MAX_SIZE)) {
 					throw new MessageNotCorrectExeption(
-							"bytes of password too long than " + PHONE_MAX_SIZE);
+							"bytes of password too long than " + Constant.PHONE_MAX_SIZE);
 				}
 				if (pData[i] == 0) {
 					dataPhone = Arrays.copyOfRange(pData, index, i);
@@ -140,15 +139,15 @@ public final class SignUpMessage extends AbstractMessage {
 
 			case Status.CREATE_NEW:
 				String username = this.username.substring(0,
-						Math.min(this.username.length(), USERNAME_MAX_SIZE));
+						Math.min(this.username.length(), Constant.USERNAME_MAX_SIZE));
 				byte[] dataOfUsername = MessageBase.Util
 						.toZeroEndBytes(username);
 				String password = this.password.substring(0,
-						Math.min(this.password.length(), PASSWORD_MAX_SIZE));
+						Math.min(this.password.length(), Constant.PASSWORD_MAX_SIZE));
 				byte[] dataOfPassword = MessageBase.Util
 						.toZeroEndBytes(password);
 				String phone = this.phone.substring(0,
-						Math.min(PHONE_MAX_SIZE, this.phone.length()));
+						Math.min(Constant.PHONE_MAX_SIZE, this.phone.length()));
 				byte[] dataOfPhone = MessageBase.Util.toZeroEndBytes(phone);
 				result = new byte[dataOfPhone.length + dataOfPassword.length
 						+ dataOfUsername.length + 1];
@@ -185,7 +184,7 @@ public final class SignUpMessage extends AbstractMessage {
 	 */
 	@Override
 	public void processMessage() {
-		// TODO Auto-generated method stub
+		
 
 	}
 

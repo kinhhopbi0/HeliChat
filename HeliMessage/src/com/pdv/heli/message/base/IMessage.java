@@ -27,4 +27,5 @@ public interface IMessage {
 
 	public void setMessageMode(MessageMode mode);
 
+
 }

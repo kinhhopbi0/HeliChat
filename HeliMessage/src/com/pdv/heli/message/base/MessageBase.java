@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 import com.pdv.heli.message.common.MessageId;
 import com.pdv.heli.message.common.MessageMode;
+import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
+import com.pdv.heli.message.detail.SignInMessage;
 import com.pdv.heli.message.detail.SignUpMessage;
 import com.pdv.heli.message.detail.TextMessage;
 
@@ -65,19 +67,26 @@ public class MessageBase extends AbstractMessage {
     public void processMessage(){
         throw new UnsupportedOperationException("Not supported yet");
     }
+    
+   
     public IMessage getDetailMessage() throws MessageNotCorrectExeption{
-        if(this.getMessageMode() == MessageMode.SEND){
-            throw new UnsupportedOperationException("Not supported yet");
-        }
+        
         IMessage message = null;
         switch (mMid){
-            case MessageId.TEXT_MESSAGE_MID:
+            case MessageId.TEXT_MESSAGE_MID:            	
                 message = new TextMessage(this);
                 break;
             case MessageId.SIGN_UP_MID:
             	message = new SignUpMessage(this);
             	break;
+            case MessageId.CONFIRM_PASSCODE:
+            	message = new ConfirmPasscodeMsg(this);
+            	break;
+            case MessageId.SIGN_IN_MID:
+            	message = new SignInMessage(this);
+            	break;
             default:
+            	 // TODO Message Base update code after create new message
                 return null;
         }
         message.fromBytes(mData);

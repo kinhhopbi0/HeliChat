@@ -1,6 +1,7 @@
 package com.phamvinh.alo.server.common;
 
 import java.util.Random;
+import java.util.UUID;
 
 public class RandomString {
 	private static final char[] symbols;
@@ -37,5 +38,8 @@ public class RandomString {
 		  for (int idx = 0; idx < buf.length; ++idx) 
 		      buf[idx] = numbers[random.nextInt(numbers.length)];
 		    return new String(buf);
+	  }
+	  public static String getUUIDToken(){
+		  return UUID.randomUUID().toString();
 	  }
 }

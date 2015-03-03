@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Heli.Theme.Light" parent="@android:style/Theme.Material.Light"></style>
-
+    <style name="Heli.Theme.Light" parent="@style/Theme.AppCompat.Light">
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+    </style>
+	<style name="Heli.Theme.Home" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
+        <item name="colorPrimaryDark">#E65100</item>
+        <item name="android:colorPrimary">@color/Orange</item>    
+     	<item name="android:statusBarColor">@android:color/transparent</item>
+     	<item name="@android:windowTranslucentStatus">true</item>
+    </style>
+    
     <style name="Heli.Theme.StartFirstActivity" parent="@android:style/Theme.Material.Light.NoActionBar">
         <item name="android:textAllCaps">false</item>        
         <item name="android:colorPrimary">@color/first_activity_colorPrimary</item>
@@ -10,7 +19,10 @@
         <item name="android:colorAccent">#E65100</item>
     </style>
 
-    <style name="Heli.Theme.PinkButton" parent="@style/Heli.Theme.Light">
+    <style name="PinkButton" parent="@android:style/Widget.Material.Button">     
+        
+    </style>
+    <style name="PinkButtonTheme" parent="@style/Heli.Theme.Light">
         <item name="android:colorButtonNormal">@color/DeepPink</item>
         <item name="android:textColor">@color/WhiteSmoke</item>
     </style>

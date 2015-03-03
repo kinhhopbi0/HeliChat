@@ -13,13 +13,14 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 	public static final byte MID = MessageId.CONFIRM_PASSCODE;
 	private byte status = Status.CONFIRM;
 	public static final int PASSCODE_SIZE = 6;
-	private String passcode;
+	private String verifyCode;
 
 	public static class Status {
 		public static final byte CONFIRM = 0x01;
 		public static final byte SUCCESS = 0x02;
 		public static final byte NOT_MATCHES = 0x03;
 		public static final byte OTHER_ERROR = 0x04;
+		public static final byte ACCOUNT_EXIST = 0x05;
 	}
 
 	public ConfirmPasscodeMsg(IMessage pMessage) {
@@ -38,16 +39,18 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 			this.status = status;
 			switch (status) {
 			case Status.CONFIRM:
-				this.passcode = new String(Arrays.copyOfRange(pData, index, PASSCODE_SIZE+index+1));
+				byte[] dataOfPasscode = Arrays.copyOfRange(pData, index, PASSCODE_SIZE+index);
+				this.verifyCode = new String(dataOfPasscode).trim();
 				break;
 			case Status.SUCCESS:
 				
 				break;
 			case Status.NOT_MATCHES:
-				
+			case Status.ACCOUNT_EXIST:
+			case Status.OTHER_ERROR:
 				break;
 			default:
-				throw new MessageNotCorrectExeption("status " + status
+				throw new MessageNotCorrectExeption(this.getClass()+" status " + status
 						+ " no defined");
 
 			}
@@ -63,14 +66,14 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 			byte[] data2Send = null;
 			if (status == Status.CONFIRM) {
 				byte[] dataOfPasscode = MessageBase.Util
-						.toZeroEndBytes(passcode);
+						.toZeroEndBytes(verifyCode);
 				data2Send = new byte[dataOfPasscode.length + 1];
 				int index = 0;
 				data2Send[index++] = status;
 				System.arraycopy(dataOfPasscode, 0, data2Send, index,
 						dataOfPasscode.length);
 			} else {
-				data2Send = new byte[status];
+				data2Send = new byte[]{status};
 			}
 			
 			return data2Send;
@@ -81,7 +84,7 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 
 	@Override
 	public void processMessage() {
-		// TODO Auto-generated method stub
+		
 
 	}
 	@Override
@@ -94,17 +97,20 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 	}
 
 	public String getPasscode() {
-		return passcode;
+		return verifyCode;
 	}
 
-	public void setPasscode(String pPasscode) {
-		passcode = pPasscode;
+	public void setPasscode(String pPasscode) throws Exception {
+		if(pPasscode.length() != 6){
+			throw new Exception("Passcode length must be 6");
+		}
+		verifyCode = pPasscode;
 	}
 
 	@Override
 	public String toString() {
 		return "ConfirmPasscodeMsg [status=" + status + ", passcode="
-				+ passcode + "]";
+				+ verifyCode + "]";
 	}
 
 	public byte getStatus() {

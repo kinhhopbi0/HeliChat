@@ -1,82 +1,846 @@
-20150226105729218 |main                 |AloServer           :56|I| Server is starting ...
-20150226105729314 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226110132665 |-/192.168.56.1:52051 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52051
-20150226110132673 |-/192.168.56.1:52051 |MessageProcess      :43|I| new message with MID:3
-20150226110132676 |-/192.168.56.1:52051 |MessageProcess      :105|I| Client /192.168.56.1:52051 request create new account: phone:93,AF1678155662, 
-20150226110132933 |-/192.168.56.1:52051 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226110156618 |-/192.168.56.1:52051 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52051
-20150226110156619 |-/192.168.56.1:52051 |MessageProcess      :43|I| new message with MID:5
-20150226110156620 |-/192.168.56.1:52051 |MessageProcess      :74|I| phone number {} request confirm passcode
-20150226110156697 |-/192.168.56.1:52051 |DbAction            :186|E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'pPasscode' at row 220
-20150226110524541 |-/192.168.56.1:52077 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52077
-20150226110524541 |-/192.168.56.1:52077 |MessageProcess      :43|I| new message with MID:3
-20150226110524542 |-/192.168.56.1:52077 |MessageProcess      :105|I| Client /192.168.56.1:52077 request create new account: phone:93,AF1678155662, 
-20150226110535528 |-/192.168.56.1:52077 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52077
-20150226110535529 |-/192.168.56.1:52077 |MessageProcess      :43|I| new message with MID:5
-20150226110535529 |-/192.168.56.1:52077 |MessageProcess      :74|I| phone number {} request confirm passcode
-20150226110535560 |-/192.168.56.1:52077 |DbAction            :186|E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'pPasscode' at row 220
-20150226110624222 |-/192.168.56.1:52084 |ServerManager       :54|I| receive 28bytes from /192.168.56.1:52084
-20150226110624223 |-/192.168.56.1:52084 |MessageProcess      :43|I| new message with MID:3
-20150226110624224 |-/192.168.56.1:52084 |MessageProcess      :105|I| Client /192.168.56.1:52084 request create new account: phone:93,AF1678155662, 
-20150226110636556 |-/192.168.56.1:52084 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52084
-20150226110636556 |-/192.168.56.1:52084 |MessageProcess      :43|I| new message with MID:5
-20150226110636556 |-/192.168.56.1:52084 |MessageProcess      :74|I| phone number {} request confirm passcode
-20150226110636578 |-/192.168.56.1:52084 |DbAction            :186|E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'pPasscode' at row 220
-20150226110710617 |main                 |AloServer           :56|I| Server is starting ...
-20150226110710639 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226110732103 |-/192.168.56.1:52093 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52093
-20150226110732108 |-/192.168.56.1:52093 |MessageProcess      :43|I| new message with MID:3
-20150226110732111 |-/192.168.56.1:52093 |MessageProcess      :105|I| Client /192.168.56.1:52093 request create new account: phone:93,AF1678155662, 
-20150226110732196 |-/192.168.56.1:52093 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226110735476 |-/192.168.56.1:52093 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52093
-20150226110735476 |-/192.168.56.1:52093 |MessageProcess      :43|I| new message with MID:5
-20150226110735478 |-/192.168.56.1:52093 |MessageProcess      :74|I| phone number {} request confirm passcode
-20150226110943487 |-/192.168.56.1:52093 |DbAction            :186|E| Create account :com.mysql.jdbc.MysqlDataTruncation: Data truncation: Data too long for column 'pPasscode' at row 220
-20150226111141541 |-/192.168.56.1:52104 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52104
-20150226111141541 |-/192.168.56.1:52104 |MessageProcess      :43|I| new message with MID:3
-20150226111141542 |-/192.168.56.1:52104 |MessageProcess      :105|I| Client /192.168.56.1:52104 request create new account: phone:93,AF1678155662, 
-20150226111151374 |-/192.168.56.1:52104 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52104
-20150226111151374 |-/192.168.56.1:52104 |MessageProcess      :43|I| new message with MID:5
-20150226111435341 |-/192.168.56.1:52104 |MessageProcess      :74|I| phone number {} request confirm passcode
-20150226111740375 |main                 |AloServer           :56|I| Server is starting ...
-20150226111740398 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226112238195 |-/192.168.56.1:52132 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52132
-20150226112238203 |-/192.168.56.1:52132 |MessageProcess      :43|I| new message with MID:3
-20150226112238205 |-/192.168.56.1:52132 |MessageProcess      :105|I| Client /192.168.56.1:52132 request create new account: phone:93,AF1678155662, 
-20150226112238253 |-/192.168.56.1:52132 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226112241594 |-/192.168.56.1:52132 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52132
-20150226112241594 |-/192.168.56.1:52132 |MessageProcess      :43|I| new message with MID:5
-20150226112315158 |-/192.168.56.1:52132 |MessageProcess      :74|I| phone number 434343 request confirm passcode
-20150226112633640 |main                 |AloServer           :56|I| Server is starting ...
-20150226112633659 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226112636108 |main                 |AloServer           :56|I| Server is starting ...
-20150226112636119 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind
-20150226112658015 |main                 |AloServer           :56|I| Server is starting ...
-20150226112658039 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226112718750 |-/192.168.56.1:52152 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52152
-20150226112718756 |-/192.168.56.1:52152 |MessageProcess      :43|I| new message with MID:3
-20150226112718760 |-/192.168.56.1:52152 |MessageProcess      :105|I| Client /192.168.56.1:52152 request create new account: phone:93,AF1678155662, 
-20150226112718829 |-/192.168.56.1:52152 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226112722410 |-/192.168.56.1:52152 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52152
-20150226112722410 |-/192.168.56.1:52152 |MessageProcess      :43|I| new message with MID:5
-20150226112729976 |-/192.168.56.1:52152 |MessageProcess      :74|I| phone number 93,AF1678155662 request confirm passcode
-20150226112956903 |main                 |AloServer           :56|I| Server is starting ...
-20150226112956924 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226112959432 |main                 |AloServer           :56|I| Server is starting ...
-20150226112959445 |main                 |AloServer           :65|E| java.net.BindException: Address already in use: JVM_Bind
-20150226113021960 |-/192.168.56.1:52170 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52170
-20150226113021969 |-/192.168.56.1:52170 |MessageProcess      :43|I| new message with MID:3
-20150226113021974 |-/192.168.56.1:52170 |MessageProcess      :105|I| Client /192.168.56.1:52170 request create new account: phone:93,AF1678155662, 
-20150226113022036 |-/192.168.56.1:52170 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226113025196 |-/192.168.56.1:52170 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52170
-20150226113025196 |-/192.168.56.1:52170 |MessageProcess      :43|I| new message with MID:5
-20150226113034441 |-/192.168.56.1:52170 |MessageProcess      :74|I| phone number 93,AF1678155662 request confirm passcode
-20150226113210686 |main                 |AloServer           :56|I| Server is starting ...
-20150226113210696 |main                 |AloServer           :62|I| Server listening on: 0.0.0.0/0.0.0.0:9090 
-20150226113300116 |-/192.168.56.1:52184 |ServerManager       :54|I| receive 26bytes from /192.168.56.1:52184
-20150226113300121 |-/192.168.56.1:52184 |MessageProcess      :43|I| new message with MID:3
-20150226113300123 |-/192.168.56.1:52184 |MessageProcess      :105|I| Client /192.168.56.1:52184 request create new account: phone:93,AF1678155662, 
-20150226113300160 |-/192.168.56.1:52184 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
-20150226113306020 |-/192.168.56.1:52184 |ServerManager       :54|I| receive 9bytes from /192.168.56.1:52184
-20150226113306020 |-/192.168.56.1:52184 |MessageProcess      :43|I| new message with MID:5
-20150226113306021 |-/192.168.56.1:52184 |MessageProcess      :74|I| phone number 93,AF1678155662 request confirm passcode
+20150303000121130 |R-192.168.1.33:53894 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:53894
+20150303000121134 |R-192.168.1.33:53894 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303000121134 |R-192.168.1.33:53894 |MessageProcess      :48 |W| Message from /192.168.1.33:53894 error: com.pdv.heli.message.base.MessageNotCorrectExeption: Parse byte to signin exception java.lang.IllegalArgumentException: 3 > 2
+20150303000140550 |main                 |AloServer           :56 |I| Server is starting ...
+20150303000140576 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303000140723 |R-192.168.1.33:45630 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:45630
+20150303000140730 |R-192.168.1.33:45630 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303000309091 |R-192.168.1.33:45630 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303000309157 |R-192.168.1.33:45630 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303000309661 |R-192.168.1.33:45630 |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000309662 |R-192.168.1.33:45630 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000350150 |main                 |AloServer           :56 |I| Server is starting ...
+20150303000350162 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303000353026 |R-192.168.1.33:60290 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:60290
+20150303000353035 |R-192.168.1.33:60290 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303000353042 |R-192.168.1.33:60290 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303000353094 |R-192.168.1.33:60290 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303000353411 |R-192.168.1.33:60290 |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000353412 |R-192.168.1.33:60290 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000419240 |R-192.168.1.33:35241 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:35241
+20150303000419241 |R-192.168.1.33:35241 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303000419242 |R-192.168.1.33:35241 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303000419302 |R-192.168.1.33:35241 |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000419303 |R-192.168.1.33:35241 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000427367 |R-192.168.1.33:35241 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:35241
+20150303000427367 |R-192.168.1.33:35241 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303000427368 |R-192.168.1.33:35241 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303000427406 |R-192.168.1.33:35241 |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000427406 |R-192.168.1.33:35241 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000452431 |R-127.0.0.1:54826    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:54826
+20150303000452432 |R-127.0.0.1:54826    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 53, 51, 97, 101, 51, 49, 54, 50, 45, 102, 54, 97, 102, 45, 52, 99, 50, 50, 45, 97, 53, 102, 100, 45, 54, 98, 102, 99, 102, 57, 51, 48, 56, 53, 50, 97, 0]
+20150303000452433 |R-127.0.0.1:54826    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:53ae3162-f6af-4c22-a5fd-6bfcf930852a
+20150303000452466 |R-127.0.0.1:54826    |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000452466 |R-127.0.0.1:54826    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000522601 |R-127.0.0.1:54838    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:54838
+20150303000522603 |R-127.0.0.1:54838    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 53, 51, 97, 101, 51, 49, 54, 50, 45, 102, 54, 97, 102, 45, 52, 99, 50, 50, 45, 97, 53, 102, 100, 45, 54, 98, 102, 99, 102, 57, 51, 48, 56, 53, 50, 97, 0]
+20150303000522604 |R-127.0.0.1:54838    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:53ae3162-f6af-4c22-a5fd-6bfcf930852a
+20150303000522670 |R-127.0.0.1:54838    |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000522671 |R-127.0.0.1:54838    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000558091 |R-127.0.0.1:54861    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:54861
+20150303000558092 |R-127.0.0.1:54861    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 53, 51, 97, 101, 51, 49, 54, 50, 45, 102, 54, 97, 102, 45, 52, 99, 50, 50, 45, 97, 53, 102, 100, 45, 54, 98, 102, 99, 102, 57, 51, 48, 56, 53, 50, 97, 0]
+20150303000558092 |R-127.0.0.1:54861    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:53ae3162-f6af-4c22-a5fd-6bfcf930852a
+20150303000558123 |R-127.0.0.1:54861    |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000558124 |R-127.0.0.1:54861    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000610986 |R-127.0.0.1:54876    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:54876
+20150303000610988 |R-127.0.0.1:54876    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 53, 51, 97, 101, 51, 49, 54, 50, 45, 102, 54, 97, 102, 45, 52, 99, 50, 50, 45, 97, 53, 102, 100, 45, 54, 98, 102, 99, 102, 57, 51, 48, 56, 53, 50, 97, 0]
+20150303000610988 |R-127.0.0.1:54876    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:53ae3162-f6af-4c22-a5fd-6bfcf930852a
+20150303000611017 |R-127.0.0.1:54876    |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000611018 |R-127.0.0.1:54876    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303000655037 |R-127.0.0.1:54907    |ServerIOManager     :51 |I| receive 25bytes from /127.0.0.1:54907
+20150303000655038 |R-127.0.0.1:54907    |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 57, 51, 44, 65, 70, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303000655038 |R-127.0.0.1:54907    |ProcessSignIn       :31 |I| Client request sign in new session with phone:93,AF1678155662
+20150303000655105 |R-127.0.0.1:54907    |ProcessSignIn       :39 |I| Client request new sign in with phone:93,AF1678155662 password matches
+20150303000655693 |R-127.0.0.1:54907    |ProcessSignIn       :45 |I| Genarate token 652cc162-9e70-4f66-be8b-0fb0ffcc725d, user_id 8 for user of phone 93,AF1678155662
+20150303000655841 |R-127.0.0.1:54907    |ProcessSignIn       :56 |I| save new login info for phone 93,AF1678155662 success
+20150303000655843 |R-127.0.0.1:54907    |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303000933381 |R-127.0.0.1:54986    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:54986
+20150303000933381 |R-127.0.0.1:54986    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303000933382 |R-127.0.0.1:54986    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303000933396 |R-127.0.0.1:54986    |ProcessSignIn       :109|I| Client request new sign in with user id:8 old token not matches
+20150303000933397 |R-127.0.0.1:54986    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303001256135 |main                 |AloServer           :56 |I| Server is starting ...
+20150303001256157 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303001304439 |R-127.0.0.1:55085    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55085
+20150303001304447 |R-127.0.0.1:55085    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303001309147 |R-127.0.0.1:55085    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303001314390 |R-127.0.0.1:55085    |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303001459602 |R-127.0.0.1:55085    |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:8 token 652cc162-9e70-4f66-be8b-0fb0ffcc725d matches 
+20150303001508722 |R-127.0.0.1:55085    |ProcessSignIn       :99 |I| Client request reconnect sign in with user id:[8, 652cc162-9e70-4f66-be8b-0fb0ffcc725d]: save success login info with new token
+20150303001508727 |R-127.0.0.1:55085    |MessageProcess      :87 |E| create byte from message to send to /127.0.0.1:55085 error:com.pdv.heli.message.base.MessageNotCorrectExeption: java.lang.NullPointerException
+20150303001618485 |main                 |AloServer           :56 |I| Server is starting ...
+20150303001618495 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303001629593 |R-127.0.0.1:55180    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55180
+20150303001629600 |R-127.0.0.1:55180    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303001629604 |R-127.0.0.1:55180    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303001629634 |R-127.0.0.1:55180    |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303001629853 |R-127.0.0.1:55180    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303001629853 |R-127.0.0.1:55180    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303001654357 |R-127.0.0.1:55180    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55180
+20150303001654357 |R-127.0.0.1:55180    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303001654358 |R-127.0.0.1:55180    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303001654381 |R-127.0.0.1:55180    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303001654381 |R-127.0.0.1:55180    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303001759520 |main                 |AloServer           :56 |I| Server is starting ...
+20150303001759536 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303001816395 |R-127.0.0.1:55239    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55239
+20150303001816401 |R-127.0.0.1:55239    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303001816407 |R-127.0.0.1:55239    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303001816437 |R-127.0.0.1:55239    |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303001816737 |R-127.0.0.1:55239    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303001816738 |R-127.0.0.1:55239    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303002146900 |R-127.0.0.1:55335    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55335
+20150303002146901 |R-127.0.0.1:55335    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002146901 |R-127.0.0.1:55335    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002146965 |R-127.0.0.1:55335    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002146966 |R-127.0.0.1:55335    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303002725207 |R-127.0.0.1:55483    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55483
+20150303002725208 |R-127.0.0.1:55483    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002725209 |R-127.0.0.1:55483    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002725269 |R-127.0.0.1:55483    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002725270 |R-127.0.0.1:55483    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303002756371 |R-127.0.0.1:55506    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55506
+20150303002756372 |R-127.0.0.1:55506    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002756372 |R-127.0.0.1:55506    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002756406 |R-127.0.0.1:55506    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002756407 |R-127.0.0.1:55506    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303002810973 |R-127.0.0.1:55518    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55518
+20150303002810974 |R-127.0.0.1:55518    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002810974 |R-127.0.0.1:55518    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002811027 |R-127.0.0.1:55518    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002811027 |R-127.0.0.1:55518    |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303002833416 |main                 |AloServer           :56 |I| Server is starting ...
+20150303002833426 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303002915710 |R-127.0.0.1:55554    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55554
+20150303002915716 |R-127.0.0.1:55554    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002915720 |R-127.0.0.1:55554    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002915752 |R-127.0.0.1:55554    |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303002915981 |R-127.0.0.1:55554    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002915982 |R-127.0.0.1:55554    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303002949059 |R-127.0.0.1:55554    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55554
+20150303002949060 |R-127.0.0.1:55554    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303002949060 |R-127.0.0.1:55554    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303002949120 |R-127.0.0.1:55554    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303002949121 |R-127.0.0.1:55554    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003101404 |R-127.0.0.1:55605    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55605
+20150303003101405 |R-127.0.0.1:55605    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003101405 |R-127.0.0.1:55605    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003101431 |R-127.0.0.1:55605    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003101432 |R-127.0.0.1:55605    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003113646 |R-192.168.1.33:44688 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:44688
+20150303003113647 |R-192.168.1.33:44688 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303003113647 |R-192.168.1.33:44688 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303003113733 |R-192.168.1.33:44688 |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003113733 |R-192.168.1.33:44688 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003141225 |R-127.0.0.1:55646    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55646
+20150303003141226 |R-127.0.0.1:55646    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003141227 |R-127.0.0.1:55646    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003141254 |R-127.0.0.1:55646    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003141255 |R-127.0.0.1:55646    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003157992 |R-127.0.0.1:55659    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55659
+20150303003157992 |R-127.0.0.1:55659    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003157993 |R-127.0.0.1:55659    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003158044 |R-127.0.0.1:55659    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003158044 |R-127.0.0.1:55659    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003353644 |R-127.0.0.1:55718    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55718
+20150303003353645 |R-127.0.0.1:55718    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003353645 |R-127.0.0.1:55718    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003353676 |R-127.0.0.1:55718    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003353677 |R-127.0.0.1:55718    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003535201 |R-127.0.0.1:55769    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55769
+20150303003535202 |R-127.0.0.1:55769    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003535202 |R-127.0.0.1:55769    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003535268 |R-127.0.0.1:55769    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003535269 |R-127.0.0.1:55769    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303003700358 |R-127.0.0.1:55816    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55816
+20150303003700359 |R-127.0.0.1:55816    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303003700359 |R-127.0.0.1:55816    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303003700408 |R-127.0.0.1:55816    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303003700409 |R-127.0.0.1:55816    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303004130555 |R-127.0.0.1:55937    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:55937
+20150303004130556 |R-127.0.0.1:55937    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303004130556 |R-127.0.0.1:55937    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303004130580 |R-127.0.0.1:55937    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303004130581 |R-127.0.0.1:55937    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303004433234 |R-192.168.1.33:50197 |ServerIOManager     :51 |I| receive 43bytes from /192.168.1.33:50197
+20150303004433235 |R-192.168.1.33:50197 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 56, 50, 49, 97, 98, 48, 50, 97, 45, 51, 98, 101, 56, 45, 52, 53, 102, 54, 45, 56, 48, 100, 100, 45, 57, 98, 52, 52, 99, 57, 102, 101, 51, 52, 102, 53, 0]
+20150303004433235 |R-192.168.1.33:50197 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:821ab02a-3be8-45f6-80dd-9b44c9fe34f5
+20150303004433290 |R-192.168.1.33:50197 |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303004433291 |R-192.168.1.33:50197 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303004611065 |R-127.0.0.1:56057    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:56057
+20150303004611066 |R-127.0.0.1:56057    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303004611067 |R-127.0.0.1:56057    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303004611150 |R-127.0.0.1:56057    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303004611151 |R-127.0.0.1:56057    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303004740600 |R-127.0.0.1:56096    |ServerIOManager     :51 |I| receive 43bytes from /127.0.0.1:56096
+20150303004740601 |R-127.0.0.1:56096    |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 54, 53, 50, 99, 99, 49, 54, 50, 45, 57, 101, 55, 48, 45, 52, 102, 54, 54, 45, 98, 101, 56, 98, 45, 48, 102, 98, 48, 102, 102, 99, 99, 55, 50, 53, 100, 0]
+20150303004740602 |R-127.0.0.1:56096    |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:652cc162-9e70-4f66-be8b-0fb0ffcc725d
+20150303004740623 |R-127.0.0.1:56096    |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303004740623 |R-127.0.0.1:56096    |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303084320409 |main                 |AloServer           :56 |I| Server is starting ...
+20150303084320452 |main                 |AloServer           :62 |I| Server listening on: 0.0.0.0/0.0.0.0:9293 
+20150303085035609 |main                 |AloServer           :56 |I| Server is starting ...
+20150303085035617 |main                 |AloServer           :65 |E| java.net.BindException: Address already in use: JVM_Bind
+20150303085422989 |192.168.100.13:50956 |ServerIOManager     :51 |I| receive 9bytes from /192.168.100.13:50956
+20150303085422997 |192.168.100.13:50956 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 57, 51, 44, 65, 70, 0, 0]
+20150303085423002 |192.168.100.13:50956 |ProcessSignIn       :31 |I| Client request sign in new session with phone:93,AF
+20150303085423260 |192.168.100.13:50956 |DbAccess            :105|I| Database ==> Login with MysqlDataSource
+20150303085423841 |192.168.100.13:50956 |ProcessSignIn       :65 |I| Client request reconnect sign in with phone:93,AF old token not matches
+20150303085423842 |192.168.100.13:50956 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303085603161 |192.168.100.13:40856 |ServerIOManager     :51 |I| receive 25bytes from /192.168.100.13:40856
+20150303085603162 |192.168.100.13:40856 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 57, 51, 44, 65, 70, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303085603162 |192.168.100.13:40856 |ProcessSignIn       :31 |I| Client request sign in new session with phone:93,AF1678155662
+20150303085603230 |192.168.100.13:40856 |ProcessSignIn       :39 |I| Client request new sign in with phone:93,AF1678155662 password matches
+20150303085603421 |192.168.100.13:40856 |ProcessSignIn       :45 |I| Genarate token f90b46d8-116b-44cd-985c-5464b99d256f, user_id 8 for user of phone 93,AF1678155662
+20150303085603627 |192.168.100.13:40856 |ProcessSignIn       :56 |I| save new login info for phone 93,AF1678155662 success
+20150303085603630 |192.168.100.13:40856 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 8, 0, 0, 0, 102, 57, 48, 98, 52, 54, 100, 56, 45, 49, 49, 54, 98, 45, 52, 52, 99, 100, 45, 57, 56, 53, 99, 45, 53, 52, 54, 52, 98, 57, 57, 100, 50, 53, 54, 102, 0]
+20150303092808818 |192.168.100.13:53058 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:53058
+20150303092808818 |192.168.100.13:53058 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 102, 57, 48, 98, 52, 54, 100, 56, 45, 49, 49, 54, 98, 45, 52, 52, 99, 100, 45, 57, 56, 53, 99, 45, 53, 52, 54, 52, 98, 57, 57, 100, 50, 53, 54, 102, 0]
+20150303092808818 |192.168.100.13:53058 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:f90b46d8-116b-44cd-985c-5464b99d256f
+20150303092808842 |192.168.100.13:53058 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:8 token f90b46d8-116b-44cd-985c-5464b99d256f matches 
+20150303092808905 |192.168.100.13:53058 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[8, f90b46d8-116b-44cd-985c-5464b99d256f]: save success login info with new token
+20150303092808905 |192.168.100.13:53058 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 8, 0, 0, 0, 51, 56, 102, 49, 54, 54, 50, 49, 45, 56, 101, 53, 102, 45, 52, 52, 48, 51, 45, 98, 54, 99, 57, 45, 49, 99, 52, 102, 56, 56, 97, 102, 99, 57, 98, 54, 0]
+20150303092902674 |192.168.100.13:52478 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:52478
+20150303092902675 |192.168.100.13:52478 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 51, 56, 102, 49, 54, 54, 50, 49, 45, 56, 101, 53, 102, 45, 52, 52, 48, 51, 45, 98, 54, 99, 57, 45, 49, 99, 52, 102, 56, 56, 97, 102, 99, 57, 98, 54, 0]
+20150303092902676 |192.168.100.13:52478 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:38f16621-8e5f-4403-b6c9-1c4f88afc9b6
+20150303092902698 |192.168.100.13:52478 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:8 token 38f16621-8e5f-4403-b6c9-1c4f88afc9b6 matches 
+20150303092902775 |192.168.100.13:52478 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[8, 38f16621-8e5f-4403-b6c9-1c4f88afc9b6]: save success login info with new token
+20150303092902775 |192.168.100.13:52478 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 8, 0, 0, 0, 101, 55, 97, 53, 52, 51, 101, 101, 45, 56, 51, 57, 97, 45, 52, 53, 54, 101, 45, 98, 56, 102, 50, 45, 52, 57, 97, 53, 48, 98, 53, 50, 54, 98, 97, 50, 0]
+20150303094026510 |192.168.100.13:44120 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:44120
+20150303094026511 |192.168.100.13:44120 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 101, 55, 97, 53, 52, 51, 101, 101, 45, 56, 51, 57, 97, 45, 52, 53, 54, 101, 45, 98, 56, 102, 50, 45, 52, 57, 97, 53, 48, 98, 53, 50, 54, 98, 97, 50, 0]
+20150303094026511 |192.168.100.13:44120 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:e7a543ee-839a-456e-b8f2-49a50b526ba2
+20150303094026542 |192.168.100.13:44120 |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303094026543 |192.168.100.13:44120 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303094217552 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:36661
+20150303094217552 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 8, 0, 0, 0, 101, 55, 97, 53, 52, 51, 101, 101, 45, 56, 51, 57, 97, 45, 52, 53, 54, 101, 45, 98, 56, 102, 50, 45, 52, 57, 97, 53, 48, 98, 53, 50, 54, 98, 97, 50, 0]
+20150303094217552 |192.168.100.13:36661 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:8, old token:e7a543ee-839a-456e-b8f2-49a50b526ba2
+20150303094217570 |192.168.100.13:36661 |ProcessSignIn       :110|I| Client request new sign in with user id:8 old token not matches
+20150303094217571 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303094306232 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 20bytes from /192.168.100.13:36661
+20150303094306233 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303094306234 |192.168.100.13:36661 |ProcessSignIn       :31 |I| Client request sign in new session with phone:1678155662
+20150303094306260 |192.168.100.13:36661 |ProcessSignIn       :65 |I| Client request reconnect sign in with phone:1678155662 old token not matches
+20150303094306260 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303094330754 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:36661
+20150303094330755 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303094330756 |192.168.100.13:36661 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303094330778 |192.168.100.13:36661 |ProcessSignIn       :65 |I| Client request reconnect sign in with phone:01678155662 old token not matches
+20150303094330779 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303094349700 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 22bytes from /192.168.100.13:36661
+20150303094349701 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=3 detail data :[1, 0, 49, 50, 51, 52, 53, 54, 0, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0]
+20150303094349727 |192.168.100.13:36661 |ProcessSignUp       :22 |I| Client /192.168.100.13:36661 request create new account: phone:01678155662, 
+20150303094349752 |192.168.100.13:36661 |ProcessSignUp       :46 |I| Phone 01678155662 sign up success step 1, save passcode:003626
+20150303094349753 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=3 detail data :[2]
+20150303094358599 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 9bytes from /192.168.100.13:36661
+20150303094358600 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=5 detail data :[1, 57, 53, 54, 49, 53, 52, 0]
+20150303094358601 |192.168.100.13:36661 |ProcessSignUp       :74 |I| phone number 01678155662 request confirm passcode
+20150303094358602 |192.168.100.13:36661 |ProcessSignUp       :109|I| Fail create new account for phone 01678155662, verify code not matches
+20150303094358603 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=5 detail data :[3]
+20150303094402266 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 9bytes from /192.168.100.13:36661
+20150303094402267 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=5 detail data :[1, 57, 53, 54, 49, 53, 52, 0]
+20150303094402268 |192.168.100.13:36661 |ProcessSignUp       :74 |I| phone number 01678155662 request confirm passcode
+20150303094402268 |192.168.100.13:36661 |ProcessSignUp       :109|I| Fail create new account for phone 01678155662, verify code not matches
+20150303094402269 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=5 detail data :[3]
+20150303094419171 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 9bytes from /192.168.100.13:36661
+20150303094419172 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=5 detail data :[1, 48, 48, 51, 54, 50, 54, 0]
+20150303094419173 |192.168.100.13:36661 |ProcessSignUp       :74 |I| phone number 01678155662 request confirm passcode
+20150303094419309 |192.168.100.13:36661 |ProcessSignUp       :93 |I| Finish create new account for phone 01678155662
+20150303094419310 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=5 detail data :[2]
+20150303094425470 |192.168.100.13:36661 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:36661
+20150303094425471 |192.168.100.13:36661 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303094425472 |192.168.100.13:36661 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303094425503 |192.168.100.13:36661 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303094425519 |192.168.100.13:36661 |ProcessSignIn       :45 |I| Genarate token e3faeb6b-64c8-47ad-81ce-7bb990c59d02, user_id 16 for user of phone 01678155662
+20150303094425609 |192.168.100.13:36661 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303094425609 |192.168.100.13:36661 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 101, 51, 102, 97, 101, 98, 54, 98, 45, 54, 52, 99, 56, 45, 52, 55, 97, 100, 45, 56, 49, 99, 101, 45, 55, 98, 98, 57, 57, 48, 99, 53, 57, 100, 48, 50, 0]
+20150303094659956 |192.168.100.13:54248 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:54248
+20150303094659956 |192.168.100.13:54248 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 101, 51, 102, 97, 101, 98, 54, 98, 45, 54, 52, 99, 56, 45, 52, 55, 97, 100, 45, 56, 49, 99, 101, 45, 55, 98, 98, 57, 57, 48, 99, 53, 57, 100, 48, 50, 0]
+20150303094659957 |192.168.100.13:54248 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:e3faeb6b-64c8-47ad-81ce-7bb990c59d02
+20150303094659978 |192.168.100.13:54248 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token e3faeb6b-64c8-47ad-81ce-7bb990c59d02 matches 
+20150303094700046 |192.168.100.13:54248 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, e3faeb6b-64c8-47ad-81ce-7bb990c59d02]: save success login info with new token
+20150303094700047 |192.168.100.13:54248 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 55, 48, 100, 97, 48, 99, 50, 45, 52, 50, 97, 51, 45, 52, 97, 99, 54, 45, 98, 99, 102, 99, 45, 53, 49, 55, 51, 51, 50, 97, 54, 102, 52, 99, 101, 0]
+20150303094853120 |192.168.100.13:33469 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:33469
+20150303094853121 |192.168.100.13:33469 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 55, 48, 100, 97, 48, 99, 50, 45, 52, 50, 97, 51, 45, 52, 97, 99, 54, 45, 98, 99, 102, 99, 45, 53, 49, 55, 51, 51, 50, 97, 54, 102, 52, 99, 101, 0]
+20150303094853121 |192.168.100.13:33469 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f70da0c2-42a3-4ac6-bcfc-517332a6f4ce
+20150303094853134 |192.168.100.13:33469 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f70da0c2-42a3-4ac6-bcfc-517332a6f4ce matches 
+20150303094853187 |192.168.100.13:33469 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f70da0c2-42a3-4ac6-bcfc-517332a6f4ce]: save success login info with new token
+20150303094853188 |192.168.100.13:33469 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 49, 57, 101, 97, 98, 100, 100, 99, 45, 55, 52, 50, 51, 45, 52, 52, 50, 57, 45, 56, 49, 102, 97, 45, 57, 54, 102, 48, 57, 52, 102, 98, 98, 48, 101, 99, 0]
+20150303095151528 |192.168.100.13:56604 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:56604
+20150303095151529 |192.168.100.13:56604 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 49, 57, 101, 97, 98, 100, 100, 99, 45, 55, 52, 50, 51, 45, 52, 52, 50, 57, 45, 56, 49, 102, 97, 45, 57, 54, 102, 48, 57, 52, 102, 98, 98, 48, 101, 99, 0]
+20150303095151529 |192.168.100.13:56604 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:19eabddc-7423-4429-81fa-96f094fbb0ec
+20150303095151542 |192.168.100.13:56604 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 19eabddc-7423-4429-81fa-96f094fbb0ec matches 
+20150303095151588 |192.168.100.13:56604 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 19eabddc-7423-4429-81fa-96f094fbb0ec]: save success login info with new token
+20150303095151588 |192.168.100.13:56604 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 54, 56, 54, 99, 98, 55, 57, 45, 100, 54, 56, 57, 45, 52, 49, 54, 49, 45, 98, 49, 99, 50, 45, 51, 50, 48, 102, 55, 97, 54, 102, 101, 54, 102, 49, 0]
+20150303095348010 |192.168.100.13:58967 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:58967
+20150303095348011 |192.168.100.13:58967 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 54, 56, 54, 99, 98, 55, 57, 45, 100, 54, 56, 57, 45, 52, 49, 54, 49, 45, 98, 49, 99, 50, 45, 51, 50, 48, 102, 55, 97, 54, 102, 101, 54, 102, 49, 0]
+20150303095348011 |192.168.100.13:58967 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:8686cb79-d689-4161-b1c2-320f7a6fe6f1
+20150303095348021 |192.168.100.13:58967 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 8686cb79-d689-4161-b1c2-320f7a6fe6f1 matches 
+20150303095348075 |192.168.100.13:58967 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 8686cb79-d689-4161-b1c2-320f7a6fe6f1]: save success login info with new token
+20150303095348076 |192.168.100.13:58967 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 48, 98, 51, 100, 51, 49, 98, 45, 57, 54, 53, 53, 45, 52, 97, 100, 57, 45, 56, 49, 54, 56, 45, 100, 48, 55, 102, 102, 49, 56, 55, 56, 50, 57, 97, 0]
+20150303095605753 |192.168.100.13:35849 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:35849
+20150303095605753 |192.168.100.13:35849 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 48, 98, 51, 100, 51, 49, 98, 45, 57, 54, 53, 53, 45, 52, 97, 100, 57, 45, 56, 49, 54, 56, 45, 100, 48, 55, 102, 102, 49, 56, 55, 56, 50, 57, 97, 0]
+20150303095605754 |192.168.100.13:35849 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f0b3d31b-9655-4ad9-8168-d07ff187829a
+20150303095605783 |192.168.100.13:35849 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f0b3d31b-9655-4ad9-8168-d07ff187829a matches 
+20150303095605845 |192.168.100.13:35849 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f0b3d31b-9655-4ad9-8168-d07ff187829a]: save success login info with new token
+20150303095605846 |192.168.100.13:35849 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 48, 55, 57, 54, 98, 48, 98, 49, 45, 102, 97, 55, 52, 45, 52, 51, 50, 102, 45, 57, 48, 53, 99, 45, 57, 52, 101, 98, 101, 49, 55, 49, 97, 99, 55, 55, 0]
+20150303095813149 |192.168.100.12:50925 |ServerIOManager     :51 |I| receive 20bytes from /192.168.100.12:50925
+20150303095813150 |192.168.100.12:50925 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303095813150 |192.168.100.12:50925 |ProcessSignIn       :31 |I| Client request sign in new session with phone:1678155662
+20150303095813203 |192.168.100.12:50925 |ProcessSignIn       :65 |I| Client request reconnect sign in with phone:1678155662 old token not matches
+20150303095813203 |192.168.100.12:50925 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303095818912 |192.168.100.12:50925 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.12:50925
+20150303095818913 |192.168.100.12:50925 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303095818915 |192.168.100.12:50925 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303095818933 |192.168.100.12:50925 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303095818946 |192.168.100.12:50925 |ProcessSignIn       :45 |I| Genarate token be2d74ed-b3ab-4c4a-ac95-588b219b956b, user_id 16 for user of phone 01678155662
+20150303095819011 |192.168.100.12:50925 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303095819012 |192.168.100.12:50925 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 98, 101, 50, 100, 55, 52, 101, 100, 45, 98, 51, 97, 98, 45, 52, 99, 52, 97, 45, 97, 99, 57, 53, 45, 53, 56, 56, 98, 50, 49, 57, 98, 57, 53, 54, 98, 0]
+20150303100227547 |192.168.100.12:51032 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:51032
+20150303100227547 |192.168.100.12:51032 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 98, 101, 50, 100, 55, 52, 101, 100, 45, 98, 51, 97, 98, 45, 52, 99, 52, 97, 45, 97, 99, 57, 53, 45, 53, 56, 56, 98, 50, 49, 57, 98, 57, 53, 54, 98, 0]
+20150303100227548 |192.168.100.12:51032 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:be2d74ed-b3ab-4c4a-ac95-588b219b956b
+20150303100227593 |192.168.100.12:51032 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token be2d74ed-b3ab-4c4a-ac95-588b219b956b matches 
+20150303100227652 |192.168.100.12:51032 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, be2d74ed-b3ab-4c4a-ac95-588b219b956b]: save success login info with new token
+20150303100227653 |192.168.100.12:51032 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 54, 51, 100, 54, 101, 97, 51, 45, 52, 100, 51, 100, 45, 52, 52, 57, 100, 45, 98, 51, 98, 49, 45, 101, 52, 97, 50, 52, 48, 53, 97, 50, 55, 52, 100, 0]
+20150303100411381 |192.168.100.12:51090 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:51090
+20150303100411381 |192.168.100.12:51090 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 54, 51, 100, 54, 101, 97, 51, 45, 52, 100, 51, 100, 45, 52, 52, 57, 100, 45, 98, 51, 98, 49, 45, 101, 52, 97, 50, 52, 48, 53, 97, 50, 55, 52, 100, 0]
+20150303100411382 |192.168.100.12:51090 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:963d6ea3-4d3d-449d-b3b1-e4a2405a274d
+20150303100411428 |192.168.100.12:51090 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 963d6ea3-4d3d-449d-b3b1-e4a2405a274d matches 
+20150303100411476 |192.168.100.12:51090 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 963d6ea3-4d3d-449d-b3b1-e4a2405a274d]: save success login info with new token
+20150303100411476 |192.168.100.12:51090 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 48, 100, 50, 99, 100, 55, 55, 52, 45, 49, 50, 51, 102, 45, 52, 48, 53, 98, 45, 97, 102, 56, 52, 45, 97, 49, 52, 101, 53, 102, 49, 49, 57, 57, 97, 56, 0]
+20150303100419412 |192.168.100.12:51096 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:51096
+20150303100419422 |192.168.100.12:51096 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 48, 100, 50, 99, 100, 55, 55, 52, 45, 49, 50, 51, 102, 45, 52, 48, 53, 98, 45, 97, 102, 56, 52, 45, 97, 49, 52, 101, 53, 102, 49, 49, 57, 57, 97, 56, 0]
+20150303100419423 |192.168.100.12:51096 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:0d2cd774-123f-405b-af84-a14e5f1199a8
+20150303100419433 |192.168.100.12:51096 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 0d2cd774-123f-405b-af84-a14e5f1199a8 matches 
+20150303100419506 |192.168.100.12:51096 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 0d2cd774-123f-405b-af84-a14e5f1199a8]: save success login info with new token
+20150303100419507 |192.168.100.12:51096 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303100954538 |192.168.100.13:54708 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:54708
+20150303100954539 |192.168.100.13:54708 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 48, 55, 57, 54, 98, 48, 98, 49, 45, 102, 97, 55, 52, 45, 52, 51, 50, 102, 45, 57, 48, 53, 99, 45, 57, 52, 101, 98, 101, 49, 55, 49, 97, 99, 55, 55, 0]
+20150303100954540 |192.168.100.13:54708 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:0796b0b1-fa74-432f-905c-94ebe171ac77
+20150303100954601 |192.168.100.13:54708 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303100954602 |192.168.100.13:54708 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303101055161 |192.168.100.13:54708 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:54708
+20150303101055162 |192.168.100.13:54708 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303101055163 |192.168.100.13:54708 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303101055221 |192.168.100.13:54708 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303101055236 |192.168.100.13:54708 |ProcessSignIn       :45 |I| Genarate token c2732308-cee7-47f4-9e72-3c62d4e0a651, user_id 16 for user of phone 01678155662
+20150303101055330 |192.168.100.13:54708 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303101055331 |192.168.100.13:54708 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 99, 50, 55, 51, 50, 51, 48, 56, 45, 99, 101, 101, 55, 45, 52, 55, 102, 52, 45, 57, 101, 55, 50, 45, 51, 99, 54, 50, 100, 52, 101, 48, 97, 54, 53, 49, 0]
+20150303102005113 |192.168.100.13:49121 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:49121
+20150303102005113 |192.168.100.13:49121 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 99, 50, 55, 51, 50, 51, 48, 56, 45, 99, 101, 101, 55, 45, 52, 55, 102, 52, 45, 57, 101, 55, 50, 45, 51, 99, 54, 50, 100, 52, 101, 48, 97, 54, 53, 49, 0]
+20150303102005113 |192.168.100.13:49121 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:c2732308-cee7-47f4-9e72-3c62d4e0a651
+20150303102005159 |192.168.100.13:49121 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token c2732308-cee7-47f4-9e72-3c62d4e0a651 matches 
+20150303102005267 |192.168.100.13:49121 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, c2732308-cee7-47f4-9e72-3c62d4e0a651]: save success login info with new token
+20150303102005267 |192.168.100.13:49121 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 99, 53, 101, 99, 57, 52, 51, 45, 98, 102, 100, 48, 45, 52, 48, 57, 55, 45, 56, 48, 52, 97, 45, 50, 101, 52, 97, 55, 98, 48, 49, 49, 48, 102, 100, 0]
+20150303102213291 |192.168.100.13:39801 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:39801
+20150303102213291 |192.168.100.13:39801 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 99, 50, 55, 51, 50, 51, 48, 56, 45, 99, 101, 101, 55, 45, 52, 55, 102, 52, 45, 57, 101, 55, 50, 45, 51, 99, 54, 50, 100, 52, 101, 48, 97, 54, 53, 49, 0]
+20150303102213292 |192.168.100.13:39801 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:c2732308-cee7-47f4-9e72-3c62d4e0a651
+20150303102213334 |192.168.100.13:39801 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303102213335 |192.168.100.13:39801 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303102238000 |192.168.100.13:39801 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:39801
+20150303102238001 |192.168.100.13:39801 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303102238001 |192.168.100.13:39801 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303102238013 |192.168.100.13:39801 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303102238033 |192.168.100.13:39801 |ProcessSignIn       :45 |I| Genarate token 83d2b07f-123c-4ad7-ba1c-793486acb93b, user_id 16 for user of phone 01678155662
+20150303102238113 |192.168.100.13:39801 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303102238114 |192.168.100.13:39801 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 51, 100, 50, 98, 48, 55, 102, 45, 49, 50, 51, 99, 45, 52, 97, 100, 55, 45, 98, 97, 49, 99, 45, 55, 57, 51, 52, 56, 54, 97, 99, 98, 57, 51, 98, 0]
+20150303103058852 |192.168.100.13:40689 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:40689
+20150303103058853 |192.168.100.13:40689 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 51, 100, 50, 98, 48, 55, 102, 45, 49, 50, 51, 99, 45, 52, 97, 100, 55, 45, 98, 97, 49, 99, 45, 55, 57, 51, 52, 56, 54, 97, 99, 98, 57, 51, 98, 0]
+20150303103058853 |192.168.100.13:40689 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:83d2b07f-123c-4ad7-ba1c-793486acb93b
+20150303103058895 |192.168.100.13:40689 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 83d2b07f-123c-4ad7-ba1c-793486acb93b matches 
+20150303103058967 |192.168.100.13:40689 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 83d2b07f-123c-4ad7-ba1c-793486acb93b]: save success login info with new token
+20150303103058968 |192.168.100.13:40689 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 101, 97, 48, 53, 51, 55, 54, 52, 45, 54, 49, 101, 51, 45, 52, 98, 48, 102, 45, 56, 52, 98, 97, 45, 102, 52, 101, 53, 98, 51, 55, 49, 100, 98, 100, 55, 0]
+20150303103430066 |192.168.100.13:39165 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:39165
+20150303103430066 |192.168.100.13:39165 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 101, 97, 48, 53, 51, 55, 54, 52, 45, 54, 49, 101, 51, 45, 52, 98, 48, 102, 45, 56, 52, 98, 97, 45, 102, 52, 101, 53, 98, 51, 55, 49, 100, 98, 100, 55, 0]
+20150303103430067 |192.168.100.13:39165 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:ea053764-61e3-4b0f-84ba-f4e5b371dbd7
+20150303103430095 |192.168.100.13:39165 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token ea053764-61e3-4b0f-84ba-f4e5b371dbd7 matches 
+20150303103430177 |192.168.100.13:39165 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, ea053764-61e3-4b0f-84ba-f4e5b371dbd7]: save success login info with new token
+20150303103430178 |192.168.100.13:39165 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 49, 99, 57, 97, 48, 48, 51, 45, 100, 48, 51, 99, 45, 52, 52, 98, 56, 45, 98, 57, 57, 56, 45, 98, 55, 54, 57, 53, 57, 49, 101, 54, 101, 57, 99, 0]
+20150303103611970 |192.168.100.13:51375 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:51375
+20150303103611971 |192.168.100.13:51375 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303103611972 |192.168.100.13:51375 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303103611992 |192.168.100.13:51375 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303103612035 |192.168.100.13:51375 |ProcessSignIn       :45 |I| Genarate token 96e191c3-6020-463a-abee-478f4cb1cf9a, user_id 16 for user of phone 01678155662
+20150303103612127 |192.168.100.13:51375 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303103612128 |192.168.100.13:51375 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 54, 101, 49, 57, 49, 99, 51, 45, 54, 48, 50, 48, 45, 52, 54, 51, 97, 45, 97, 98, 101, 101, 45, 52, 55, 56, 102, 52, 99, 98, 49, 99, 102, 57, 97, 0]
+20150303103934052 |192.168.100.13:48122 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:48122
+20150303103934052 |192.168.100.13:48122 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 54, 101, 49, 57, 49, 99, 51, 45, 54, 48, 50, 48, 45, 52, 54, 51, 97, 45, 97, 98, 101, 101, 45, 52, 55, 56, 102, 52, 99, 98, 49, 99, 102, 57, 97, 0]
+20150303103934052 |192.168.100.13:48122 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:96e191c3-6020-463a-abee-478f4cb1cf9a
+20150303103934089 |192.168.100.13:48122 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 96e191c3-6020-463a-abee-478f4cb1cf9a matches 
+20150303103934181 |192.168.100.13:48122 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 96e191c3-6020-463a-abee-478f4cb1cf9a]: save success login info with new token
+20150303103934182 |192.168.100.13:48122 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 101, 101, 48, 55, 55, 100, 50, 100, 45, 57, 97, 57, 54, 45, 52, 49, 52, 99, 45, 97, 100, 55, 54, 45, 99, 101, 56, 101, 101, 97, 51, 50, 49, 97, 56, 54, 0]
+20150303105300288 |192.168.100.12:52251 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:52251
+20150303105300289 |192.168.100.12:52251 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303105300289 |192.168.100.12:52251 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303105300358 |192.168.100.12:52251 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303105300358 |192.168.100.12:52251 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303105442169 |192.168.100.12:52293 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:52293
+20150303105442170 |192.168.100.12:52293 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303105442170 |192.168.100.12:52293 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303105442183 |192.168.100.12:52293 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303105442184 |192.168.100.12:52293 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303111250582 |192.168.100.12:52918 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:52918
+20150303111250583 |192.168.100.12:52918 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303111250583 |192.168.100.12:52918 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303111250647 |192.168.100.12:52918 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303111250648 |192.168.100.12:52918 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303112607802 |192.168.100.12:53206 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53206
+20150303112607803 |192.168.100.12:53206 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303112607803 |192.168.100.12:53206 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303112608015 |192.168.100.12:53206 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303112608016 |192.168.100.12:53206 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303112611561 |192.168.100.12:53212 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53212
+20150303112611561 |192.168.100.12:53212 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303112611562 |192.168.100.12:53212 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303112611606 |192.168.100.12:53212 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303112611607 |192.168.100.12:53212 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303112617722 |192.168.100.12:53219 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53219
+20150303112617722 |192.168.100.12:53219 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303112617723 |192.168.100.12:53219 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303112617731 |192.168.100.12:53219 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303112617732 |192.168.100.12:53219 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303112624589 |192.168.100.12:53226 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53226
+20150303112624590 |192.168.100.12:53226 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303112624590 |192.168.100.12:53226 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303112624638 |192.168.100.12:53226 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303112624638 |192.168.100.12:53226 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303113542680 |192.168.100.12:53412 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53412
+20150303113542680 |192.168.100.12:53412 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303113542681 |192.168.100.12:53412 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303113542792 |192.168.100.12:53412 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303113542792 |192.168.100.12:53412 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303113751125 |192.168.100.12:53454 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53454
+20150303113751125 |192.168.100.12:53454 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303113751125 |192.168.100.12:53454 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303113751161 |192.168.100.12:53454 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303113751162 |192.168.100.12:53454 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303113835695 |192.168.100.12:53475 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53475
+20150303113835695 |192.168.100.12:53475 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303113835696 |192.168.100.12:53475 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303113835751 |192.168.100.12:53475 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303113835752 |192.168.100.12:53475 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303114009501 |192.168.100.12:53507 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53507
+20150303114009501 |192.168.100.12:53507 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303114009502 |192.168.100.12:53507 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303114009512 |192.168.100.12:53507 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303114009513 |192.168.100.12:53507 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303114112349 |192.168.100.12:53535 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53535
+20150303114112350 |192.168.100.12:53535 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303114112350 |192.168.100.12:53535 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303114112368 |192.168.100.12:53535 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303114112369 |192.168.100.12:53535 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303114130928 |192.168.100.12:53555 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53555
+20150303114130929 |192.168.100.12:53555 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303114130930 |192.168.100.12:53555 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303114130958 |192.168.100.12:53555 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303114130959 |192.168.100.12:53555 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303114215647 |192.168.100.13:41074 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:41074
+20150303114215680 |192.168.100.13:41074 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303114215680 |192.168.100.13:41074 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303114215694 |192.168.100.13:41074 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303114215713 |192.168.100.13:41074 |ProcessSignIn       :45 |I| Genarate token 6a70b8f7-b028-46f8-908f-8755fe547be9, user_id 16 for user of phone 01678155662
+20150303114215782 |192.168.100.13:41074 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303114215782 |192.168.100.13:41074 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 54, 97, 55, 48, 98, 56, 102, 55, 45, 98, 48, 50, 56, 45, 52, 54, 102, 56, 45, 57, 48, 56, 102, 45, 56, 55, 53, 53, 102, 101, 53, 52, 55, 98, 101, 57, 0]
+20150303115135987 |192.168.100.13:54329 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:54329
+20150303115135988 |192.168.100.13:54329 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 54, 97, 55, 48, 98, 56, 102, 55, 45, 98, 48, 50, 56, 45, 52, 54, 102, 56, 45, 57, 48, 56, 102, 45, 56, 55, 53, 53, 102, 101, 53, 52, 55, 98, 101, 57, 0]
+20150303115135988 |192.168.100.13:54329 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:6a70b8f7-b028-46f8-908f-8755fe547be9
+20150303115136028 |192.168.100.13:54329 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 6a70b8f7-b028-46f8-908f-8755fe547be9 matches 
+20150303115136129 |192.168.100.13:54329 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 6a70b8f7-b028-46f8-908f-8755fe547be9]: save success login info with new token
+20150303115136130 |192.168.100.13:54329 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 50, 57, 54, 99, 52, 56, 57, 49, 45, 98, 49, 57, 97, 45, 52, 56, 51, 48, 45, 98, 98, 48, 53, 45, 98, 56, 55, 50, 55, 52, 97, 57, 100, 54, 53, 56, 0]
+20150303115155077 |192.168.100.13:53085 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:53085
+20150303115155079 |192.168.100.13:53085 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 50, 57, 54, 99, 52, 56, 57, 49, 45, 98, 49, 57, 97, 45, 52, 56, 51, 48, 45, 98, 98, 48, 53, 45, 98, 56, 55, 50, 55, 52, 97, 57, 100, 54, 53, 56, 0]
+20150303115155079 |192.168.100.13:53085 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:296c4891-b19a-4830-bb05-b87274a9d658
+20150303115155163 |192.168.100.13:53085 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 296c4891-b19a-4830-bb05-b87274a9d658 matches 
+20150303115155284 |192.168.100.13:53085 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 296c4891-b19a-4830-bb05-b87274a9d658]: save success login info with new token
+20150303115155285 |192.168.100.13:53085 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 50, 100, 48, 55, 57, 53, 55, 56, 45, 56, 52, 98, 99, 45, 52, 50, 57, 52, 45, 97, 100, 98, 48, 45, 54, 99, 52, 53, 49, 55, 51, 102, 53, 97, 98, 55, 0]
+20150303115509057 |192.168.100.13:42481 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:42481
+20150303115509058 |192.168.100.13:42481 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 50, 100, 48, 55, 57, 53, 55, 56, 45, 56, 52, 98, 99, 45, 52, 50, 57, 52, 45, 97, 100, 98, 48, 45, 54, 99, 52, 53, 49, 55, 51, 102, 53, 97, 98, 55, 0]
+20150303115509058 |192.168.100.13:42481 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:2d079578-84bc-4294-adb0-6c45173f5ab7
+20150303115509135 |192.168.100.13:42481 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 2d079578-84bc-4294-adb0-6c45173f5ab7 matches 
+20150303115509222 |192.168.100.13:42481 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 2d079578-84bc-4294-adb0-6c45173f5ab7]: save success login info with new token
+20150303115509223 |192.168.100.13:42481 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 49, 101, 50, 50, 100, 101, 98, 57, 45, 51, 101, 98, 102, 45, 52, 99, 102, 98, 45, 97, 56, 55, 57, 45, 97, 98, 98, 56, 51, 99, 48, 50, 50, 102, 48, 99, 0]
+20150303120728948 |192.168.100.12:53987 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:53987
+20150303120728948 |192.168.100.12:53987 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 100, 57, 52, 57, 99, 98, 45, 97, 50, 49, 49, 45, 52, 52, 102, 102, 45, 57, 102, 101, 99, 45, 56, 53, 57, 97, 102, 52, 53, 48, 102, 55, 56, 101, 0]
+20150303120728949 |192.168.100.12:53987 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59d949cb-a211-44ff-9fec-859af450f78e
+20150303120728998 |192.168.100.12:53987 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303120728999 |192.168.100.12:53987 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303120743045 |192.168.100.12:53987 |ServerIOManager     :51 |I| receive 23bytes from /192.168.100.12:53987
+20150303120743046 |192.168.100.12:53987 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 55, 56, 0]
+20150303120743046 |192.168.100.12:53987 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303120743105 |192.168.100.12:53987 |ProcessSignIn       :65 |I| Client request reconnect sign in with phone:01678155662 old token not matches
+20150303120743105 |192.168.100.12:53987 |MessageProcess      :83 |D| Sending MID=1 detail data :[3]
+20150303120745103 |192.168.100.12:53987 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.12:53987
+20150303120745104 |192.168.100.12:53987 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303120745104 |192.168.100.12:53987 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303120745117 |192.168.100.12:53987 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303120745142 |192.168.100.12:53987 |ProcessSignIn       :45 |I| Genarate token f4f5898d-4855-403e-9e9a-bb6aa9e53347, user_id 16 for user of phone 01678155662
+20150303120745256 |192.168.100.12:53987 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303120745257 |192.168.100.12:53987 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 52, 102, 53, 56, 57, 56, 100, 45, 52, 56, 53, 53, 45, 52, 48, 51, 101, 45, 57, 101, 57, 97, 45, 98, 98, 54, 97, 97, 57, 101, 53, 51, 51, 52, 55, 0]
+20150303120814298 |192.168.100.12:54016 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:54016
+20150303120814298 |192.168.100.12:54016 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 52, 102, 53, 56, 57, 56, 100, 45, 52, 56, 53, 53, 45, 52, 48, 51, 101, 45, 57, 101, 57, 97, 45, 98, 98, 54, 97, 97, 57, 101, 53, 51, 51, 52, 55, 0]
+20150303120814298 |192.168.100.12:54016 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f4f5898d-4855-403e-9e9a-bb6aa9e53347
+20150303120814356 |192.168.100.12:54016 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f4f5898d-4855-403e-9e9a-bb6aa9e53347 matches 
+20150303120814445 |192.168.100.12:54016 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f4f5898d-4855-403e-9e9a-bb6aa9e53347]: save success login info with new token
+20150303120814445 |192.168.100.12:54016 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 53, 57, 102, 53, 101, 97, 57, 55, 45, 101, 99, 102, 56, 45, 52, 97, 50, 100, 45, 56, 101, 52, 54, 45, 102, 102, 54, 54, 102, 101, 100, 56, 49, 57, 48, 54, 0]
+20150303120956051 |192.168.100.12:54086 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:54086
+20150303120956052 |192.168.100.12:54086 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 57, 102, 53, 101, 97, 57, 55, 45, 101, 99, 102, 56, 45, 52, 97, 50, 100, 45, 56, 101, 52, 54, 45, 102, 102, 54, 54, 102, 101, 100, 56, 49, 57, 48, 54, 0]
+20150303120956052 |192.168.100.12:54086 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:59f5ea97-ecf8-4a2d-8e46-ff66fed81906
+20150303120956091 |192.168.100.12:54086 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 59f5ea97-ecf8-4a2d-8e46-ff66fed81906 matches 
+20150303120956193 |192.168.100.12:54086 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 59f5ea97-ecf8-4a2d-8e46-ff66fed81906]: save success login info with new token
+20150303120956193 |192.168.100.12:54086 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 98, 50, 56, 56, 53, 53, 98, 45, 56, 100, 99, 99, 45, 52, 50, 97, 56, 45, 97, 50, 101, 54, 45, 102, 57, 101, 100, 55, 53, 57, 52, 49, 98, 54, 97, 0]
+20150303121055295 |192.168.100.12:54104 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:54104
+20150303121055296 |192.168.100.12:54104 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 98, 50, 56, 56, 53, 53, 98, 45, 56, 100, 99, 99, 45, 52, 50, 97, 56, 45, 97, 50, 101, 54, 45, 102, 57, 101, 100, 55, 53, 57, 52, 49, 98, 54, 97, 0]
+20150303121055296 |192.168.100.12:54104 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:3b28855b-8dcc-42a8-a2e6-f9ed75941b6a
+20150303121055338 |192.168.100.12:54104 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 3b28855b-8dcc-42a8-a2e6-f9ed75941b6a matches 
+20150303121055424 |192.168.100.12:54104 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 3b28855b-8dcc-42a8-a2e6-f9ed75941b6a]: save success login info with new token
+20150303121055424 |192.168.100.12:54104 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 49, 57, 102, 52, 55, 53, 99, 97, 45, 54, 98, 101, 49, 45, 52, 55, 97, 100, 45, 98, 56, 49, 53, 45, 48, 101, 101, 54, 52, 48, 98, 98, 51, 101, 97, 97, 0]
+20150303121725678 |192.168.100.13:60149 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:60149
+20150303121725678 |192.168.100.13:60149 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 49, 101, 50, 50, 100, 101, 98, 57, 45, 51, 101, 98, 102, 45, 52, 99, 102, 98, 45, 97, 56, 55, 57, 45, 97, 98, 98, 56, 51, 99, 48, 50, 50, 102, 48, 99, 0]
+20150303121725679 |192.168.100.13:60149 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:1e22deb9-3ebf-4cfb-a879-abb83c022f0c
+20150303121725745 |192.168.100.13:60149 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303121725746 |192.168.100.13:60149 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303122034881 |192.168.100.13:56391 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:56391
+20150303122034907 |192.168.100.13:56391 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 49, 101, 50, 50, 100, 101, 98, 57, 45, 51, 101, 98, 102, 45, 52, 99, 102, 98, 45, 97, 56, 55, 57, 45, 97, 98, 98, 56, 51, 99, 48, 50, 50, 102, 48, 99, 0]
+20150303122034907 |192.168.100.13:56391 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:1e22deb9-3ebf-4cfb-a879-abb83c022f0c
+20150303122035086 |192.168.100.13:56391 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303122035087 |192.168.100.13:56391 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303122059142 |192.168.100.13:56391 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:56391
+20150303122059143 |192.168.100.13:56391 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303122059143 |192.168.100.13:56391 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303122059162 |192.168.100.13:56391 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303122059210 |192.168.100.13:56391 |ProcessSignIn       :45 |I| Genarate token 8dde4ea7-8fbb-48c6-b9f4-e305948ff05d, user_id 16 for user of phone 01678155662
+20150303122059307 |192.168.100.13:56391 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303122059308 |192.168.100.13:56391 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 100, 100, 101, 52, 101, 97, 55, 45, 56, 102, 98, 98, 45, 52, 56, 99, 54, 45, 98, 57, 102, 52, 45, 101, 51, 48, 53, 57, 52, 56, 102, 102, 48, 53, 100, 0]
+20150303122119609 |192.168.100.13:39098 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:39098
+20150303122119609 |192.168.100.13:39098 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 100, 100, 101, 52, 101, 97, 55, 45, 56, 102, 98, 98, 45, 52, 56, 99, 54, 45, 98, 57, 102, 52, 45, 101, 51, 48, 53, 57, 52, 56, 102, 102, 48, 53, 100, 0]
+20150303122119610 |192.168.100.13:39098 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:8dde4ea7-8fbb-48c6-b9f4-e305948ff05d
+20150303122119653 |192.168.100.13:39098 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 8dde4ea7-8fbb-48c6-b9f4-e305948ff05d matches 
+20150303122119754 |192.168.100.13:39098 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 8dde4ea7-8fbb-48c6-b9f4-e305948ff05d]: save success login info with new token
+20150303122119755 |192.168.100.13:39098 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 99, 52, 50, 53, 49, 101, 56, 53, 45, 57, 97, 97, 97, 45, 52, 102, 53, 53, 45, 56, 50, 102, 55, 45, 100, 55, 53, 100, 99, 56, 51, 53, 49, 49, 48, 102, 0]
+20150303122241421 |192.168.100.13:55584 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:55584
+20150303122241421 |192.168.100.13:55584 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 99, 52, 50, 53, 49, 101, 56, 53, 45, 57, 97, 97, 97, 45, 52, 102, 53, 53, 45, 56, 50, 102, 55, 45, 100, 55, 53, 100, 99, 56, 51, 53, 49, 49, 48, 102, 0]
+20150303122241421 |192.168.100.13:55584 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:c4251e85-9aaa-4f55-82f7-d75dc835110f
+20150303122241511 |192.168.100.13:55584 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token c4251e85-9aaa-4f55-82f7-d75dc835110f matches 
+20150303122241626 |192.168.100.13:55584 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, c4251e85-9aaa-4f55-82f7-d75dc835110f]: save success login info with new token
+20150303122241626 |192.168.100.13:55584 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 54, 56, 48, 48, 99, 49, 57, 45, 52, 102, 56, 100, 45, 52, 55, 54, 52, 45, 57, 50, 48, 52, 45, 55, 50, 55, 101, 52, 99, 48, 53, 97, 101, 50, 53, 0]
+20150303122256962 |192.168.100.13:54037 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:54037
+20150303122256963 |192.168.100.13:54037 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 54, 56, 48, 48, 99, 49, 57, 45, 52, 102, 56, 100, 45, 52, 55, 54, 52, 45, 57, 50, 48, 52, 45, 55, 50, 55, 101, 52, 99, 48, 53, 97, 101, 50, 53, 0]
+20150303122256963 |192.168.100.13:54037 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f6800c19-4f8d-4764-9204-727e4c05ae25
+20150303122256989 |192.168.100.13:54037 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f6800c19-4f8d-4764-9204-727e4c05ae25 matches 
+20150303122257055 |192.168.100.13:54037 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f6800c19-4f8d-4764-9204-727e4c05ae25]: save success login info with new token
+20150303122257056 |192.168.100.13:54037 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 55, 100, 98, 49, 102, 48, 99, 55, 45, 56, 56, 48, 51, 45, 52, 102, 52, 97, 45, 98, 53, 99, 55, 45, 50, 56, 54, 99, 50, 100, 57, 50, 57, 54, 48, 97, 0]
+20150303122454418 |192.168.100.12:54494 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:54494
+20150303122454418 |192.168.100.12:54494 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 49, 57, 102, 52, 55, 53, 99, 97, 45, 54, 98, 101, 49, 45, 52, 55, 97, 100, 45, 98, 56, 49, 53, 45, 48, 101, 101, 54, 52, 48, 98, 98, 51, 101, 97, 97, 0]
+20150303122454418 |192.168.100.12:54494 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:19f475ca-6be1-47ad-b815-0ee640bb3eaa
+20150303122454443 |192.168.100.12:54494 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303122454443 |192.168.100.12:54494 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303122508494 |192.168.100.12:54494 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.12:54494
+20150303122508495 |192.168.100.12:54494 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303122508495 |192.168.100.12:54494 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303122508508 |192.168.100.12:54494 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303122508551 |192.168.100.12:54494 |ProcessSignIn       :45 |I| Genarate token 52c14fc7-0ddb-4004-b695-88411434a7ed, user_id 16 for user of phone 01678155662
+20150303122508673 |192.168.100.12:54494 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303122508674 |192.168.100.12:54494 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 53, 50, 99, 49, 52, 102, 99, 55, 45, 48, 100, 100, 98, 45, 52, 48, 48, 52, 45, 98, 54, 57, 53, 45, 56, 56, 52, 49, 49, 52, 51, 52, 97, 55, 101, 100, 0]
+20150303122620033 |192.168.100.13:45290 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:45290
+20150303122620034 |192.168.100.13:45290 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 55, 100, 98, 49, 102, 48, 99, 55, 45, 56, 56, 48, 51, 45, 52, 102, 52, 97, 45, 98, 53, 99, 55, 45, 50, 56, 54, 99, 50, 100, 57, 50, 57, 54, 48, 97, 0]
+20150303122620035 |192.168.100.13:45290 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:7db1f0c7-8803-4f4a-b5c7-286c2d92960a
+20150303122620081 |192.168.100.13:45290 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303122620082 |192.168.100.13:45290 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303122631949 |192.168.100.13:45290 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:45290
+20150303122631950 |192.168.100.13:45290 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303122631950 |192.168.100.13:45290 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303122631994 |192.168.100.13:45290 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303122632005 |192.168.100.13:45290 |ProcessSignIn       :45 |I| Genarate token 33361786-1c38-4832-b11b-37b0d8c39538, user_id 16 for user of phone 01678155662
+20150303122632068 |192.168.100.13:45290 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303122632068 |192.168.100.13:45290 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 51, 51, 54, 49, 55, 56, 54, 45, 49, 99, 51, 56, 45, 52, 56, 51, 50, 45, 98, 49, 49, 98, 45, 51, 55, 98, 48, 100, 56, 99, 51, 57, 53, 51, 56, 0]
+20150303122735843 |192.168.100.13:41698 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:41698
+20150303122735843 |192.168.100.13:41698 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 51, 51, 54, 49, 55, 56, 54, 45, 49, 99, 51, 56, 45, 52, 56, 51, 50, 45, 98, 49, 49, 98, 45, 51, 55, 98, 48, 100, 56, 99, 51, 57, 53, 51, 56, 0]
+20150303122735843 |192.168.100.13:41698 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:33361786-1c38-4832-b11b-37b0d8c39538
+20150303122735853 |192.168.100.13:41698 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 33361786-1c38-4832-b11b-37b0d8c39538 matches 
+20150303122735945 |192.168.100.13:41698 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 33361786-1c38-4832-b11b-37b0d8c39538]: save success login info with new token
+20150303122735945 |192.168.100.13:41698 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 51, 97, 54, 97, 49, 98, 54, 45, 101, 53, 51, 51, 45, 52, 50, 56, 55, 45, 97, 100, 99, 55, 45, 99, 54, 52, 99, 52, 54, 52, 49, 100, 101, 98, 50, 0]
+20150303122907104 |192.168.100.13:48505 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:48505
+20150303122907105 |192.168.100.13:48505 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 51, 97, 54, 97, 49, 98, 54, 45, 101, 53, 51, 51, 45, 52, 50, 56, 55, 45, 97, 100, 99, 55, 45, 99, 54, 52, 99, 52, 54, 52, 49, 100, 101, 98, 50, 0]
+20150303122907106 |192.168.100.13:48505 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:d3a6a1b6-e533-4287-adc7-c64c4641deb2
+20150303122907119 |192.168.100.13:48505 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token d3a6a1b6-e533-4287-adc7-c64c4641deb2 matches 
+20150303122907201 |192.168.100.13:48505 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, d3a6a1b6-e533-4287-adc7-c64c4641deb2]: save success login info with new token
+20150303122907201 |192.168.100.13:48505 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 51, 53, 55, 49, 48, 98, 98, 45, 56, 97, 57, 52, 45, 52, 97, 50, 55, 45, 56, 52, 98, 102, 45, 98, 50, 48, 102, 51, 98, 48, 102, 102, 49, 54, 102, 0]
+20150303134428416 |192.168.100.13:33597 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:33597
+20150303134428417 |192.168.100.13:33597 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 51, 53, 55, 49, 48, 98, 98, 45, 56, 97, 57, 52, 45, 52, 97, 50, 55, 45, 56, 52, 98, 102, 45, 98, 50, 48, 102, 51, 98, 48, 102, 102, 49, 54, 102, 0]
+20150303134428417 |192.168.100.13:33597 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:935710bb-8a94-4a27-84bf-b20f3b0ff16f
+20150303134428523 |192.168.100.13:33597 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 935710bb-8a94-4a27-84bf-b20f3b0ff16f matches 
+20150303134428798 |192.168.100.13:33597 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 935710bb-8a94-4a27-84bf-b20f3b0ff16f]: save success login info with new token
+20150303134428799 |192.168.100.13:33597 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 54, 48, 48, 57, 98, 97, 51, 45, 98, 48, 53, 48, 45, 52, 57, 102, 99, 45, 97, 55, 101, 51, 45, 101, 51, 56, 97, 48, 57, 53, 51, 54, 101, 51, 102, 0]
+20150303134500457 |192.168.100.13:45015 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:45015
+20150303134500461 |192.168.100.13:45015 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 54, 48, 48, 57, 98, 97, 51, 45, 98, 48, 53, 48, 45, 52, 57, 102, 99, 45, 97, 55, 101, 51, 45, 101, 51, 56, 97, 48, 57, 53, 51, 54, 101, 51, 102, 0]
+20150303134500461 |192.168.100.13:45015 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:36009ba3-b050-49fc-a7e3-e38a09536e3f
+20150303134500524 |192.168.100.13:45015 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 36009ba3-b050-49fc-a7e3-e38a09536e3f matches 
+20150303134500629 |192.168.100.13:45015 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 36009ba3-b050-49fc-a7e3-e38a09536e3f]: save success login info with new token
+20150303134500630 |192.168.100.13:45015 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 52, 98, 101, 48, 98, 56, 98, 55, 45, 48, 48, 57, 56, 45, 52, 54, 100, 98, 45, 98, 56, 51, 55, 45, 52, 52, 97, 97, 49, 100, 48, 52, 57, 98, 57, 56, 0]
+20150303134810786 |192.168.100.13:37617 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:37617
+20150303134810786 |192.168.100.13:37617 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 52, 98, 101, 48, 98, 56, 98, 55, 45, 48, 48, 57, 56, 45, 52, 54, 100, 98, 45, 98, 56, 51, 55, 45, 52, 52, 97, 97, 49, 100, 48, 52, 57, 98, 57, 56, 0]
+20150303134810787 |192.168.100.13:37617 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:4be0b8b7-0098-46db-b837-44aa1d049b98
+20150303134810824 |192.168.100.13:37617 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 4be0b8b7-0098-46db-b837-44aa1d049b98 matches 
+20150303134810905 |192.168.100.13:37617 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 4be0b8b7-0098-46db-b837-44aa1d049b98]: save success login info with new token
+20150303134810920 |192.168.100.13:37617 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 50, 101, 100, 56, 101, 98, 54, 48, 45, 51, 54, 49, 50, 45, 52, 53, 52, 102, 45, 56, 99, 97, 55, 45, 55, 49, 101, 101, 48, 52, 55, 49, 102, 57, 99, 100, 0]
+20150303134840779 |192.168.100.13:41929 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:41929
+20150303134840780 |192.168.100.13:41929 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 50, 101, 100, 56, 101, 98, 54, 48, 45, 51, 54, 49, 50, 45, 52, 53, 52, 102, 45, 56, 99, 97, 55, 45, 55, 49, 101, 101, 48, 52, 55, 49, 102, 57, 99, 100, 0]
+20150303134840781 |192.168.100.13:41929 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:2ed8eb60-3612-454f-8ca7-71ee0471f9cd
+20150303134840820 |192.168.100.13:41929 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 2ed8eb60-3612-454f-8ca7-71ee0471f9cd matches 
+20150303134840880 |192.168.100.13:41929 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 2ed8eb60-3612-454f-8ca7-71ee0471f9cd]: save success login info with new token
+20150303134840881 |192.168.100.13:41929 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 48, 100, 97, 101, 53, 54, 98, 100, 45, 100, 56, 52, 99, 45, 52, 53, 102, 48, 45, 57, 52, 102, 57, 45, 48, 97, 97, 50, 101, 50, 99, 56, 99, 101, 101, 57, 0]
+20150303135108590 |192.168.100.13:43441 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:43441
+20150303135108591 |192.168.100.13:43441 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 48, 100, 97, 101, 53, 54, 98, 100, 45, 100, 56, 52, 99, 45, 52, 53, 102, 48, 45, 57, 52, 102, 57, 45, 48, 97, 97, 50, 101, 50, 99, 56, 99, 101, 101, 57, 0]
+20150303135108592 |192.168.100.13:43441 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:0dae56bd-d84c-45f0-94f9-0aa2e2c8cee9
+20150303135108640 |192.168.100.13:43441 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 0dae56bd-d84c-45f0-94f9-0aa2e2c8cee9 matches 
+20150303135108756 |192.168.100.13:43441 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 0dae56bd-d84c-45f0-94f9-0aa2e2c8cee9]: save success login info with new token
+20150303135108756 |192.168.100.13:43441 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 56, 51, 52, 55, 99, 55, 53, 45, 98, 98, 50, 56, 45, 52, 100, 50, 99, 45, 97, 54, 101, 52, 45, 51, 101, 101, 52, 101, 97, 54, 51, 50, 55, 57, 53, 0]
+20150303140721150 |192.168.100.13:49712 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:49712
+20150303140721150 |192.168.100.13:49712 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 56, 51, 52, 55, 99, 55, 53, 45, 98, 98, 50, 56, 45, 52, 100, 50, 99, 45, 97, 54, 101, 52, 45, 51, 101, 101, 52, 101, 97, 54, 51, 50, 55, 57, 53, 0]
+20150303140721151 |192.168.100.13:49712 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:d8347c75-bb28-4d2c-a6e4-3ee4ea632795
+20150303140721219 |192.168.100.13:49712 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token d8347c75-bb28-4d2c-a6e4-3ee4ea632795 matches 
+20150303140721307 |192.168.100.13:49712 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, d8347c75-bb28-4d2c-a6e4-3ee4ea632795]: save success login info with new token
+20150303140721328 |192.168.100.13:49712 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 56, 49, 50, 53, 97, 52, 49, 45, 57, 100, 102, 54, 45, 52, 52, 56, 57, 45, 97, 51, 97, 52, 45, 52, 99, 99, 50, 52, 98, 100, 100, 56, 56, 100, 99, 0]
+20150303145933352 |192.168.100.13:39193 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:39193
+20150303145933353 |192.168.100.13:39193 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 56, 49, 50, 53, 97, 52, 49, 45, 57, 100, 102, 54, 45, 52, 52, 56, 57, 45, 97, 51, 97, 52, 45, 52, 99, 99, 50, 52, 98, 100, 100, 56, 56, 100, 99, 0]
+20150303145933353 |192.168.100.13:39193 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:d8125a41-9df6-4489-a3a4-4cc24bdd88dc
+20150303145933425 |192.168.100.13:39193 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token d8125a41-9df6-4489-a3a4-4cc24bdd88dc matches 
+20150303145933566 |192.168.100.13:39193 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, d8125a41-9df6-4489-a3a4-4cc24bdd88dc]: save success login info with new token
+20150303145933567 |192.168.100.13:39193 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 99, 101, 52, 100, 99, 98, 102, 45, 98, 56, 53, 52, 45, 52, 53, 51, 48, 45, 97, 49, 56, 49, 45, 100, 53, 102, 99, 101, 100, 51, 102, 48, 50, 50, 53, 0]
+20150303150125090 |192.168.100.13:57025 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:57025
+20150303150125090 |192.168.100.13:57025 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 99, 101, 52, 100, 99, 98, 102, 45, 98, 56, 53, 52, 45, 52, 53, 51, 48, 45, 97, 49, 56, 49, 45, 100, 53, 102, 99, 101, 100, 51, 102, 48, 50, 50, 53, 0]
+20150303150125091 |192.168.100.13:57025 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:fce4dcbf-b854-4530-a181-d5fced3f0225
+20150303150125154 |192.168.100.13:57025 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token fce4dcbf-b854-4530-a181-d5fced3f0225 matches 
+20150303150125231 |192.168.100.13:57025 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, fce4dcbf-b854-4530-a181-d5fced3f0225]: save success login info with new token
+20150303150125232 |192.168.100.13:57025 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 98, 99, 53, 50, 48, 49, 98, 45, 52, 102, 51, 52, 45, 52, 57, 55, 51, 45, 57, 57, 102, 97, 45, 56, 102, 101, 98, 99, 98, 101, 101, 49, 99, 101, 97, 0]
+20150303151430246 |192.168.100.12:58220 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58220
+20150303151430247 |192.168.100.12:58220 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 50, 99, 49, 52, 102, 99, 55, 45, 48, 100, 100, 98, 45, 52, 48, 48, 52, 45, 98, 54, 57, 53, 45, 56, 56, 52, 49, 49, 52, 51, 52, 97, 55, 101, 100, 0]
+20150303151430248 |192.168.100.12:58220 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:52c14fc7-0ddb-4004-b695-88411434a7ed
+20150303151430321 |192.168.100.12:58220 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303151430322 |192.168.100.12:58220 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303151525701 |192.168.100.12:58220 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.12:58220
+20150303151525702 |192.168.100.12:58220 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303151525702 |192.168.100.12:58220 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303151525837 |192.168.100.12:58220 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303151525874 |192.168.100.12:58220 |ProcessSignIn       :45 |I| Genarate token 5da6f2dd-c3e6-41b7-9bbd-aeaf9a1ecb9e, user_id 16 for user of phone 01678155662
+20150303151525969 |192.168.100.12:58220 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303151525969 |192.168.100.12:58220 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 53, 100, 97, 54, 102, 50, 100, 100, 45, 99, 51, 101, 54, 45, 52, 49, 98, 55, 45, 57, 98, 98, 100, 45, 97, 101, 97, 102, 57, 97, 49, 101, 99, 98, 57, 101, 0]
+20150303151802741 |192.168.100.12:58356 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58356
+20150303151802743 |192.168.100.12:58356 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 53, 100, 97, 54, 102, 50, 100, 100, 45, 99, 51, 101, 54, 45, 52, 49, 98, 55, 45, 57, 98, 98, 100, 45, 97, 101, 97, 102, 57, 97, 49, 101, 99, 98, 57, 101, 0]
+20150303151802744 |192.168.100.12:58356 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:5da6f2dd-c3e6-41b7-9bbd-aeaf9a1ecb9e
+20150303151802782 |192.168.100.12:58356 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 5da6f2dd-c3e6-41b7-9bbd-aeaf9a1ecb9e matches 
+20150303151802914 |192.168.100.12:58356 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 5da6f2dd-c3e6-41b7-9bbd-aeaf9a1ecb9e]: save success login info with new token
+20150303151802915 |192.168.100.12:58356 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 55, 51, 99, 52, 52, 99, 102, 98, 45, 97, 52, 99, 53, 45, 52, 97, 50, 57, 45, 97, 97, 99, 97, 45, 48, 98, 100, 97, 100, 98, 49, 97, 97, 49, 49, 97, 0]
+20150303151913005 |192.168.100.12:58385 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58385
+20150303151913006 |192.168.100.12:58385 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 55, 51, 99, 52, 52, 99, 102, 98, 45, 97, 52, 99, 53, 45, 52, 97, 50, 57, 45, 97, 97, 99, 97, 45, 48, 98, 100, 97, 100, 98, 49, 97, 97, 49, 49, 97, 0]
+20150303151913007 |192.168.100.12:58385 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:73c44cfb-a4c5-4a29-aaca-0bdadb1aa11a
+20150303151913149 |192.168.100.12:58385 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 73c44cfb-a4c5-4a29-aaca-0bdadb1aa11a matches 
+20150303151913251 |192.168.100.12:58385 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 73c44cfb-a4c5-4a29-aaca-0bdadb1aa11a]: save success login info with new token
+20150303151913252 |192.168.100.12:58385 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 48, 57, 51, 54, 100, 51, 54, 49, 45, 56, 50, 101, 56, 45, 52, 101, 54, 56, 45, 56, 48, 51, 49, 45, 100, 100, 50, 52, 52, 52, 98, 97, 99, 49, 102, 54, 0]
+20150303151924513 |192.168.100.12:58394 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58394
+20150303151924514 |192.168.100.12:58394 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 48, 57, 51, 54, 100, 51, 54, 49, 45, 56, 50, 101, 56, 45, 52, 101, 54, 56, 45, 56, 48, 51, 49, 45, 100, 100, 50, 52, 52, 52, 98, 97, 99, 49, 102, 54, 0]
+20150303151924519 |192.168.100.12:58394 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:0936d361-82e8-4e68-8031-dd2444bac1f6
+20150303151924624 |192.168.100.12:58394 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 0936d361-82e8-4e68-8031-dd2444bac1f6 matches 
+20150303151924934 |192.168.100.12:58394 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 0936d361-82e8-4e68-8031-dd2444bac1f6]: save success login info with new token
+20150303151924948 |192.168.100.12:58394 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 50, 57, 99, 52, 52, 51, 55, 56, 45, 48, 102, 48, 100, 45, 52, 99, 48, 56, 45, 97, 98, 102, 57, 45, 97, 54, 53, 56, 56, 52, 52, 57, 99, 102, 49, 53, 0]
+20150303152002428 |192.168.100.12:58417 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58417
+20150303152002429 |192.168.100.12:58417 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 50, 57, 99, 52, 52, 51, 55, 56, 45, 48, 102, 48, 100, 45, 52, 99, 48, 56, 45, 97, 98, 102, 57, 45, 97, 54, 53, 56, 56, 52, 52, 57, 99, 102, 49, 53, 0]
+20150303152002429 |192.168.100.12:58417 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:29c44378-0f0d-4c08-abf9-a6588449cf15
+20150303152008576 |192.168.100.12:58417 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 29c44378-0f0d-4c08-abf9-a6588449cf15 matches 
+20150303152008764 |192.168.100.12:58417 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 29c44378-0f0d-4c08-abf9-a6588449cf15]: save success login info with new token
+20150303152008765 |192.168.100.12:58417 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 52, 97, 57, 53, 98, 97, 49, 53, 45, 56, 54, 53, 54, 45, 52, 99, 100, 100, 45, 57, 100, 51, 51, 45, 57, 52, 98, 102, 101, 99, 48, 51, 53, 48, 52, 53, 0]
+20150303152210971 |192.168.100.13:46997 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.13:46997
+20150303152210972 |192.168.100.13:46997 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 98, 99, 53, 50, 48, 49, 98, 45, 52, 102, 51, 52, 45, 52, 57, 55, 51, 45, 57, 57, 102, 97, 45, 56, 102, 101, 98, 99, 98, 101, 101, 49, 99, 101, 97, 0]
+20150303152210972 |192.168.100.13:46997 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:3bc5201b-4f34-4973-99fa-8febcbee1cea
+20150303152211165 |192.168.100.13:46997 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303152211166 |192.168.100.13:46997 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303152225322 |192.168.100.13:46997 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.13:46997
+20150303152225323 |192.168.100.13:46997 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303152225362 |192.168.100.13:46997 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303152225505 |192.168.100.13:46997 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303152225616 |192.168.100.13:46997 |ProcessSignIn       :45 |I| Genarate token 15939816-3974-4735-ad73-1847a8a2b4a9, user_id 16 for user of phone 01678155662
+20150303152225757 |192.168.100.13:46997 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303152225758 |192.168.100.13:46997 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 49, 53, 57, 51, 57, 56, 49, 54, 45, 51, 57, 55, 52, 45, 52, 55, 51, 53, 45, 97, 100, 55, 51, 45, 49, 56, 52, 55, 97, 56, 97, 50, 98, 52, 97, 57, 0]
+20150303153510644 |192.168.100.12:58897 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:58897
+20150303153510644 |192.168.100.12:58897 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 52, 97, 57, 53, 98, 97, 49, 53, 45, 56, 54, 53, 54, 45, 52, 99, 100, 100, 45, 57, 100, 51, 51, 45, 57, 52, 98, 102, 101, 99, 48, 51, 53, 48, 52, 53, 0]
+20150303153510645 |192.168.100.12:58897 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:4a95ba15-8656-4cdd-9d33-94bfec035045
+20150303153510825 |192.168.100.12:58897 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303153510825 |192.168.100.12:58897 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303153647879 |192.168.100.12:59079 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59079
+20150303153647880 |192.168.100.12:59079 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 52, 97, 57, 53, 98, 97, 49, 53, 45, 56, 54, 53, 54, 45, 52, 99, 100, 100, 45, 57, 100, 51, 51, 45, 57, 52, 98, 102, 101, 99, 48, 51, 53, 48, 52, 53, 0]
+20150303153647880 |192.168.100.12:59079 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:4a95ba15-8656-4cdd-9d33-94bfec035045
+20150303153648033 |192.168.100.12:59079 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303153648033 |192.168.100.12:59079 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303153708954 |192.168.100.12:59079 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59079
+20150303153708954 |192.168.100.12:59079 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 52, 97, 57, 53, 98, 97, 49, 53, 45, 56, 54, 53, 54, 45, 52, 99, 100, 100, 45, 57, 100, 51, 51, 45, 57, 52, 98, 102, 101, 99, 48, 51, 53, 48, 52, 53, 0]
+20150303153708955 |192.168.100.12:59079 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:4a95ba15-8656-4cdd-9d33-94bfec035045
+20150303153709037 |192.168.100.12:59079 |ProcessSignIn       :110|I| Client request new sign in with user id:16 old token not matches
+20150303153709037 |192.168.100.12:59079 |MessageProcess      :83 |D| Sending MID=1 detail data :[7]
+20150303153738199 |192.168.100.12:59079 |ServerIOManager     :51 |I| receive 21bytes from /192.168.100.12:59079
+20150303153738200 |192.168.100.12:59079 |MessageProcess      :41 |D| Receive MID=1 detail data :[1, 48, 49, 54, 55, 56, 49, 53, 53, 54, 54, 50, 0, 49, 50, 51, 52, 53, 54, 0]
+20150303153738201 |192.168.100.12:59079 |ProcessSignIn       :31 |I| Client request sign in new session with phone:01678155662
+20150303153738591 |192.168.100.12:59079 |ProcessSignIn       :39 |I| Client request new sign in with phone:01678155662 password matches
+20150303153738648 |192.168.100.12:59079 |ProcessSignIn       :45 |I| Genarate token fccb221a-34a8-4c37-829e-3d1e5cc2da4f, user_id 16 for user of phone 01678155662
+20150303153738791 |192.168.100.12:59079 |ProcessSignIn       :56 |I| save new login info for phone 01678155662 success
+20150303153738792 |192.168.100.12:59079 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 99, 99, 98, 50, 50, 49, 97, 45, 51, 52, 97, 56, 45, 52, 99, 51, 55, 45, 56, 50, 57, 101, 45, 51, 100, 49, 101, 53, 99, 99, 50, 100, 97, 52, 102, 0]
+20150303161231843 |192.168.100.12:59563 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59563
+20150303161231867 |192.168.100.12:59563 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 99, 99, 98, 50, 50, 49, 97, 45, 51, 52, 97, 56, 45, 52, 99, 51, 55, 45, 56, 50, 57, 101, 45, 51, 100, 49, 101, 53, 99, 99, 50, 100, 97, 52, 102, 0]
+20150303161231867 |192.168.100.12:59563 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:fccb221a-34a8-4c37-829e-3d1e5cc2da4f
+20150303161232137 |192.168.100.12:59563 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token fccb221a-34a8-4c37-829e-3d1e5cc2da4f matches 
+20150303161232260 |192.168.100.12:59563 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, fccb221a-34a8-4c37-829e-3d1e5cc2da4f]: save success login info with new token
+20150303161232261 |192.168.100.12:59563 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 101, 98, 102, 50, 102, 55, 48, 54, 45, 100, 97, 56, 99, 45, 52, 54, 98, 101, 45, 56, 98, 52, 101, 45, 102, 102, 50, 57, 100, 49, 52, 102, 101, 56, 100, 100, 0]
+20150303161319830 |192.168.100.12:59596 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59596
+20150303161319831 |192.168.100.12:59596 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 101, 98, 102, 50, 102, 55, 48, 54, 45, 100, 97, 56, 99, 45, 52, 54, 98, 101, 45, 56, 98, 52, 101, 45, 102, 102, 50, 57, 100, 49, 52, 102, 101, 56, 100, 100, 0]
+20150303161319831 |192.168.100.12:59596 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:ebf2f706-da8c-46be-8b4e-ff29d14fe8dd
+20150303161319940 |192.168.100.12:59596 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token ebf2f706-da8c-46be-8b4e-ff29d14fe8dd matches 
+20150303161320013 |192.168.100.12:59596 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, ebf2f706-da8c-46be-8b4e-ff29d14fe8dd]: save success login info with new token
+20150303161320033 |192.168.100.12:59596 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 97, 48, 102, 56, 51, 48, 54, 57, 45, 53, 101, 57, 50, 45, 52, 52, 101, 56, 45, 98, 50, 48, 57, 45, 51, 99, 57, 53, 52, 97, 56, 50, 48, 50, 53, 101, 0]
+20150303161558472 |192.168.100.12:59676 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59676
+20150303161558473 |192.168.100.12:59676 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 97, 48, 102, 56, 51, 48, 54, 57, 45, 53, 101, 57, 50, 45, 52, 52, 101, 56, 45, 98, 50, 48, 57, 45, 51, 99, 57, 53, 52, 97, 56, 50, 48, 50, 53, 101, 0]
+20150303161558473 |192.168.100.12:59676 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:a0f83069-5e92-44e8-b209-3c954a82025e
+20150303161558593 |192.168.100.12:59676 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token a0f83069-5e92-44e8-b209-3c954a82025e matches 
+20150303161558669 |192.168.100.12:59676 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, a0f83069-5e92-44e8-b209-3c954a82025e]: save success login info with new token
+20150303161558670 |192.168.100.12:59676 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 99, 56, 55, 54, 52, 100, 52, 45, 55, 51, 50, 52, 45, 52, 51, 53, 52, 45, 57, 98, 48, 49, 45, 57, 51, 102, 98, 99, 50, 54, 52, 57, 97, 56, 50, 0]
+20150303162818413 |192.168.100.12:59918 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59918
+20150303162818414 |192.168.100.12:59918 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 99, 56, 55, 54, 52, 100, 52, 45, 55, 51, 50, 52, 45, 52, 51, 53, 52, 45, 57, 98, 48, 49, 45, 57, 51, 102, 98, 99, 50, 54, 52, 57, 97, 56, 50, 0]
+20150303162818414 |192.168.100.12:59918 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:dc8764d4-7324-4354-9b01-93fbc2649a82
+20150303162818564 |192.168.100.12:59918 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token dc8764d4-7324-4354-9b01-93fbc2649a82 matches 
+20150303162818644 |192.168.100.12:59918 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, dc8764d4-7324-4354-9b01-93fbc2649a82]: save success login info with new token
+20150303162818644 |192.168.100.12:59918 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 54, 99, 56, 52, 98, 101, 50, 48, 45, 99, 56, 52, 99, 45, 52, 51, 56, 99, 45, 97, 97, 52, 55, 45, 48, 57, 53, 56, 49, 56, 53, 55, 49, 49, 48, 56, 0]
+20150303163010551 |192.168.100.12:59954 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:59954
+20150303163010551 |192.168.100.12:59954 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 54, 99, 56, 52, 98, 101, 50, 48, 45, 99, 56, 52, 99, 45, 52, 51, 56, 99, 45, 97, 97, 52, 55, 45, 48, 57, 53, 56, 49, 56, 53, 55, 49, 49, 48, 56, 0]
+20150303163010551 |192.168.100.12:59954 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:6c84be20-c84c-438c-aa47-095818571108
+20150303163010670 |192.168.100.12:59954 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 6c84be20-c84c-438c-aa47-095818571108 matches 
+20150303163010834 |192.168.100.12:59954 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 6c84be20-c84c-438c-aa47-095818571108]: save success login info with new token
+20150303163010834 |192.168.100.12:59954 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 54, 100, 98, 98, 51, 49, 101, 98, 45, 48, 57, 49, 51, 45, 52, 55, 100, 57, 45, 97, 52, 51, 54, 45, 101, 55, 102, 101, 102, 55, 56, 99, 56, 49, 102, 49, 0]
+20150303163918197 |192.168.100.12:60114 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60114
+20150303163918197 |192.168.100.12:60114 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 54, 100, 98, 98, 51, 49, 101, 98, 45, 48, 57, 49, 51, 45, 52, 55, 100, 57, 45, 97, 52, 51, 54, 45, 101, 55, 102, 101, 102, 55, 56, 99, 56, 49, 102, 49, 0]
+20150303163918198 |192.168.100.12:60114 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:6dbb31eb-0913-47d9-a436-e7fef78c81f1
+20150303163918325 |192.168.100.12:60114 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 6dbb31eb-0913-47d9-a436-e7fef78c81f1 matches 
+20150303163918420 |192.168.100.12:60114 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 6dbb31eb-0913-47d9-a436-e7fef78c81f1]: save success login info with new token
+20150303163918421 |192.168.100.12:60114 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 98, 100, 54, 48, 48, 55, 55, 97, 45, 55, 57, 97, 52, 45, 52, 53, 50, 50, 45, 98, 49, 50, 50, 45, 51, 102, 99, 50, 57, 99, 48, 51, 52, 100, 56, 100, 0]
+20150303164011486 |192.168.100.12:60137 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60137
+20150303164011487 |192.168.100.12:60137 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 98, 100, 54, 48, 48, 55, 55, 97, 45, 55, 57, 97, 52, 45, 52, 53, 50, 50, 45, 98, 49, 50, 50, 45, 51, 102, 99, 50, 57, 99, 48, 51, 52, 100, 56, 100, 0]
+20150303164011489 |192.168.100.12:60137 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:bd60077a-79a4-4522-b122-3fc29c034d8d
+20150303164011570 |192.168.100.12:60137 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token bd60077a-79a4-4522-b122-3fc29c034d8d matches 
+20150303164011817 |192.168.100.12:60137 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, bd60077a-79a4-4522-b122-3fc29c034d8d]: save success login info with new token
+20150303164011817 |192.168.100.12:60137 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 99, 57, 48, 51, 57, 56, 97, 55, 45, 52, 56, 48, 98, 45, 52, 52, 101, 57, 45, 97, 57, 56, 100, 45, 99, 98, 50, 57, 57, 101, 51, 100, 100, 102, 55, 50, 0]
+20150303164057258 |192.168.100.12:60158 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60158
+20150303164057259 |192.168.100.12:60158 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 99, 57, 48, 51, 57, 56, 97, 55, 45, 52, 56, 48, 98, 45, 52, 52, 101, 57, 45, 97, 57, 56, 100, 45, 99, 98, 50, 57, 57, 101, 51, 100, 100, 102, 55, 50, 0]
+20150303164057259 |192.168.100.12:60158 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:c90398a7-480b-44e9-a98d-cb299e3ddf72
+20150303164057486 |192.168.100.12:60158 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token c90398a7-480b-44e9-a98d-cb299e3ddf72 matches 
+20150303164057667 |192.168.100.12:60158 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, c90398a7-480b-44e9-a98d-cb299e3ddf72]: save success login info with new token
+20150303164057667 |192.168.100.12:60158 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 97, 98, 48, 99, 54, 51, 100, 101, 45, 99, 100, 55, 53, 45, 52, 102, 99, 49, 45, 98, 54, 48, 48, 45, 57, 53, 56, 100, 98, 100, 56, 48, 49, 99, 53, 52, 0]
+20150303164209751 |192.168.100.12:60207 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60207
+20150303164209751 |192.168.100.12:60207 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 97, 98, 48, 99, 54, 51, 100, 101, 45, 99, 100, 55, 53, 45, 52, 102, 99, 49, 45, 98, 54, 48, 48, 45, 57, 53, 56, 100, 98, 100, 56, 48, 49, 99, 53, 52, 0]
+20150303164209751 |192.168.100.12:60207 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:ab0c63de-cd75-4fc1-b600-958dbd801c54
+20150303164209804 |192.168.100.12:60207 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token ab0c63de-cd75-4fc1-b600-958dbd801c54 matches 
+20150303164210008 |192.168.100.12:60207 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, ab0c63de-cd75-4fc1-b600-958dbd801c54]: save success login info with new token
+20150303164210008 |192.168.100.12:60207 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 98, 98, 49, 50, 100, 52, 55, 45, 52, 55, 53, 48, 45, 52, 55, 55, 52, 45, 97, 48, 100, 55, 45, 51, 101, 100, 101, 49, 48, 55, 101, 99, 102, 100, 52, 0]
+20150303164318400 |192.168.100.12:60233 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60233
+20150303164318400 |192.168.100.12:60233 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 98, 98, 49, 50, 100, 52, 55, 45, 52, 55, 53, 48, 45, 52, 55, 55, 52, 45, 97, 48, 100, 55, 45, 51, 101, 100, 101, 49, 48, 55, 101, 99, 102, 100, 52, 0]
+20150303164318401 |192.168.100.12:60233 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:8bb12d47-4750-4774-a0d7-3ede107ecfd4
+20150303164318423 |192.168.100.12:60233 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 8bb12d47-4750-4774-a0d7-3ede107ecfd4 matches 
+20150303164318525 |192.168.100.12:60233 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 8bb12d47-4750-4774-a0d7-3ede107ecfd4]: save success login info with new token
+20150303164318525 |192.168.100.12:60233 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 55, 98, 51, 101, 52, 53, 52, 45, 49, 56, 53, 48, 45, 52, 53, 53, 55, 45, 56, 50, 101, 56, 45, 55, 56, 102, 52, 57, 100, 57, 53, 101, 50, 50, 56, 0]
+20150303164547321 |192.168.100.12:60275 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60275
+20150303164547322 |192.168.100.12:60275 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 55, 98, 51, 101, 52, 53, 52, 45, 49, 56, 53, 48, 45, 52, 53, 53, 55, 45, 56, 50, 101, 56, 45, 55, 56, 102, 52, 57, 100, 57, 53, 101, 50, 50, 56, 0]
+20150303164547322 |192.168.100.12:60275 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:d7b3e454-1850-4557-82e8-78f49d95e228
+20150303164547376 |192.168.100.12:60275 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token d7b3e454-1850-4557-82e8-78f49d95e228 matches 
+20150303164547539 |192.168.100.12:60275 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, d7b3e454-1850-4557-82e8-78f49d95e228]: save success login info with new token
+20150303164547539 |192.168.100.12:60275 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 54, 100, 51, 57, 52, 56, 98, 51, 45, 54, 48, 53, 97, 45, 52, 99, 49, 57, 45, 57, 54, 101, 48, 45, 97, 52, 54, 54, 100, 49, 97, 101, 48, 98, 52, 54, 0]
+20150303164638242 |192.168.100.12:60297 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60297
+20150303164638243 |192.168.100.12:60297 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 54, 100, 51, 57, 52, 56, 98, 51, 45, 54, 48, 53, 97, 45, 52, 99, 49, 57, 45, 57, 54, 101, 48, 45, 97, 52, 54, 54, 100, 49, 97, 101, 48, 98, 52, 54, 0]
+20150303164638243 |192.168.100.12:60297 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:6d3948b3-605a-4c19-96e0-a466d1ae0b46
+20150303164638317 |192.168.100.12:60297 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 6d3948b3-605a-4c19-96e0-a466d1ae0b46 matches 
+20150303164638419 |192.168.100.12:60297 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 6d3948b3-605a-4c19-96e0-a466d1ae0b46]: save success login info with new token
+20150303164638420 |192.168.100.12:60297 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 55, 53, 50, 56, 98, 97, 52, 45, 101, 97, 54, 97, 45, 52, 53, 57, 57, 45, 56, 49, 53, 54, 45, 52, 49, 101, 49, 57, 49, 49, 49, 53, 53, 50, 101, 0]
+20150303164719942 |192.168.100.12:60317 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60317
+20150303164719957 |192.168.100.12:60317 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 55, 53, 50, 56, 98, 97, 52, 45, 101, 97, 54, 97, 45, 52, 53, 57, 57, 45, 56, 49, 53, 54, 45, 52, 49, 101, 49, 57, 49, 49, 49, 53, 53, 50, 101, 0]
+20150303164719958 |192.168.100.12:60317 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f7528ba4-ea6a-4599-8156-41e19111552e
+20150303164719988 |192.168.100.12:60317 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f7528ba4-ea6a-4599-8156-41e19111552e matches 
+20150303164720104 |192.168.100.12:60317 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f7528ba4-ea6a-4599-8156-41e19111552e]: save success login info with new token
+20150303164720105 |192.168.100.12:60317 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 102, 57, 57, 57, 54, 56, 56, 45, 57, 98, 54, 100, 45, 52, 52, 55, 52, 45, 98, 100, 55, 102, 45, 98, 97, 52, 56, 53, 97, 49, 50, 54, 49, 57, 53, 0]
+20150303164852340 |192.168.100.12:60348 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60348
+20150303164852340 |192.168.100.12:60348 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 102, 57, 57, 57, 54, 56, 56, 45, 57, 98, 54, 100, 45, 52, 52, 55, 52, 45, 98, 100, 55, 102, 45, 98, 97, 52, 56, 53, 97, 49, 50, 54, 49, 57, 53, 0]
+20150303164852341 |192.168.100.12:60348 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:df999688-9b6d-4474-bd7f-ba485a126195
+20150303164852495 |192.168.100.12:60348 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token df999688-9b6d-4474-bd7f-ba485a126195 matches 
+20150303164852693 |192.168.100.12:60348 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, df999688-9b6d-4474-bd7f-ba485a126195]: save success login info with new token
+20150303164852744 |192.168.100.12:60348 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 53, 99, 54, 49, 50, 101, 100, 45, 57, 49, 101, 102, 45, 52, 97, 49, 101, 45, 56, 55, 102, 102, 45, 101, 57, 99, 49, 99, 98, 51, 49, 50, 57, 51, 52, 0]
+20150303170429096 |192.168.100.12:60732 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60732
+20150303170429097 |192.168.100.12:60732 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 53, 99, 54, 49, 50, 101, 100, 45, 57, 49, 101, 102, 45, 52, 97, 49, 101, 45, 56, 55, 102, 102, 45, 101, 57, 99, 49, 99, 98, 51, 49, 50, 57, 51, 52, 0]
+20150303170429097 |192.168.100.12:60732 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:95c612ed-91ef-4a1e-87ff-e9c1cb312934
+20150303170429254 |192.168.100.12:60732 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 95c612ed-91ef-4a1e-87ff-e9c1cb312934 matches 
+20150303170429471 |192.168.100.12:60732 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 95c612ed-91ef-4a1e-87ff-e9c1cb312934]: save success login info with new token
+20150303170429472 |192.168.100.12:60732 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 102, 51, 49, 54, 100, 51, 99, 98, 45, 97, 53, 50, 51, 45, 52, 54, 54, 101, 45, 98, 54, 57, 49, 45, 50, 52, 100, 53, 100, 56, 49, 51, 102, 100, 99, 49, 0]
+20150303170811797 |192.168.100.12:60789 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:60789
+20150303170811798 |192.168.100.12:60789 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 102, 51, 49, 54, 100, 51, 99, 98, 45, 97, 53, 50, 51, 45, 52, 54, 54, 101, 45, 98, 54, 57, 49, 45, 50, 52, 100, 53, 100, 56, 49, 51, 102, 100, 99, 49, 0]
+20150303170811798 |192.168.100.12:60789 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:f316d3cb-a523-466e-b691-24d5d813fdc1
+20150303170816812 |192.168.100.12:60789 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token f316d3cb-a523-466e-b691-24d5d813fdc1 matches 
+20150303170817141 |192.168.100.12:60789 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, f316d3cb-a523-466e-b691-24d5d813fdc1]: save success login info with new token
+20150303170817141 |192.168.100.12:60789 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 99, 54, 100, 102, 56, 100, 54, 45, 52, 56, 99, 51, 45, 52, 98, 55, 98, 45, 97, 52, 51, 52, 45, 101, 98, 54, 98, 55, 49, 56, 48, 102, 53, 100, 52, 0]
+20150303172035297 |192.168.100.12:61008 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61008
+20150303172035298 |192.168.100.12:61008 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 99, 54, 100, 102, 56, 100, 54, 45, 52, 56, 99, 51, 45, 52, 98, 55, 98, 45, 97, 52, 51, 52, 45, 101, 98, 54, 98, 55, 49, 56, 48, 102, 53, 100, 52, 0]
+20150303172035301 |192.168.100.12:61008 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:9c6df8d6-48c3-4b7b-a434-eb6b7180f5d4
+20150303172035353 |192.168.100.12:61008 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 9c6df8d6-48c3-4b7b-a434-eb6b7180f5d4 matches 
+20150303172035669 |192.168.100.12:61008 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 9c6df8d6-48c3-4b7b-a434-eb6b7180f5d4]: save success login info with new token
+20150303172035669 |192.168.100.12:61008 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 98, 97, 98, 54, 102, 48, 102, 98, 45, 52, 56, 97, 55, 45, 52, 55, 100, 52, 45, 57, 53, 53, 52, 45, 52, 49, 55, 100, 97, 55, 50, 53, 97, 57, 98, 53, 0]
+20150303172247534 |192.168.100.12:61105 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61105
+20150303172247534 |192.168.100.12:61105 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 98, 97, 98, 54, 102, 48, 102, 98, 45, 52, 56, 97, 55, 45, 52, 55, 100, 52, 45, 57, 53, 53, 52, 45, 52, 49, 55, 100, 97, 55, 50, 53, 97, 57, 98, 53, 0]
+20150303172247534 |192.168.100.12:61105 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:bab6f0fb-48a7-47d4-9554-417da725a9b5
+20150303172247609 |192.168.100.12:61105 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token bab6f0fb-48a7-47d4-9554-417da725a9b5 matches 
+20150303172247951 |192.168.100.12:61105 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, bab6f0fb-48a7-47d4-9554-417da725a9b5]: save success login info with new token
+20150303172247951 |192.168.100.12:61105 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 100, 100, 48, 56, 53, 52, 50, 101, 45, 55, 101, 57, 57, 45, 52, 99, 48, 54, 45, 57, 48, 102, 55, 45, 49, 98, 54, 53, 98, 48, 48, 54, 54, 54, 56, 97, 0]
+20150303172431582 |192.168.100.12:61139 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61139
+20150303172431582 |192.168.100.12:61139 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 100, 100, 48, 56, 53, 52, 50, 101, 45, 55, 101, 57, 57, 45, 52, 99, 48, 54, 45, 57, 48, 102, 55, 45, 49, 98, 54, 53, 98, 48, 48, 54, 54, 54, 56, 97, 0]
+20150303172431582 |192.168.100.12:61139 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:dd08542e-7e99-4c06-90f7-1b65b006668a
+20150303172431641 |192.168.100.12:61139 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token dd08542e-7e99-4c06-90f7-1b65b006668a matches 
+20150303172431915 |192.168.100.12:61139 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, dd08542e-7e99-4c06-90f7-1b65b006668a]: save success login info with new token
+20150303172431915 |192.168.100.12:61139 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 55, 56, 52, 50, 50, 100, 57, 45, 49, 97, 100, 51, 45, 52, 50, 55, 54, 45, 56, 55, 55, 53, 45, 101, 50, 99, 99, 52, 57, 48, 51, 57, 57, 51, 100, 0]
+20150303172524021 |192.168.100.12:61161 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61161
+20150303172524022 |192.168.100.12:61161 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 55, 56, 52, 50, 50, 100, 57, 45, 49, 97, 100, 51, 45, 52, 50, 55, 54, 45, 56, 55, 55, 53, 45, 101, 50, 99, 99, 52, 57, 48, 51, 57, 57, 51, 100, 0]
+20150303172524022 |192.168.100.12:61161 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:378422d9-1ad3-4276-8775-e2cc4903993d
+20150303172524052 |192.168.100.12:61161 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 378422d9-1ad3-4276-8775-e2cc4903993d matches 
+20150303172524113 |192.168.100.12:61161 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 378422d9-1ad3-4276-8775-e2cc4903993d]: save success login info with new token
+20150303172524114 |192.168.100.12:61161 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 102, 55, 51, 54, 49, 56, 101, 45, 49, 98, 99, 55, 45, 52, 100, 52, 51, 45, 98, 52, 98, 102, 45, 49, 54, 100, 51, 57, 51, 52, 53, 51, 101, 56, 101, 0]
+20150303172956421 |192.168.100.12:61290 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61290
+20150303172956422 |192.168.100.12:61290 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 102, 55, 51, 54, 49, 56, 101, 45, 49, 98, 99, 55, 45, 52, 100, 52, 51, 45, 98, 52, 98, 102, 45, 49, 54, 100, 51, 57, 51, 52, 53, 51, 101, 56, 101, 0]
+20150303172956422 |192.168.100.12:61290 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:3f73618e-1bc7-4d43-b4bf-16d393453e8e
+20150303172956502 |192.168.100.12:61290 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 3f73618e-1bc7-4d43-b4bf-16d393453e8e matches 
+20150303172956617 |192.168.100.12:61290 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 3f73618e-1bc7-4d43-b4bf-16d393453e8e]: save success login info with new token
+20150303172956617 |192.168.100.12:61290 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 51, 49, 53, 54, 56, 48, 101, 45, 49, 57, 52, 57, 45, 52, 53, 52, 51, 45, 98, 57, 98, 49, 45, 53, 54, 97, 51, 100, 48, 52, 56, 49, 51, 102, 50, 0]
+20150303173350112 |192.168.100.12:61349 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61349
+20150303173350113 |192.168.100.12:61349 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 51, 49, 53, 54, 56, 48, 101, 45, 49, 57, 52, 57, 45, 52, 53, 52, 51, 45, 98, 57, 98, 49, 45, 53, 54, 97, 51, 100, 48, 52, 56, 49, 51, 102, 50, 0]
+20150303173350114 |192.168.100.12:61349 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:8315680e-1949-4543-b9b1-56a3d04813f2
+20150303173350189 |192.168.100.12:61349 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 8315680e-1949-4543-b9b1-56a3d04813f2 matches 
+20150303173350287 |192.168.100.12:61349 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 8315680e-1949-4543-b9b1-56a3d04813f2]: save success login info with new token
+20150303173350288 |192.168.100.12:61349 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 97, 97, 53, 102, 49, 49, 101, 56, 45, 49, 48, 51, 98, 45, 52, 55, 52, 99, 45, 97, 55, 48, 48, 45, 54, 55, 102, 48, 57, 97, 48, 51, 102, 54, 55, 99, 0]
+20150303173902649 |192.168.100.12:61453 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61453
+20150303173902650 |192.168.100.12:61453 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 97, 97, 53, 102, 49, 49, 101, 56, 45, 49, 48, 51, 98, 45, 52, 55, 52, 99, 45, 97, 55, 48, 48, 45, 54, 55, 102, 48, 57, 97, 48, 51, 102, 54, 55, 99, 0]
+20150303173902650 |192.168.100.12:61453 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:aa5f11e8-103b-474c-a700-67f09a03f67c
+20150303173902660 |192.168.100.12:61453 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token aa5f11e8-103b-474c-a700-67f09a03f67c matches 
+20150303173902767 |192.168.100.12:61453 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, aa5f11e8-103b-474c-a700-67f09a03f67c]: save success login info with new token
+20150303173902768 |192.168.100.12:61453 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 57, 101, 56, 97, 50, 54, 102, 99, 45, 101, 51, 50, 54, 45, 52, 99, 99, 102, 45, 98, 52, 56, 50, 45, 50, 56, 101, 51, 102, 102, 54, 97, 51, 98, 56, 100, 0]
+20150303174120284 |192.168.100.12:61511 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61511
+20150303174120284 |192.168.100.12:61511 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 57, 101, 56, 97, 50, 54, 102, 99, 45, 101, 51, 50, 54, 45, 52, 99, 99, 102, 45, 98, 52, 56, 50, 45, 50, 56, 101, 51, 102, 102, 54, 97, 51, 98, 56, 100, 0]
+20150303174120284 |192.168.100.12:61511 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:9e8a26fc-e326-4ccf-b482-28e3ff6a3b8d
+20150303174120339 |192.168.100.12:61511 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 9e8a26fc-e326-4ccf-b482-28e3ff6a3b8d matches 
+20150303174120420 |192.168.100.12:61511 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 9e8a26fc-e326-4ccf-b482-28e3ff6a3b8d]: save success login info with new token
+20150303174120420 |192.168.100.12:61511 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 56, 48, 101, 48, 54, 101, 100, 57, 45, 101, 57, 50, 98, 45, 52, 102, 53, 56, 45, 56, 50, 56, 99, 45, 100, 48, 55, 51, 54, 98, 54, 99, 97, 98, 55, 55, 0]
+20150303174217806 |192.168.100.12:61534 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61534
+20150303174217806 |192.168.100.12:61534 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 56, 48, 101, 48, 54, 101, 100, 57, 45, 101, 57, 50, 98, 45, 52, 102, 53, 56, 45, 56, 50, 56, 99, 45, 100, 48, 55, 51, 54, 98, 54, 99, 97, 98, 55, 55, 0]
+20150303174217807 |192.168.100.12:61534 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:80e06ed9-e92b-4f58-828c-d0736b6cab77
+20150303174217848 |192.168.100.12:61534 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 80e06ed9-e92b-4f58-828c-d0736b6cab77 matches 
+20150303174217925 |192.168.100.12:61534 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 80e06ed9-e92b-4f58-828c-d0736b6cab77]: save success login info with new token
+20150303174217926 |192.168.100.12:61534 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 99, 101, 52, 101, 97, 54, 97, 99, 45, 54, 97, 100, 55, 45, 52, 53, 54, 56, 45, 57, 50, 48, 97, 45, 51, 53, 54, 51, 97, 99, 101, 56, 51, 97, 54, 101, 0]
+20150303174415281 |192.168.100.12:61571 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61571
+20150303174415281 |192.168.100.12:61571 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 99, 101, 52, 101, 97, 54, 97, 99, 45, 54, 97, 100, 55, 45, 52, 53, 54, 56, 45, 57, 50, 48, 97, 45, 51, 53, 54, 51, 97, 99, 101, 56, 51, 97, 54, 101, 0]
+20150303174415282 |192.168.100.12:61571 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:ce4ea6ac-6ad7-4568-920a-3563ace83a6e
+20150303174415303 |192.168.100.12:61571 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token ce4ea6ac-6ad7-4568-920a-3563ace83a6e matches 
+20150303174415403 |192.168.100.12:61571 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, ce4ea6ac-6ad7-4568-920a-3563ace83a6e]: save success login info with new token
+20150303174415404 |192.168.100.12:61571 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 51, 52, 54, 55, 49, 57, 53, 98, 45, 54, 51, 56, 51, 45, 52, 49, 49, 48, 45, 57, 49, 99, 51, 45, 49, 99, 98, 101, 48, 55, 56, 50, 49, 98, 98, 48, 0]
+20150303180855022 |192.168.100.12:61996 |ServerIOManager     :51 |I| receive 43bytes from /192.168.100.12:61996
+20150303180855022 |192.168.100.12:61996 |MessageProcess      :41 |D| Receive MID=1 detail data :[5, 16, 0, 0, 0, 51, 52, 54, 55, 49, 57, 53, 98, 45, 54, 51, 56, 51, 45, 52, 49, 49, 48, 45, 57, 49, 99, 51, 45, 49, 99, 98, 101, 48, 55, 56, 50, 49, 98, 98, 48, 0]
+20150303180855022 |192.168.100.12:61996 |ProcessSignIn       :83 |I| Client request reconnect sign in session with user id:16, old token:3467195b-6383-4110-91c3-1cbe07821bb0
+20150303180855095 |192.168.100.12:61996 |ProcessSignIn       :90 |I| Client request reconnect sign in with user id:16 token 3467195b-6383-4110-91c3-1cbe07821bb0 matches 
+20150303180855179 |192.168.100.12:61996 |ProcessSignIn       :100|I| Client request reconnect sign in with user id:[16, 3467195b-6383-4110-91c3-1cbe07821bb0]: save success login info with new token
+20150303180855179 |192.168.100.12:61996 |MessageProcess      :83 |D| Sending MID=1 detail data :[2, 16, 0, 0, 0, 99, 50, 52, 50, 53, 53, 49, 49, 45, 100, 98, 101, 56, 45, 52, 54, 57, 101, 45, 56, 100, 98, 50, 45, 102, 52, 101, 49, 51, 99, 100, 100, 98, 54, 50, 57, 0]

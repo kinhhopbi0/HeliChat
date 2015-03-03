@@ -37,11 +37,13 @@
             android:textColor="@color/DodgerBlue" />
 
         <TextView
+            
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lbcountry_code" />
 
         <Spinner
+             android:visibility="gone"
             android:id="@+id/spnContryCode"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -88,13 +90,13 @@
             android:singleLine="true" />
 
         <Button
-            android:id="@+id/btnSignUp"
-            style="@style/Heli.Button.Small"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            
+            android:id="@+id/btnSignUp"           
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
             android:text="@string/lb_sign_up"
-            android:theme="@style/Heli.Theme.PinkButton" />
+            style="@style/PinkButton"
+            android:theme="@style/PinkButtonTheme"
+            />
     </LinearLayout>
 
 </ScrollView>
