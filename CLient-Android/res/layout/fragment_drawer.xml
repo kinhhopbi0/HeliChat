@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_head"
+        android:layout_width="280dp"
+        android:layout_height="140dp"        
+       
+        >
+
+        <ImageView
+            android:id="@+id/imvPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_wall" />
+
+        <ImageView
+            android:id="@+id/imvAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_action_account_circle" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imvAvatar"
+            android:layout_toRightOf="@id/imvAvatar"
+            android:text="Pham Dinh Vinh"
+            android:textColor="@color/White"
+            android:textStyle="bold" />        
+    </RelativeLayout>
+    <View 
+        	           
+            android:layout_width="280dp"
+            android:layout_height="8dp"
+            android:background="@drawable/drop_shadow"
+            />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawer_list"
+        
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" >
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

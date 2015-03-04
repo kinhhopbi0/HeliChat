@@ -7,6 +7,7 @@
     <style name="Heli.Theme.Home" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
         <item name="colorPrimary">@color/Yellow</item>
+        <item name="android:fitsSystemWindows">true</item>
     </style>
 
     <style name="Heli.Theme.StartFirstActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">

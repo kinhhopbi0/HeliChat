@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.pdv.heli.R;
@@ -20,11 +21,12 @@ public class HomeActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		Log.v("Home", "onCreate");
 		super.onCreate(savedInstanceState);
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 		setContentView(R.layout.activity_home);
 		toolBar = (Toolbar) findViewById(R.id.app_bar);
 		setSupportActionBar(toolBar);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
-		FrgmNavigationDrawer drawerFragment = (FrgmNavigationDrawer) getFragmentManager()
+		FrgmNavigationDrawer drawerFragment = (FrgmNavigationDrawer) getSupportFragmentManager()
 				.findFragmentById(R.id.left_slide);
 
 		drawerFragment.setUp(R.id.left_slide,
@@ -42,6 +44,7 @@ public class HomeActivity extends ActionBarActivity {
 			friendsFragment.setArguments(getIntent().getExtras());
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.fragment_container, friendsFragment).commit();
+			this.invalidateOptionsMenu();
 		}
 	}
 
@@ -80,4 +83,5 @@ public class HomeActivity extends ActionBarActivity {
 	public void onBackPressed() {
 		finish();
 	}
+	
 }

@@ -67,14 +67,19 @@
         <activity
             android:name=".activity.home.HomeActivity"
             android:label="Home"
-            android:windowSoftInputMode="stateHidden|adjustResize|adjustPan"
-            android:theme="@style/Heli.Theme.Home" >
+            android:theme="@style/Heli.Theme.Home"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
         </activity>
-		
+
         <service android:name=".app.service.BgService" >
         </service>
 
-        
+        <activity
+            android:name=".TestActivity"
+            android:theme="@style/Heli.Theme.Home"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:label="@string/title_activity_test" >
+        </activity>
     </application>
 
 </manifest>

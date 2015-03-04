@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"   
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    
+    android:weightSum="10" >
+
+    <ImageView
+        android:id="@+id/imvIcon"
+        android:layout_width="wrap_content"
+      	android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/ic_settings" />
+
+    <TextView
+        android:id="@+id/tvRowName"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="72dp"
+        android:layout_weight="10"        
+        android:gravity="center_vertical"
+        android:text="Dumy Text" />
+
+    <TextView
+        android:id="@+id/tvBage"
+        android:layout_width="wrap_content"
+         android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:text="12"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/diviler"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="1px"
+        android:layout_alignParentTop="true"
+        android:background="@color/DarkGray"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

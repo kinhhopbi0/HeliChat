@@ -6,10 +6,11 @@
     </style>
 	<style name="Heli.Theme.Home" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
-        <item name="colorPrimaryDark">#E65100</item>
+        <item name="@android:colorPrimaryDark">#EF6C00</item>
         <item name="android:colorPrimary">@color/Orange</item>    
-     	<item name="android:statusBarColor">@android:color/transparent</item>
-     	<item name="@android:windowTranslucentStatus">true</item>
+     	<item name="android:statusBarColor">#B2EF6C00</item>
+     	<item name="@android:windowTranslucentStatus">false</item>
+     	<item name="android:windowTranslucentNavigation">true</item>   
     </style>
     
     <style name="Heli.Theme.StartFirstActivity" parent="@android:style/Theme.Material.Light.NoActionBar">

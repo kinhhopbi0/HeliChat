@@ -30,5 +30,6 @@
     <string name="title_activity_home2_activiy">Home2Activiy</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
