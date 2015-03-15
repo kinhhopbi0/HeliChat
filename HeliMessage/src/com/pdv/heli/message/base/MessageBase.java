@@ -1,113 +1,141 @@
 package com.pdv.heli.message.base;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
-
-import com.pdv.heli.message.common.MessageId;
-import com.pdv.heli.message.common.MessageMode;
-import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
-import com.pdv.heli.message.detail.SignInMessage;
-import com.pdv.heli.message.detail.SignUpMessage;
-import com.pdv.heli.message.detail.TextMessage;
 
 /**
  * Created by via on 2/3/15.
  */
 public class MessageBase extends AbstractMessage {
+
+	private int mCRC;
+	private byte[] mDetailData;
+
+	public MessageBase(String socketAddress) {
+		this.socketAddress = socketAddress;
+	}
+
+	public MessageBase(IMessage clone) {
+		super(clone);
+	}
+
+	public MessageBase(String socketAddress, byte mMid, byte mMType,
+			byte[] mData) {
+		this.mMid = mMid;
+		this.mDetailData = mData;
+	}	
+
+	public MessageBase() {
+		
+	}
+
+	@Override
+	public void fromBytes(byte[] data) {
+		this.mMid = data[0];
+		if(this.mMid == 0x00){
+			this.mDetailData = Arrays.copyOfRange(data, 1, data.length);
+		}else{
+			String controllerName = null;
+			String actionName = null;
+			byte[] after = Arrays.copyOfRange(data, 1, data.length);
+			ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream();
+			ByteArrayInputStream arrayInputStream = new ByteArrayInputStream(after);		
+			int pos = 1;
+			try {
+				int bytez;				
+				while( (bytez = arrayInputStream.read()) >= 0){
+					pos++;
+					if(bytez == 0){
+						arrayOutputStream.flush();
+						if(controllerName == null){
+							controllerName = new String(arrayOutputStream.toByteArray());
+							arrayOutputStream.reset();
+						}else{
+							actionName = new String(arrayOutputStream.toByteArray());
+							break;
+						}		
+					}else{
+						arrayOutputStream.write(bytez);
+					}					
+				}
+				this.controllerName = controllerName;
+				this.actionName = actionName;
+			} catch (IOException e) {			
+				e.printStackTrace();
+			}
+			this.mDetailData = Arrays.copyOfRange(data, pos, data.length);
+		}
+		
+	}
+
+	@Override
+	public byte[] toSendBytes() {
+		byte[] dataToSend = new byte[1 + 2 + mDetailData.length + controllerName.length() + actionName.length()];
+		int index = 0;
+		dataToSend[index++] = mMid;
+		byte[] dataOfController = controllerName.getBytes();
+		byte[] dataOfAction = actionName.getBytes();
+		System.arraycopy(dataOfController, 0, dataToSend, index, dataOfController.length);
+		index += dataOfController.length + 1;
+		System.arraycopy(dataOfAction, 0, dataToSend, index, dataOfAction.length);
+		index += dataOfAction.length +1;
+		System.arraycopy(mDetailData, 0, dataToSend, index, mDetailData.length);
+		// TODO calculate CRC
+		return dataToSend;
+	}
 	
-    private String mTokenKey;
-    private int mCRC;
-    private byte[] mData;
 
+	/*public AbstractMessage getDetailMessage() throws MessageNotCorrectExeption {
+		AbstractMessage message = null;
+		switch (mMid) {
+		case MessageId.TEXT_MESSAGE_MID:
+			message = new TextMessage(this);
+			break;
+		case MessageId.SIGN_UP_MID:
+			message = new SignUpMessage(this);
+			break;
+		case MessageId.CONFIRM_PASSCODE:
+			message = new ConfirmPasscodeMsg(this);
+			break;
+		case MessageId.SIGN_IN_MID:
+			message = new SignInMessage(this);
+			break;
+		case LinearStringMessage.MID:
+			message = new LinearStringMessage(this);
+			break;
+		case ChatMessage.MID:
+			message = new ChatMessage(this);
+			break;
+		case SyncDeviceContactMessage.MID:
+			message = new SyncDeviceContactMessage(this);
+			break;
 
-    public MessageBase(String socketAddress, MessageMode messageMode) {
-        super(socketAddress, messageMode);
-    }
+		default:
+			// TODO Message Base update code after create new message
+			throw new MessageNotCorrectExeption("MID " + mMid + " unknow");
+		}
+		message.fromBytes(mDetailData);
+		return message;
+	}*/
 
-    public MessageBase(IMessage clone) {
-        super(clone);
-    }
+	@Deprecated
+	@Override
+	public IMessage getBaseMessage() {
+		throw new UnsupportedOperationException("Not supported yet");
+	}
 
-    public MessageBase(MessageMode messageMode) {
-        super(messageMode);
-    }
+	public byte[] getDetailData() {
+		return mDetailData;
+	}
 
-    public MessageBase(String socketAddress, MessageMode messageMode, String mTokenKey, byte mMid, byte mMType, byte[] mData) {
-        super(socketAddress, messageMode);
-        this.setTokenKey(mTokenKey);
-        this.mMid = mMid;       
-        this.mData = mData;
-    }
+	public void setDetailData(byte[] mData) {
+		this.mDetailData = mData;
+	}
 
-    public MessageBase(MessageMode messageMode, String mTokenKey, byte mMid, byte mMType, byte[] mData) {
-        super(messageMode);
-        this.setTokenKey(mTokenKey);
-        this.mMid = mMid;
-       
-        this.mData = mData;
-    }
-
-    @Override
-    public void fromBytes(byte[] data){
-        this.mMid = data[0];      
-        this.mData = Arrays.copyOfRange(data,1,data.length);
-    }
-
-    @Override
-    public byte[] toSendBytes() {
-        byte[] dataToSend = new byte[1 + mData.length];
-        int index = 0;
-        dataToSend[index++] = mMid;       
-        System.arraycopy(mData,0,dataToSend,index,mData.length);
-        //CRC
-        return dataToSend;
-    }
-
-
-    @Override
-    public void processMessage(){
-        throw new UnsupportedOperationException("Not supported yet");
-    }
-    
-   
-    public IMessage getDetailMessage() throws MessageNotCorrectExeption{
-        
-        IMessage message = null;
-        switch (mMid){
-            case MessageId.TEXT_MESSAGE_MID:            	
-                message = new TextMessage(this);
-                break;
-            case MessageId.SIGN_UP_MID:
-            	message = new SignUpMessage(this);
-            	break;
-            case MessageId.CONFIRM_PASSCODE:
-            	message = new ConfirmPasscodeMsg(this);
-            	break;
-            case MessageId.SIGN_IN_MID:
-            	message = new SignInMessage(this);
-            	break;
-            default:
-            	 // TODO Message Base update code after create new message
-                return null;
-        }
-        message.fromBytes(mData);
-        return message;
-    }
-
-    @Deprecated
-    @Override
-    public IMessage getBaseMessage()  {
-        throw new UnsupportedOperationException("Not supported yet");
-    }
-
-
-    public byte[] getData() {
-        return mData;
-    }
-
-    public void setData(byte[] mData) {
-        this.mData = mData;
-    }
-    /**
+	/**
 	 * @return the cRC
 	 */
 	public int getCRC() {
@@ -115,29 +143,27 @@ public class MessageBase extends AbstractMessage {
 	}
 
 	/**
-	 * @param cRC the cRC to set
+	 * @param cRC
+	 *            the cRC to set
 	 */
 	public void setCRC(int cRC) {
 		mCRC = cRC;
 	}
-	public String getTokenKey() {
-		return mTokenKey;
+
+	public interface IOnMessageReceive {
+		public void onReceiveMessage(IMessage message);
 	}
 
-	public void setTokenKey(String pTokenKey) {
-		mTokenKey = pTokenKey;
-	}
-	public interface IOnMessageReceive{
-        public void onReceiveMessage(IMessage message);
-    }
-	public static class Util{
-		public static byte[] toZeroEndBytes(String pString){			
-			byte[] plaintBytes = pString.getBytes();
-			byte[] result = new byte[plaintBytes.length + 1];			
-			System.arraycopy(plaintBytes, 0,result, 0, plaintBytes.length);
+	public static class Util {
+		public static byte[] toZeroEndBytes(String pString)
+				throws UnsupportedEncodingException {
+			byte[] plaintBytes = pString.getBytes("UTF-8");
+			byte[] result = new byte[plaintBytes.length + 1];
+			System.arraycopy(plaintBytes, 0, result, 0, plaintBytes.length);
 			return result;
 		}
 	}
+
 	
 
 }

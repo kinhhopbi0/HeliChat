@@ -170,12 +170,7 @@ public class SignInMessage extends AbstractMessage {
 		}
 	}
 
-	/**
-	 * 
-	 */
-	@Override
-	public void processMessage() {
-	}
+	
 
 	@Override
 	public byte getMid() {

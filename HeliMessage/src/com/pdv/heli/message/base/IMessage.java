@@ -1,6 +1,5 @@
 package com.pdv.heli.message.base;
 
-import com.pdv.heli.message.common.MessageMode;
 
 /**
  * Created by via on 2/4/15.
@@ -9,9 +8,7 @@ public interface IMessage {
 
 	public void fromBytes(byte[] data) throws MessageNotCorrectExeption;
 
-	public byte[] toSendBytes() throws MessageNotCorrectExeption;
-
-	public void processMessage();
+	public byte[] toSendBytes() throws MessageNotCorrectExeption;	
 
 	public void setMid(byte pMid);
 
@@ -21,11 +18,13 @@ public interface IMessage {
 
 	public void setSocketAddress(String socketAddress);
 
-	public MessageMode getMessageMode();
-
 	public IMessage getBaseMessage() throws MessageNotCorrectExeption;
 
-	public void setMessageMode(MessageMode mode);
+	public String getAction();
 
+	public void setAction(String actionName);
 
+	public String getController();
+
+	public void setController(String controllerName);
 }

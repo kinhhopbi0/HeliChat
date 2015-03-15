@@ -1,12 +1,10 @@
 package com.pdv.heli.message.detail;
 
+import java.util.Arrays;
+
 import com.pdv.heli.message.base.AbstractMessage;
 import com.pdv.heli.message.base.IMessage;
-import com.pdv.heli.message.base.MessageBase;
 import com.pdv.heli.message.common.MessageId;
-import com.pdv.heli.message.common.MessageMode;
-
-import java.util.Arrays;
 
 /**
  * Created by via on 2/3/15.
@@ -19,35 +17,14 @@ public class TextMessage extends AbstractMessage {
 	public static final int CONTENT_SIZE = 256;
 	public static final int USER_ID_SIZE = 60;
 
-	public TextMessage(MessageMode messageMode) {
-		super(messageMode);
-		this.mMid = MessageId.TEXT_MESSAGE_MID;
-	}
+	
 
 	public TextMessage(IMessage message) {
 		super(message);
 		this.mMid = MessageId.TEXT_MESSAGE_MID;
 	}
 
-	public TextMessage(String socketAddress, MessageMode messageMode,
-			String mContent) {
-		super(socketAddress, messageMode);
-		this.mContent = mContent;
-		this.mMid = MessageId.TEXT_MESSAGE_MID;
-	}
 
-	public TextMessage(MessageMode messageMode, String mContent) {
-		super(messageMode);
-		this.mContent = mContent;
-		this.mMid = MessageId.TEXT_MESSAGE_MID;
-	}
-
-	public TextMessage(MessageMode messageMode, String mContent, String mUserId) {
-		super(messageMode);
-		this.mContent = mContent;
-		this.mUserId = mUserId;
-		this.mMid = MessageId.TEXT_MESSAGE_MID;
-	}
 
 	@Override
 	public void fromBytes(byte[] data) {
@@ -85,12 +62,6 @@ public class TextMessage extends AbstractMessage {
 		}
 		return null;
 	}
-
-	@Override
-	public void processMessage() {
-
-	}
-
 
 	@Override
 	public byte getMid() {

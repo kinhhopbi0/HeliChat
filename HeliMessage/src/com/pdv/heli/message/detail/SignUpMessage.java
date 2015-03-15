@@ -11,7 +11,6 @@ import com.pdv.heli.message.base.MessageBase;
 import com.pdv.heli.message.base.MessageNotCorrectExeption;
 import com.pdv.heli.message.common.Constant;
 import com.pdv.heli.message.common.MessageId;
-import com.pdv.heli.message.common.MessageMode;
 
 /**
  * @author via
@@ -40,14 +39,7 @@ public final class SignUpMessage extends AbstractMessage {
 		public static final byte OTHER = 0x03;
 	}
 
-	public SignUpMessage(MessageMode pMessageMode) {
-		super(pMessageMode);
-	}
-
-	public SignUpMessage(String pSocketAddress, MessageMode pMessageMode) {
-		super(pSocketAddress, pMessageMode);
-
-	}
+	
 
 	public SignUpMessage(IMessage pMessage) {
 		super(pMessage);
@@ -177,16 +169,7 @@ public final class SignUpMessage extends AbstractMessage {
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.phamvinh.alo.message.base.IMessage#processMessage()
-	 */
-	@Override
-	public void processMessage() {
-		
-
-	}
+	
 
 	public static void demo(int in) {
 		System.out.println(in);

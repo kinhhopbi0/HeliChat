@@ -82,11 +82,7 @@ public class ConfirmPasscodeMsg extends AbstractMessage {
 		}
 	}
 
-	@Override
-	public void processMessage() {
-		
-
-	}
+	
 	@Override
 	public byte getMid() {
 		return MID;
