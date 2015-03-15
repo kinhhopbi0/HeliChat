@@ -2,16 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"   
-    android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_backdground"
+    android:clickable="true"
+    android:focusable="true"
     
-    android:weightSum="10" >
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
 
     <ImageView
         android:id="@+id/imvIcon"
         android:layout_width="wrap_content"
-      	android:layout_height="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_gravity="start|center_vertical"
         android:layout_marginLeft="16dp"
@@ -26,14 +28,13 @@
         android:layout_alignParentLeft="true"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="72dp"
-        android:layout_weight="10"        
         android:gravity="center_vertical"
         android:text="Dumy Text" />
 
     <TextView
         android:id="@+id/tvBage"
         android:layout_width="wrap_content"
-         android:layout_height="48dp"
+        android:layout_height="48dp"
         android:layout_alignParentRight="true"
         android:layout_gravity="end|center_vertical"
         android:layout_marginRight="16dp"
@@ -44,12 +45,12 @@
     <View
         android:id="@+id/diviler"
         android:layout_width="match_parent"
-        android:layout_marginLeft="36dp"
-        android:layout_marginRight="16dp"
         android:layout_height="1px"
         android:layout_alignParentTop="true"
-        android:background="@color/DarkGray"
         android:layout_marginBottom="8dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/DarkGray"
         android:visibility="gone" />
 
 </RelativeLayout>

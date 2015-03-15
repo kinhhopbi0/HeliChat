@@ -18,9 +18,8 @@ import android.widget.TextView.OnEditorActionListener;
 import android.widget.Toast;
 
 import com.pdv.heli.R;
-import com.pdv.heli.manager.MessageQueueProcessor;
+import com.pdv.heli.manager.MessageQueue;
 import com.pdv.heli.manager.TcpClientManager;
-import com.pdv.heli.message.common.MessageMode;
 import com.pdv.heli.message.detail.SignUpMessage;
 import com.pdv.heli.util.PasswordValidator;
 
@@ -86,13 +85,13 @@ public class SignUpFragment extends Fragment implements OnEditorActionListener,
 			String phone = edtPhone.getText().toString();
 			String code = spnContryCode.getSelectedItem().toString();
 
-			SignUpMessage accountMessage = new SignUpMessage(MessageMode.SEND);
-			user_phone = phone;
-			accountMessage.setPhone(user_phone);
-			accountMessage.setStatus(SignUpMessage.Status.CREATE_NEW);
-			user_pass = password;
-			accountMessage.setPassword(user_pass);
-			MessageQueueProcessor.getInstance().offerOutMessage(accountMessage);
+//			SignUpMessage accountMessage = new SignUpMessage(MessageMode.SEND);
+//			user_phone = phone;
+//			accountMessage.setPhone(user_phone);
+//			accountMessage.setStatus(SignUpMessage.Status.CREATE_NEW);
+//			user_pass = password;
+//			accountMessage.setPassword(user_pass);
+//			MessageQueue.getInstance().offerOutMessage(accountMessage);
 
 		}
 	}

@@ -23,7 +23,7 @@
 
         <fragment
             android:id="@+id/left_slide"
-            android:name="com.pdv.heli.activity.home.FrgmNavigationDrawer"
+            android:name="com.pdv.heli.activity.home.FragmentNavigationDrawer"
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:layout_gravity="start" />

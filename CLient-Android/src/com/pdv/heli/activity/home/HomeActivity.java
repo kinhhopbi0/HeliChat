@@ -13,10 +13,12 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.pdv.heli.R;
+import com.pdv.heli.activity.contact.FriendsFragment;
+import com.pdv.heli.app.ActivitiesManager;
 
 public class HomeActivity extends ActionBarActivity {
 	private Toolbar toolBar;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Log.v("Home", "onCreate");
@@ -26,7 +28,7 @@ public class HomeActivity extends ActionBarActivity {
 		toolBar = (Toolbar) findViewById(R.id.app_bar);
 		setSupportActionBar(toolBar);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
-		FrgmNavigationDrawer drawerFragment = (FrgmNavigationDrawer) getSupportFragmentManager()
+		FragmentNavigationDrawer drawerFragment = (FragmentNavigationDrawer) getSupportFragmentManager()
 				.findFragmentById(R.id.left_slide);
 
 		drawerFragment.setUp(R.id.left_slide,
@@ -40,11 +42,11 @@ public class HomeActivity extends ActionBarActivity {
 			if (inBundle != null) {
 				return;
 			}
-			Fragment friendsFragment = new AccountSettingFragment();
+			Fragment friendsFragment = new FriendsFragment();
 			friendsFragment.setArguments(getIntent().getExtras());
 			getSupportFragmentManager().beginTransaction()
 					.add(R.id.fragment_container, friendsFragment).commit();
-			this.invalidateOptionsMenu();
+			
 		}
 	}
 
@@ -73,10 +75,15 @@ public class HomeActivity extends ActionBarActivity {
 	}
 
 	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
+	protected void onResume() {		
 		super.onResume();
 		Log.i("Home", "onResume");
+		ActivitiesManager.getInstance().setCurrentActivity(this);
+	}
+	@Override
+	protected void onPause() {		
+		super.onPause();
+		ActivitiesManager.getInstance().removeCurrentActivity(this);
 	}
 
 	@Override

@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res/com.pdv.heli">
 
     <LinearLayout
+        style="@style/ListDefaultStyle"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:gravity="center_vertical"
@@ -12,24 +13,42 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp" >
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Display name"
-            android:textColor="@color/Black"
-            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/tvDisplayName"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Dumy content"
-            android:singleLine="true"
-            android:inputType="textPersonName"
-            android:textSize="14sp" />
+            >
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/edt_displayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Display name"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+               
+                app:floatingLabel="highlight"
+                app:floatingLabelTextSize="14sp"
+                app:primaryColor="#1B5E20"
+                app:baseColor="@color/Black"
+              
+                 />
+
+            <ImageButton
+                android:id="@+id/bt_save_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_tick_blue"               
+                android:background="@android:color/transparent"
+                android:layout_alignRight="@id/edt_displayName"
+                android:layout_alignBottom="@id/edt_displayName"
+                android:visibility="gone"
+                 />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
+        style="@style/ListDefaultStyle"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:gravity="center_vertical"
@@ -45,6 +64,7 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/edt_dob"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="32dp"
@@ -54,6 +74,7 @@
     </LinearLayout>
 
     <LinearLayout
+        style="@style/ListDefaultStyle"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:gravity="center_vertical"
@@ -67,30 +88,27 @@
             android:text="Gender"
             android:textColor="@color/Black"
             android:textSize="16sp" />
-		
-		<RadioGroup
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    
-		    >
-		    <RadioButton 
-		        android:id="@+id/radio_female"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="Female"
-		        android:checked="true"
-		        
-		        />
-		    <RadioButton
-		        android:id="@+id/radio_male" 
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_marginLeft="16dp"
-		        android:text="Male"
-		        />
-		</RadioGroup>
-       
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="Male" />
+        </RadioGroup>
     </LinearLayout>
 
 </LinearLayout>

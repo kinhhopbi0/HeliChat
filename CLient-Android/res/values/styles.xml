@@ -6,7 +6,7 @@
 
     <style name="Heli.Theme.Home" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
-        <item name="colorPrimary">@color/Yellow</item>
+        <item name="colorPrimary">@color/Orange</item>
         <item name="android:fitsSystemWindows">true</item>
     </style>
 
@@ -38,6 +38,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="ListDefaultStyle">
+        <item name="@android:background">@drawable/list_backdground</item>
+        <item name="@android:clickable">true</item>
     </style>
 	
 </resources>

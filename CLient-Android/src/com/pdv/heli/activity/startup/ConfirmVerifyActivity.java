@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.pdv.heli.R;
 import com.pdv.heli.activity.BaseActivity;
-import com.pdv.heli.manager.MessageQueueProcessor;
+import com.pdv.heli.manager.MessageQueue;
 import com.pdv.heli.message.detail.ConfirmPasscodeMsg;
 
 public class ConfirmVerifyActivity extends BaseActivity implements
@@ -47,7 +47,7 @@ public class ConfirmVerifyActivity extends BaseActivity implements
 				return;
 			}
 			msg.setStatus(ConfirmPasscodeMsg.Status.CONFIRM);
-			MessageQueueProcessor.getInstance().offerOutMessage(msg);
+			//MessageQueue.getInstance().offerOutMessage(msg);
 		}
 
 	}

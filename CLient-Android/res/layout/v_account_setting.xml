@@ -3,9 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
+
     <LinearLayout
+        android:id="@+id/layout_password"
         android:layout_width="match_parent"
         android:layout_height="72dp"
+        android:background="@drawable/list_backdground"
+        android:clickable="true"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="16dp"
@@ -19,13 +23,17 @@
             android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/tv_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Change your password"
             android:textSize="14sp" />
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout_avatar"
+        style="@style/ListDefaultStyle"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:gravity="center_vertical"
@@ -45,9 +53,12 @@
             android:layout_height="wrap_content"
             android:text="Update your avatar from library"
             android:textSize="14sp" />
+        
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/layout_wallPicture"
+        style="@style/ListDefaultStyle"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:gravity="center_vertical"

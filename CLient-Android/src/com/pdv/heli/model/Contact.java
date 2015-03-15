@@ -1,9 +1,11 @@
 package com.pdv.heli.model;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import android.support.v4.graphics.BitmapCompat;
+import android.graphics.Bitmap;
+import android.net.Uri;
 
 public class Contact {
 	private String phoneNumber;
@@ -11,7 +13,7 @@ public class Contact {
 	private String displayName;
 	private String contactName;
 	private boolean isStar;
-	private BitmapCompat avatar;
+	private Bitmap avatar;
 
 	public static List<Contact> findAll() {
 		
@@ -27,6 +29,18 @@ public class Contact {
 		return Collections.emptyList();
 	}
 	
+	
+
+	public Contact(String phoneNumber, String displayName) {
+		super();
+		this.phoneNumber = phoneNumber;
+		this.displayName = displayName;
+		
+	}
+
+	public Contact() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -68,12 +82,29 @@ public class Contact {
 		this.isStar = isStar;
 	}
 
-	public BitmapCompat getAvatar() {
+	public Bitmap getAvatar() {
 		return avatar;
 	}
 
-	public void setAvatar(BitmapCompat avatar) {
+	public void setAvatar(Bitmap avatar) {
 		this.avatar = avatar;
+	}
+
+	public Uri getAvatarUri() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static List<Contact> getDemos(){
+		List<Contact> lst = new ArrayList<Contact>();
+		
+		return lst;
+	}
+
+	public static Contact findById(int sernderId) {
+		Contact ct = new Contact("01678155662", "anh vinh");
+		ct.setUser_id(sernderId);
+		return ct;
+		
 	}
 
 }

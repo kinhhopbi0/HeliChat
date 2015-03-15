@@ -13,12 +13,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import android.widget.Toast;
 
 import com.pdv.heli.R;
-import com.pdv.heli.manager.MessageQueueProcessor;
-import com.pdv.heli.manager.TcpClientManager;
-import com.pdv.heli.message.detail.SignInMessage;
+import com.pdv.heli.manager.MessageQueue;
+import com.pdv.heli.message.detail.LinearStringMessage;
 
 
 
@@ -94,18 +92,17 @@ public class SignInFragment extends android.support.v4.app.Fragment implements
 		if(!validateInput()){
 			return;
 		}
-		if (!TcpClientManager.getInstance().getConnectState()
-				.equals(TcpClientManager.State.READY)) {
-			Toast.makeText(getActivity(), "not connect", Toast.LENGTH_SHORT)
-					.show();
-			return;
-		}
+		
 		String password = edtPassword.getText().toString();	
 		
 		String phone = edtPhone.getText().toString();
 		String fullPhone = phone;
-		SignInMessage signInMessage = new SignInMessage(fullPhone, password);
-		MessageQueueProcessor.getInstance().offerOutMessage(signInMessage);
+		LinearStringMessage siginMsg = new LinearStringMessage();
+		siginMsg.setAction("SignIn");
+		siginMsg.setController("Account");
+		siginMsg.putParam("pn", fullPhone);
+		siginMsg.putParam("pwd", password);		
+		MessageQueue.getInstance().offerOutMessage(siginMsg, this.getActivity());
 		
 
 	}

@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.pdv.heli.R;
-import com.pdv.heli.TestActivity;
-import com.pdv.heli.activity.home.ConversationActivity;
 import com.pdv.heli.activity.home.HomeActivity;
 import com.pdv.heli.activity.startup.StartFirstActivity;
 import com.pdv.heli.app.service.BgService;

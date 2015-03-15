@@ -5,7 +5,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.provider.MediaStore;
 
 import com.pdv.heli.app.HeliApplication;
 
@@ -56,5 +60,20 @@ public class BitmapStorage {
 				e.printStackTrace();
 			}
 		}
+	}
+	public static Bitmap getFromUri(Uri uri,Context context){
+		 String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+         Cursor cursor = context.getContentResolver().query(
+                            uri, filePathColumn, null, null, null);
+         cursor.moveToFirst();
+
+         int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+         String filePath = cursor.getString(columnIndex);
+         cursor.close();
+
+
+         Bitmap yourSelectedImage = BitmapFactory.decodeFile(filePath);
+         return yourSelectedImage;
 	}
 }

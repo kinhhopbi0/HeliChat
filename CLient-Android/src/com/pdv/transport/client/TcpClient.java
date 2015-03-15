@@ -88,24 +88,22 @@ public class TcpClient {
 			receiveThread.start();
 			return true;
 		} catch (IOException e) {
-			Log.v(TAG, "connect fail");
 			if (callBack != null) {
 				callBack.onConnectFail(TcpClient.this, e);
 			}
-			e.printStackTrace();
 
 		}
 		return false;
 	}
 
-	private void receiveFn() {		
+	private void receiveFn() {
 		byte[] buffer;
 		try {
 			buffer = new byte[bufferSize];
 			int readSize = inputStream.read(buffer);
 			if (readSize > 0) {
 				byte[] realRead = new byte[readSize];
-				System.arraycopy(buffer, 0, realRead, 0, readSize);				
+				System.arraycopy(buffer, 0, realRead, 0, readSize);
 				if (callBack != null) {
 					callBack.onReceiveBytes(TcpClient.this, realRead);
 				}
@@ -116,41 +114,45 @@ public class TcpClient {
 				flagReceive = false;
 				if (callBack != null) {
 					callBack.onServerCloseConnection(TcpClient.this);
-				}				
+				}
 			}
 		} catch (IOException ex) {
-			Log.v(TAG, "disconnect from server:" + socket.getRemoteSocketAddress());
+			Log.v(TAG,
+					"disconnect from server:" + socket.getRemoteSocketAddress());
 			flagReceive = false;
 			if (callBack != null) {
 				callBack.onDisconnect(TcpClient.this);
-			}			
+			}
 		}
 
 	}
 
 	public void stop() {
-		Log.v(TAG, "release");
+		Log.v(TAG, "release tcp connection");
 		try {
 			flagReceive = false;
-			if(inputStream !=null ){				
+			if (inputStream != null) {
 				inputStream.close();
 				inputStream = null;
 			}
-			if(outputStream !=null){
+			if (outputStream != null) {
 				outputStream.close();
 				outputStream = null;
-			}			
-			
-			if(connectThread != null && connectThread.isAlive()){
+			}
+
+			if (connectThread != null && connectThread.isAlive()) {
 				connectThread.interrupt();
 			}
-			if(receiveThread != null && receiveThread.isAlive()){
+			if (receiveThread != null && receiveThread.isAlive()) {
 				receiveThread.interrupt();
 			}
-			if(socket != null){
-				socket.shutdownOutput();
+			if (socket != null) {
+				if(socket.isConnected()){
+					socket.shutdownOutput();
+					socket.close();
+				}
 				socket = null;
-			}			
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -162,7 +164,7 @@ public class TcpClient {
 	}
 
 	public void sendAsync(final byte[] buff) {
-		if(buff==null){
+		if (buff == null) {
 			return;
 		}
 		Thread sendThread = new Thread(new Runnable() {
@@ -172,7 +174,7 @@ public class TcpClient {
 					if (callBack != null) {
 						callBack.onSending(TcpClient.this);
 					}
-					outputStream.write(buff);
+					outputStream.write(buff);					
 					outputStream.flush();
 
 					if (callBack != null) {

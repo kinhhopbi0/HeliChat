@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pdv.heli.R;
-import com.pdv.heli.activity.home.AccountSettingFragment;
-import com.pdv.heli.activity.home.FriendsFragment;
+import com.pdv.heli.activity.contact.FriendsFragment;
+import com.pdv.heli.activity.setting.AccountSettingFragment;
 
 public class DrawerMenuItem {
 	
@@ -14,6 +14,7 @@ public class DrawerMenuItem {
 	private int iconResId;
 	private int count;
 	private boolean isDiviler;
+	private boolean isSelected;
 	
 	public DrawerMenuItem(String pKye ,String name, int iconResId, int count) {
 		key = pKye;
@@ -47,15 +48,15 @@ public class DrawerMenuItem {
 	}
 	
 	public static List<DrawerMenuItem> getDefaultItems() {
-		List<DrawerMenuItem> lst = new ArrayList<>();
+		List<DrawerMenuItem> lst = new ArrayList<DrawerMenuItem>();
 		lst.add(new DrawerMenuItem(FriendsFragment.class.getName(),"All Contact", 0, 12));
-		lst.add(new DrawerMenuItem("Start friend", 0, 12));		
-		lst.add(new DrawerMenuItem("Block list", 0, 12));
-		lst.add(new DrawerMenuItem(true));
+		lst.add(new DrawerMenuItem("Start friend", 0, 12));
+		DrawerMenuItem itemBl = new DrawerMenuItem("Block list", 0, 12);
+		itemBl.setDiviler(true);
+		lst.add(itemBl);		
 		lst.add(new DrawerMenuItem("Settings", R.drawable.ic_settings,0));
 		lst.add(new DrawerMenuItem(AccountSettingFragment.class.getName(),"Account settings", R.drawable.ic_settings,0));
-		lst.add(new DrawerMenuItem("About", R.drawable.ic_settings,0));
-		
+		lst.add(new DrawerMenuItem("logout","Logout", R.drawable.ic_settings,0));		
 		return lst;
 	}
 	public DrawerMenuItem(boolean isDiviler) {		
@@ -73,5 +74,12 @@ public class DrawerMenuItem {
 	public void setKey(String key) {
 		this.key = key;
 	}
+	public boolean isSelected() {
+		return isSelected;
+	}
+	public void setSelected(boolean isSelected) {
+		this.isSelected = isSelected;
+	}
+	
 	
 }

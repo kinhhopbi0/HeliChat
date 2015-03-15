@@ -10,7 +10,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.app.TaskStackBuilder;
 
 import com.pdv.heli.R;
-import com.pdv.heli.activity.home.ConversationActivity;
+import com.pdv.heli.activity.conversation.ConversationFragment;
 import com.pdv.heli.app.HeliApplication;
 import com.pdv.heli.message.detail.TextMessage;
 
@@ -46,13 +46,13 @@ public class CustomNotification {
         if(notificationManager!=null){
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context);
 
-            Intent resultIntent = new Intent(context, ConversationActivity.class);
+            Intent resultIntent = new Intent(context, ConversationFragment.class);
             // The stack builder object will contain an artificial back stack for the
             // started Activity.
             // This ensures that navigating backward from the Activity leads out of
             // your application to the Home screen.
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-            stackBuilder.addParentStack(ConversationActivity.class);
+          //  stackBuilder.addParentStack(ConversationActivity.class);
             stackBuilder.addNextIntent(resultIntent);
             PendingIntent resultPendingIntent  = stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
 

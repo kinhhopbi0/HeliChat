@@ -9,6 +9,7 @@ import android.util.Log;
 import com.pdv.heli.activity.SplashActivity;
 import com.pdv.heli.app.HeliApplication;
 import com.pdv.heli.constant.ServerInfo;
+import com.pdv.heli.message.detail.LinearStringMessage;
 import com.pdv.heli.message.detail.SignInMessage;
 import com.pdv.transport.client.ClientNetworkingInterface;
 import com.pdv.transport.client.TcpClient;
@@ -34,6 +35,7 @@ public class TcpClientManager implements ClientNetworkingInterface {
 			ServerInfo.DDNS_HOST,
 			ServerInfo.DDNS_RPC_HOST,
 			ServerInfo.HOST_DEV_GENYMOTION,
+			ServerInfo.HOST_LOCAL_6,
 			
 	};
 	private void init() {
@@ -86,8 +88,7 @@ public class TcpClientManager implements ClientNetworkingInterface {
 	public void onConnectFail(Object sender, IOException ex) {
 		connectState = State.NOTCONNECTED;
 		Log.i(TAG, "Connect fail");
-		HeliApplication.getInstance().showToastFromOtherThread("Fail connect");
-		
+				
 		Intent intent = new Intent();
 		intent.setAction(SplashActivity.ACTION_CONNECT_FAIL);	
 		HeliApplication.getInstance().sendBroadcast(intent);
@@ -115,7 +116,7 @@ public class TcpClientManager implements ClientNetworkingInterface {
 			reconectThread.interrupt();
 			reconectThread = null;
 		}
-		MessageQueueProcessor.getInstance().startDeQueueTask();		
+		MessageQueue.getInstance().startDeQueueTask();		
 		Intent intent = new Intent();	
 		intent.setAction(SplashActivity.ACTION_CONNECT_SUCCESS);
 		HeliApplication.getInstance().sendBroadcast(intent);	
@@ -133,11 +134,14 @@ public class TcpClientManager implements ClientNetworkingInterface {
 		HeliApplication.getInstance().sendBroadcast(intent);				
 		
 		int userId = SharedPreferencesManager.getLoginUserId();
-		SignInMessage message = new SignInMessage();
-		message.setStatus(SignInMessage.Status.RE_REQUEST);
-		message.setUser_id(userId);
-		message.setToken(SharedPreferencesManager.getSessionTokenKey());
-		MessageQueueProcessor.getInstance().offerOutMessage(message);
+		String token = SharedPreferencesManager.getSessionTokenKey();
+		
+		LinearStringMessage signInMessage = new LinearStringMessage();
+		signInMessage.setController("Account");
+		signInMessage.setAction("SignIn");
+		signInMessage.putParam("id", userId + "");
+		signInMessage.putParam("token", token);
+		MessageQueue.getInstance().offerOutMessage(signInMessage, null);
 	}
 
 	@Override
@@ -161,7 +165,7 @@ public class TcpClientManager implements ClientNetworkingInterface {
 		HeliApplication.getInstance().showToastFromOtherThread("Server close");
 		connectState = State.NOTCONNECTED;
 		tcpClient.stop();
-		MessageQueueProcessor.getInstance().stopDeQueueTask();		
+		MessageQueue.getInstance().stopDeQueueTask();		
 	}
 
 	@Override
@@ -169,14 +173,15 @@ public class TcpClientManager implements ClientNetworkingInterface {
 		HeliApplication.getInstance().showToastFromOtherThread("Disconnect");
 		connectState = State.NOTCONNECTED;
 		tcpClient.stop();
-		MessageQueueProcessor.getInstance().stopDeQueueTask();
+		MessageQueue.getInstance().stopDeQueueTask();
 		reConnect();
 		
 	}
 	
 	@Override
 	public void onReceiveBytes(Object sender, byte[] buffer) {
-		MessageQueueProcessor.getInstance().offerToIncommingBytes(buffer);
+		
+		MessageQueue.getInstance().offerToIncommingBytes(buffer);
 	}
 
 	public void sendBytes(byte[] buffer) {

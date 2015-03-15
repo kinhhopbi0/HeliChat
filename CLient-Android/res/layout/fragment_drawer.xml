@@ -9,8 +9,7 @@
     <RelativeLayout
         android:id="@+id/layout_head"
         android:layout_width="280dp"
-        android:layout_height="140dp"        
-       
+        android:layout_height="140dp"       
         >
 
         <ImageView
@@ -22,11 +21,12 @@
 
         <ImageView
             android:id="@+id/imvAvatar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
+            android:scaleType="centerCrop"
             android:src="@drawable/ic_action_account_circle" />
 
         <TextView

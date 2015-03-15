@@ -7,8 +7,8 @@ import android.widget.Button;
 
 import com.pdv.heli.R;
 import com.pdv.heli.activity.BaseActivity;
-import com.pdv.heli.manager.MessageQueueProcessor;
-import com.pdv.heli.message.detail.SignInMessage;
+import com.pdv.heli.manager.MessageQueue;
+import com.pdv.heli.message.detail.LinearStringMessage;
 
 public class FinishSignUpActivity extends BaseActivity implements
 		OnClickListener {
@@ -39,10 +39,16 @@ public class FinishSignUpActivity extends BaseActivity implements
 			String phone = bundle.getString(ConfirmVerifyActivity.PHONE_KEY);
 			String password = bundle
 					.getString(ConfirmVerifyActivity.PASSWORD_KEY);
-			SignInMessage signInMessage = new SignInMessage(phone, password);
+		
 			isWaittingServer = true;
 			btnSignIn.setText("Signing...");
-			MessageQueueProcessor.getInstance().offerOutMessage(signInMessage);
+			LinearStringMessage siginMsg = new LinearStringMessage();
+			siginMsg.setAction("SignIn");
+			siginMsg.setController("Account");
+			siginMsg.putParam("pn", phone);
+			siginMsg.putParam("pwd", password);		
+			MessageQueue.getInstance().offerOutMessage(siginMsg, this);
+			
 		}
 	}
 	

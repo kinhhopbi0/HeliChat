@@ -49,23 +49,7 @@ public class HeliApplication extends Application {
 		});
 	}
 
-	/**
-	 * Show a text message to notification or to screen bubble chat
-	 * 
-	 * @param message
-	 */
-	public void receiveTextMessage(final TextMessage message) {
-		if (ActivitiesManager.getInstance().getLiveConversation() != null) {
-			handler.post(new Runnable() {
-				@Override
-				public void run() {
-					ActivitiesManager.getInstance().getLiveConversation()
-							.insertBubbleChat(message);
-				}
-			});
-		}
-		new CustomNotification(this).pushTextMessage(message);
-	}
+	
 
 	public void startService(Class<? extends Service> clazz) {
 		Intent intent = new Intent(this, clazz);
