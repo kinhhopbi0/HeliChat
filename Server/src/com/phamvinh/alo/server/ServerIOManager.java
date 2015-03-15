@@ -3,7 +3,7 @@ package com.phamvinh.alo.server;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.phamvinh.alo.server.proccess.MessageProcess;
+import com.phamvinh.alo.server.proccess.MessageIO;
 import com.phamvinh.network.server.transport.Client;
 import com.phamvinh.network.server.transport.ServerNetworkInterface;
 
@@ -51,7 +51,7 @@ public class ServerIOManager implements ServerNetworkInterface {
 		LOG.info("receive {}bytes from {}", buffer.length, sender);
 		try {
 			Client client = (Client) sender;
-			MessageProcess.getInstance().readMessageBytes(client, buffer);
+			MessageIO.getInstance().readedDataBytes(client, buffer);
 		} catch (Exception ex) {
 			LOG.error("Recevice error: {}",ex);
 			ex.printStackTrace();

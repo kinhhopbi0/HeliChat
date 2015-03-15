@@ -5,11 +5,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.phamvinh.alo.server.common.PasswordUtil;
+import com.phamvinh.alo.server.common.PhoneFormat;
 
 public class DbAction {
 	private static final Logger LOGGER = LogManager.getLogger(DbAction.class
@@ -23,78 +25,11 @@ public class DbAction {
 		return instance;
 	}
 
-	public int checkLoginAsPhone(String pPhone, String pRawPassword) {
-		Connection connection = null;
-		PreparedStatement pstm = null;
-		ResultSet rs = null;
-		PreparedStatement getSaltStm = null;
-		ResultSet getSaltRs = null;
-		try {
-			connection = DbAccess.getInstance(LOGGER).getConn();
-			String getSaltSQL = "select salt from account where phone=? and isLock=0";
-			getSaltStm = connection.prepareStatement(getSaltSQL);
-			getSaltStm.setString(1, pPhone);
-			getSaltRs = getSaltStm.executeQuery();
-			String salt = null;
-			if (getSaltRs.next()) {
-				salt = getSaltRs.getString("salt");
-			} else {
-				return 1;
-			}
-			String encrytedPass = PasswordUtil.encryptPassword(pRawPassword,
-					salt);
+	
 
-			String checkSQL = "select count(id) as c from account where phone=? and password=? ";
-			pstm = connection.prepareStatement(checkSQL);
-			pstm.setString(1, pPhone);
-			pstm.setString(2, encrytedPass);
-			rs = pstm.executeQuery();
-			if (rs.next() && rs.getInt("c") == 1) {
-				return 0;
-			} else {
-				return 1;
-			}
+	
 
-		} catch (SQLException sqlex) {
-			LOGGER.error(sqlex.toString());
-			return -1;
-		} finally {
-			DbAccess.getInstance(LOGGER).closeResultSet(getSaltRs);
-			DbAccess.getInstance(LOGGER).closePreparedStatement(getSaltStm);
-			DbAccess.getInstance(LOGGER).closeResultSet(rs);
-			DbAccess.getInstance(LOGGER).closePreparedStatement(pstm);
-			DbAccess.getInstance(LOGGER).closeConn(connection);
-		}
-
-	}
-
-	public int checkLoginAsToken(int userId, String token) {
-		Connection connection = null;
-		PreparedStatement pstm = null;
-		ResultSet rs = null;
-		try {
-			connection = DbAccess.getInstance(LOGGER).getConn();
-			String checkSQL = "select token from login_history where user_id=? order by login_time desc limit 1";
-			pstm = connection.prepareStatement(checkSQL);
-			pstm.setInt(1, userId);
-			rs = pstm.executeQuery();
-			String dbToken ;
-			if (rs.next() && (dbToken = rs.getString("token")).equals(token)) {
-				return 0;
-			} else {
-				return 1;
-			}
-
-		} catch (SQLException sqlex) {
-			LOGGER.error(sqlex.toString());
-			return -1;
-		} finally {
-			DbAccess.getInstance(LOGGER).closeResultSet(rs);
-			DbAccess.getInstance(LOGGER).closePreparedStatement(pstm);
-			DbAccess.getInstance(LOGGER).closeConn(connection);
-		}
-
-	}
+	
 
 	/**
 	 * Insert new account in database configure in {@link DbAccess} instance
@@ -246,40 +181,63 @@ public class DbAction {
 		return 0;
 	}
 
-	public int insertLoginInfo(int user_id, String token, String remoteIP,
-			int remotePort) {
+	
+
+
+	public String findLoginedAddr(int userId){
 		Connection connection = null;
-		PreparedStatement pstm = null;
-		try {
+		CallableStatement cstm = null;
+		ResultSet rs = null;
+		try{
 			connection = DbAccess.getInstance(LOGGER).getConn();
-			String sql = "insert into login_history(`user_id`,`remote_ip`,`remote_port`,`token`) values(?,?,?,?)";
-			pstm = connection.prepareStatement(sql);
-			pstm.setInt(1, user_id);
-			pstm.setString(2, remoteIP);
-			pstm.setInt(3, remotePort);
-			pstm.setString(4, token);
-			int count = pstm.executeUpdate();
-			if (!connection.getAutoCommit()) {
-				connection.commit();
+			String query = "{call sp_findLoginedAddrById(?)}";
+			cstm = connection.prepareCall(query);
+			cstm.setInt(1, userId);
+			rs = cstm.executeQuery();
+			if(rs.next()){
+				String ip = rs.getString("ip");
+				String port = rs.getString("port");
+				return ip+":"+port;
 			}
-			if (count == 1) {
-				return 0;
-			} else {
-				return 1;
-			}
-		} catch (SQLException sqlex) {
-			try {
-				if (!connection.getAutoCommit())
-					connection.rollback();
-			} catch (SQLException e) {
-				LOGGER.error(e.toString());
-			}
-			LOGGER.error("Create account :{}", sqlex.toString());
-		} finally {
-			DbAccess.getInstance(LOGGER).closePreparedStatement(pstm);
+			return null;
+		}catch(SQLException exception){
+			LOGGER.error("Create account :{}", exception.toString());
+			return null;
+		}finally{
+			DbAccess.getInstance(LOGGER).closeCallableStatement(cstm);
 			DbAccess.getInstance(LOGGER).closeConn(connection);
 		}
-		return -1;
-
 	}
+	public int insertContact(int user_id, ArrayList<String> phones, ArrayList<String> names){
+		Connection cn = null;
+		CallableStatement cstm = null;
+		try {
+			cn = DbAccess.getInstance(LOGGER).getConn();
+			cn.setAutoCommit(false);
+			String sql = "{call sp_insert_update_contact(?,?,?)}";
+			cstm = cn.prepareCall(sql);
+			cstm.setInt(1, user_id);
+			for (int i = 0; i < phones.size(); i++) {				
+				String formated = PhoneFormat.formatPhone(phones.get(i));
+				cstm.setString(2,formated);
+				cstm.setString(3,names.get(i));
+				cstm.addBatch();
+			}
+			cstm.executeBatch();
+			cn.commit();
+			return 0;
+		} catch (SQLException e) {
+			try {
+				cn.rollback();
+			} catch (SQLException e1) {
+				LOGGER.error(e1);
+			}
+			return -1;
+			
+		}finally{			
+			DbAccess.getInstance(LOGGER).closeCallableStatement(cstm);
+			DbAccess.getInstance(LOGGER).closeConn(cn);
+		}
+	}
+	
 }
