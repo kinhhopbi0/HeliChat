@@ -11,9 +11,6 @@ import java.net.Socket;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import javax.net.ssl.SSLServerSocketFactory;
-import javax.net.ssl.SSLSocket;
-
 /**
  *
  * @author via
@@ -28,9 +25,9 @@ public class SSLTcpServer implements ServerNetworkInterface {
     private ConcurrentHashMap<String, Client> clients;
     private ServerNetworkInterface networkInterfaceCallBack;
     
-    public SSLTcpServer(int port,int numberClientMax) {
+    public SSLTcpServer(int port,int numberMaxClient) {
         this.listenPort = port;
-        clients = new ConcurrentHashMap<>(numberClientMax);
+        clients = new ConcurrentHashMap<>(numberMaxClient);
         listenThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -53,7 +50,7 @@ public class SSLTcpServer implements ServerNetworkInterface {
                 Client receiveClient = new Client(client);
                 onClientConnect(receiveClient);
                 receiveClient.addNetworkingListener(this);
-                clients.put(client.getRemoteSocketAddress().toString(), receiveClient);
+                clients.put(receiveClient.toString(), receiveClient);
                 receiveClient.startReceive();
             } catch (IOException ex) {
                 ex.printStackTrace();
@@ -63,8 +60,7 @@ public class SSLTcpServer implements ServerNetworkInterface {
     }
 
 
-    public void closeClientFromAddress(String addressStrinng) {
-        System.out.println("Closing client " + addressStrinng);
+    public void closeAndRemoveClientFromAddress(String addressStrinng) {
         Client client;
         if ((client = clients.remove(addressStrinng)) != null) {
             client.close();
@@ -98,7 +94,7 @@ public class SSLTcpServer implements ServerNetworkInterface {
             if(networkInterfaceCallBack != null){
                 networkInterfaceCallBack.onClientClose(sender);
             }
-            this.closeClientFromAddress(client.getSocket().getRemoteSocketAddress().toString());
+            this.closeAndRemoveClientFromAddress(client.getSocket().getRemoteSocketAddress().toString());
         }
 
     }
@@ -110,7 +106,7 @@ public class SSLTcpServer implements ServerNetworkInterface {
             if(networkInterfaceCallBack != null){
                 networkInterfaceCallBack.onClientDisconnect(sender);
             }
-            this.closeClientFromAddress(client.getSocket().getRemoteSocketAddress().toString());
+            this.closeAndRemoveClientFromAddress(client.getSocket().getRemoteSocketAddress().toString());
         }
     }
 

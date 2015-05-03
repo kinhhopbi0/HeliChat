@@ -12,8 +12,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -45,9 +43,9 @@ public class Client {
 					receive();					
 				}
 			});
-            thread.setName("Receive-" + client.getRemoteSocketAddress().toString());
+            thread.setName("R-" + this.toString());
         } catch (IOException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+           
         }
     }
 
@@ -71,7 +69,7 @@ public class Client {
 					}
                     break;
                 }
-            } catch (IOException ex) {
+            } catch (Exception ex) {
             	for (ServerNetworkInterface listener : callBacks) {
                	 listener.onClientDisconnect(this);
 				}
@@ -88,7 +86,7 @@ public class Client {
 
     }
 
-    public void sendByte(byte[] buffer) {
+    public synchronized void sendByte(byte[] buffer) {
         try {
             outputStream.write(buffer);
             outputStream.flush();
@@ -120,7 +118,7 @@ public class Client {
             outputStream = null;
             socket = null;
         } catch (IOException ex) {
-            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+           
         }
 
     }
@@ -151,12 +149,21 @@ public class Client {
 
     @Override
     public String toString() {
-        return this.socket.getRemoteSocketAddress().toString();
+        return getRemoteIP()+":"+getRemotePort();
     }
 
 
 	public ConcurrentHashMap<String, Object> getSessionExtras() {
 		return sessionExtras;
+	}
+
+	public int getRemotePort() {
+		return this.socket.getPort();
+		
+	}
+
+	public String getRemoteIP() {
+		return socket.getInetAddress().getHostAddress();
 	}
     
     
