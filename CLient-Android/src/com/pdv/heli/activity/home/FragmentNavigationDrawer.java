@@ -23,7 +23,9 @@ import com.pdv.heli.R;
 import com.pdv.heli.activity.contact.FriendsFragment;
 import com.pdv.heli.activity.home.DrawerRecyclerViewAdapter.IOnClickItem;
 import com.pdv.heli.activity.setting.AccountSettingFragment;
+import com.pdv.heli.activity.setting.AppSettingActivity;
 import com.pdv.heli.activity.startup.StartFirstActivity;
+import com.pdv.heli.controller.AccountController;
 import com.pdv.heli.manager.SharedPreferencesManager;
 import com.pdv.heli.model.DrawerMenuItem;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
@@ -70,17 +72,17 @@ public class FragmentNavigationDrawer extends Fragment implements IOnClickItem {
 		recyclerView
 				.addItemDecoration(new HorizontalDividerItemDecoration.Builder(
 						getActivity()).visibilityProvider(adapter)
-						.marginProvider(adapter).colorProvider(adapter).build());
+						.marginProvider(adapter).build());
 		adapter.setOnItemClickListener(this);
 		Log.i("Drawer fragment", "onCreateV end");
 		return layout;
 	}
 
-	public void setUp(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
+	public ActionBarDrawerToggle setUp(int fragmentId, DrawerLayout drawerLayout) {
 		containerFragmetViewTag = getActivity().findViewById(fragmentId);
 		this.drawerLayout = drawerLayout;
 		drawerToggle = new ActionBarDrawerToggle(getActivity(), drawerLayout,
-				toolbar, R.string.drawer_open, R.string.drawer_close) {
+				 R.string.drawer_open, R.string.drawer_close) {
 			@Override
 			public void onDrawerOpened(View drawerView) {
 				super.onDrawerOpened(drawerView);
@@ -117,6 +119,7 @@ public class FragmentNavigationDrawer extends Fragment implements IOnClickItem {
 				drawerToggle.syncState();
 			}
 		});
+		return drawerToggle;
 	}
 
 	public static void saveToPrefer(Context context, String name, String value) {
@@ -139,21 +142,25 @@ public class FragmentNavigationDrawer extends Fragment implements IOnClickItem {
 	public void onItemClick(View v, int pos) {
 
 		DrawerMenuItem model = adapter.getItemModel(pos);
-		if (model.getKey() == null) {
-			return;
-		}
-		if (model.getKey().equals(AccountSettingFragment.class.getName())) {
-			replaceMainFragment(new AccountSettingFragment());
-
-		}
-		if (model.getKey().equals(FriendsFragment.class.getName())) {
-			replaceMainFragment(new FriendsFragment());
-		}
-		if (model.getKey().equals("logout")) {
-			SharedPreferencesManager.saveLogInUserId(0);
-			SharedPreferencesManager.saveSessionTokenKey("");
+		int item_id = model.getId();
+		switch (item_id) {
+		case DrawerMenuItem.ACTION_LOG_OUT:
+			AccountController.doSignOut();
 			Intent intent = new Intent(getActivity(), StartFirstActivity.class);
-			startActivity(intent);
+			startActivity(intent);	
+			break;
+		case DrawerMenuItem.ITEM_ACCOUNT_SETTING:
+			replaceMainFragment(new AccountSettingFragment());
+			break;
+		case DrawerMenuItem.ITEM_ALL_CONTACT:
+			replaceMainFragment(new FriendsFragment());
+			break;
+		case DrawerMenuItem.ITEM_APP_SETTING:
+			Intent intent2 = new Intent(getActivity(), AppSettingActivity.class);
+			startActivity(intent2);
+			break;
+		default:
+			break;
 		}
 
 		adapter.setSelectedPosition(pos);
@@ -171,7 +178,7 @@ public class FragmentNavigationDrawer extends Fragment implements IOnClickItem {
 				.getSupportFragmentManager().beginTransaction();
 		fragmentTransaction.replace(R.id.fragment_container, newFragemet);
 		fragmentTransaction.addToBackStack(null);	
-		isNewFragment = true;
+		isNewFragment = true;		
 	}
 
 	public void updateUserAvatar(Bitmap avatar) {

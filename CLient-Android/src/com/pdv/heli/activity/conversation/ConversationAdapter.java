@@ -3,35 +3,31 @@ package com.pdv.heli.activity.conversation;
 import java.util.Collections;
 import java.util.List;
 
-import android.app.Service;
-import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 
 import com.pdv.heli.R;
 import com.pdv.heli.activity.conversation.BaseViewHolder.OnItemClickListener;
-import com.pdv.heli.app.HeliApplication;
-import com.pdv.heli.manager.SharedPreferencesManager;
-import com.pdv.heli.model.ChatRowModel;
+import com.pdv.heli.model.ChatRow;
+import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration.VisibilityProvider;
 
 public class ConversationAdapter extends
-		RecyclerView.Adapter<BaseViewHolder> implements  OnItemClickListener {
+		RecyclerView.Adapter<BaseViewHolder> implements  OnItemClickListener, VisibilityProvider {
 	public static final int ROW_TYPE_TEXT_FROM_YOU = 1;
 	public static final int ROW_TYPE_TEXT_FROM_FRIEND = 2;
 	public static final int ROW_TYPE_FILE_FROM_YOU = 3;
-	public static int userId = SharedPreferencesManager.getLoginUserId();
-
-	private List<ChatRowModel> mList = Collections.emptyList();
-	private Context mContext;
+			
+	private List<ChatRow> mList = Collections.emptyList();
+	private ConversationFragment container;
 	
 	
-	public ConversationAdapter(List<ChatRowModel> mList, Context mContext) {
+	public ConversationAdapter(List<ChatRow> mList,  ConversationFragment container) {
 		super();
-		this.mList = mList;
-		this.mContext = mContext;
+		this.mList = mList;		
+		this.container = container;
 	}
 	
 	@Override
@@ -41,13 +37,14 @@ public class ConversationAdapter extends
 
 	@Override
 	public void onBindViewHolder(BaseViewHolder viewHolder, int pos) {
-		ChatRowModel chatRowModel = mList.get(pos);
+		ChatRow chatRowModel = mList.get(pos);
 		viewHolder.bindData(chatRowModel);
+		Log.v("test", "bind "+pos);
 	}
 	@Override
 	public int getItemViewType(int position) {
-		ChatRowModel model = mList.get(position);		
-		if(model.getSender().getUser_id() ==userId ){
+		ChatRow model = mList.get(position);		
+		if(model.getSenderPhone().equals(container.getYourPhone())){
 			return ROW_TYPE_TEXT_FROM_YOU;
 		}else{
 			return ROW_TYPE_TEXT_FROM_FRIEND;
@@ -56,18 +53,18 @@ public class ConversationAdapter extends
 
 	@Override
 	public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {		
-		LayoutInflater inflater = LayoutInflater.from(mContext);
+		LayoutInflater inflater = LayoutInflater.from(container.getActivity());
 		BaseViewHolder viewHolder = null;
 		View row = null;
 		switch (viewType) {
 		case ROW_TYPE_TEXT_FROM_YOU:
 			row = inflater.inflate(R.layout.view_chat_item_you, parent,false);
-			viewHolder = new TextFromYouViewHolder(row);
+			viewHolder = new TextFromYouViewHolder(row,container.conversation, this);
 			break;
 
 		case ROW_TYPE_TEXT_FROM_FRIEND:
 			row = inflater.inflate(R.layout.view_chat_item_friend, parent,false);
-			viewHolder = new TextFromFriendViewHolder(row);
+			viewHolder = new TextFromFriendViewHolder(row,container.conversation, this);
 			break;			
 		default:
 			
@@ -76,18 +73,11 @@ public class ConversationAdapter extends
 		viewHolder.setOnItemClickListener(this);
 		return viewHolder; 
 	}
-	public void popMyText(String text){
-		ChatRowModel model = new ChatRowModel(userId, text);
 	
-		mList.add(0, model);	
-		notifyItemInserted(0);
-		
-	}
-
 	@Override
-	public void onItemClick(int pos, View v) {
+	public void onRecyclerViewAdapterItemClick(int pos, View v) {
 		if(listener!=null){
-			listener.onItemClick(pos, v);
+			listener.onRecyclerViewAdapterItemClick(pos, v);
 		}
 	}
 	private BaseViewHolder.OnItemClickListener listener;
@@ -95,8 +85,22 @@ public class ConversationAdapter extends
 		this.listener = clickListener;
 	}
 
-	public void add(int i, ChatRowModel model) {
+	public void add(int i, ChatRow model) {
 		mList.add(i,model);
+		notifyItemInserted(i);
+	}
+	public void setNewList(List<ChatRow> lst){
+		this.mList = null;
+		this.mList = lst;		
+	}
+	public List<ChatRow> getListModel(){
+		return mList;
+	}
+
+	@Override
+	public boolean shouldHideDivider(int position, RecyclerView parent) {
 		
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

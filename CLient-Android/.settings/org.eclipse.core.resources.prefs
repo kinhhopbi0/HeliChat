@@ -1,3 +1,6 @@
 eclipse.preferences.version=1
 encoding//src/com/pdv/heli/activity/contact/FriendsFragment.java=UTF-8
+encoding//src/com/pdv/heli/activity/contact/UpdateContactUIReceiver.java=UTF-8
+encoding//src/com/pdv/heli/controller/AccountController.java=UTF-8
+encoding//src/com/pdv/heli/controller/ConversationController.java=UTF-8
 encoding//src/com/pdv/heli/model/Contact.java=UTF-8

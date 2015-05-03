@@ -1,5 +1,8 @@
 package com.pdv.heli.activity.startup;
 
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,25 +13,34 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.nispok.snackbar.Snackbar;
+import com.nispok.snackbar.SnackbarManager;
 import com.pdv.heli.R;
-import com.pdv.heli.app.ActivitiesManager;
+import com.pdv.heli.activity.home.HomeActivity;
+import com.pdv.heli.app.service.SignInStateReceiver;
+import com.pdv.heli.app.service.SignInStateReceiver.ReceiveCallBack;
+import com.pdv.heli.manager.ActivitiesManager;
 import com.pdv.heli.message.detail.SignUpMessage;
 
-public class StartFirstActivity extends FragmentActivity {
+public class StartFirstActivity extends FragmentActivity implements ReceiveCallBack {
 	private ViewPager viewPager;
 	private PageAdapter fragmentPageAdapter;
+	private SignInStateReceiver stateReceiver;
 
 	@Override
 	protected void onCreate(Bundle saveInstanceState) {
 		super.onCreate(saveInstanceState);
-		initComponent();
-		ActivitiesManager.getInstance().setCurrentActivity(this);
+		initComponent();		
+		stateReceiver = new SignInStateReceiver();
+		stateReceiver.setCallBack(this);
+		Log.v("test", "create start");
 	}
 
 	private void initComponent() {
 		setContentView(R.layout.activity_start_first);
 
 		viewPager = (ViewPager) findViewById(R.id.pager);
+		
 		fragmentPageAdapter = new PageAdapter(getSupportFragmentManager());
 		viewPager.setAdapter(fragmentPageAdapter);
 	}
@@ -41,14 +53,16 @@ public class StartFirstActivity extends FragmentActivity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-
 		ActivitiesManager.getInstance().setCurrentActivity(this);
+		stateReceiver.register(getApplicationContext());
+		Log.v("test", "start resume");
 	}
 
 	@Override
 	protected void onPause() {
 		Log.v("Test", "activiti on pause");
 		ActivitiesManager.getInstance().removeCurrentActivity(this);
+		stateReceiver.unregister(getApplicationContext());
 		super.onPause();
 	}
 
@@ -131,6 +145,20 @@ public class StartFirstActivity extends FragmentActivity {
 			break;
 		default:
 			break;
+		}
+	}
+
+	@Override
+	public void onReciveCallBack(Context context, Intent intent) {
+		if(intent.getAction().equals(SignInStateReceiver.ACTION_ON_SIGIN_SUCCESS)){
+			Intent intent2 = new Intent(this, HomeActivity.class);
+			startActivity(intent2);
+			this.finish();
+			return;
+		}
+		if(intent.getAction().equals(SignInStateReceiver.ACTION_ON_SIGIN_FAIL)){
+			String text =  intent.getExtras().getString("error","");
+			SnackbarManager.show(Snackbar.with(this).text(text).color(Color.RED));
 		}
 	}
 }

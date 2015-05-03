@@ -35,7 +35,7 @@ public class TcpClient {
 		});
 	}
 
-	public void start() {
+	public synchronized void  start() {
 		connectThread.start();
 	}
 
@@ -50,7 +50,7 @@ public class TcpClient {
 	}
 
 	private boolean connectFn() {
-		Log.v(TAG, "Connecting to server...");
+		//Log.v(TAG, "Connecting to server...");
 		if (callBack != null)
 			callBack.onConnecting(TcpClient.this);
 		if (socket != null) {
@@ -92,6 +92,10 @@ public class TcpClient {
 				callBack.onConnectFail(TcpClient.this, e);
 			}
 
+		}catch (Exception e) {
+			if (callBack != null) {
+				callBack.onConnectError(TcpClient.this, e);
+			}
 		}
 		return false;
 	}
@@ -128,7 +132,7 @@ public class TcpClient {
 	}
 
 	public void stop() {
-		Log.v(TAG, "release tcp connection");
+		//Log.v(TAG, "release tcp connection");
 		try {
 			flagReceive = false;
 			if (inputStream != null) {

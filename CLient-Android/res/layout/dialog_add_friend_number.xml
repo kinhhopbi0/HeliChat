@@ -1,61 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.pdv.heli"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"  
     android:orientation="vertical"
-    android:theme="@style/Theme.AppCompat.Light.Dialog" >
-
-    <LinearLayout
-        android:id="@+id/layout_title_dialog"
+   >
+    
+	 <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@drawable/cotainer_drow_shadow"
-        android:orientation="horizontal" >
-
-        <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
-            android:id="@+id/progress_loading"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="8dp"
-            android:background="#1E88E5"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/tv_dialog_title"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="8dp"
-            android:gravity="center_vertical"
-            android:text="Add your friend phone number"
-            android:textColor="@color/abc_primary_text_material_light"
-            android:textSize="18dp" />
-    </LinearLayout>
-
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"           
+        android:fontFamily="sans-serif"
+        android:hint="People name"
+        android:inputType="textCapWords"
+        android:imeOptions="actionDone"
+        app:floatingLabel="highlight"
+        app:floatingLabelTextSize="14sp" 
+        android:singleLine="true"
+        app:baseColor="@color/Black"
+        app:primaryColor="@color/accent_material_light"
+        />
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"             
         android:fontFamily="sans-serif"
         android:hint="Phone number to add"
         android:inputType="numberSigned|phone"
+        android:singleLine="true"
         android:imeOptions="actionDone"
         app:floatingLabel="highlight"
-        app:floatingLabelTextSize="14sp" />
+        app:floatingLabelTextSize="14sp" 
+        app:baseColor="@color/Black"
+        app:primaryColor="@color/accent_material_light"
+        />
 
     <TextView
         android:id="@+id/responseText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text=""
-        
-        android:visibility="visible" />
+        android:layout_height="wrap_content"   
+        android:text=""        
+        android:visibility="gone" />
 
 </LinearLayout>

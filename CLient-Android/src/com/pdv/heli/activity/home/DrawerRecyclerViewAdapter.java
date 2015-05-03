@@ -15,15 +15,14 @@ import android.widget.TextView;
 
 import com.pdv.heli.R;
 import com.pdv.heli.activity.home.DrawerRecyclerViewAdapter.DrawerViewHolder;
+import com.pdv.heli.model.Contact;
 import com.pdv.heli.model.DrawerMenuItem;
-import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration.ColorProvider;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration.VisibilityProvider;
 
 public class DrawerRecyclerViewAdapter extends
 		RecyclerView.Adapter<DrawerViewHolder>
 		implements
-		VisibilityProvider,
-		ColorProvider,
+		VisibilityProvider,		
 		com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration.MarginProvider {
 
 	private LayoutInflater inflater;
@@ -63,6 +62,9 @@ public class DrawerRecyclerViewAdapter extends
 	public void onBindViewHolder(DrawerViewHolder pHolder, final int pPosition) {
 		DrawerMenuItem setting = items.get(pPosition);
 		pHolder.tvRowName.setText(setting.getName());
+		if(setting.getId() == DrawerMenuItem.ITEM_ALL_CONTACT){
+			setting.setCount(Contact.findAllToCursor().getCount());
+		}
 		int bageCount = setting.getCount();
 		if (bageCount > 0) {
 			pHolder.tvBage.setText(setting.getCount() + "");
@@ -88,7 +90,7 @@ public class DrawerRecyclerViewAdapter extends
 		private TextView tvBage;
 		private TextView tvRowName;
 		private ImageView imvIcon;
-		private View diviler;
+		
 		private View itemRow;
 
 		public DrawerViewHolder(View itemView) {
@@ -97,7 +99,7 @@ public class DrawerRecyclerViewAdapter extends
 			tvBage = (TextView) itemView.findViewById(R.id.tvBage);
 			tvRowName = (TextView) itemView.findViewById(R.id.tvRowName);
 			imvIcon = (ImageView) itemView.findViewById(R.id.imvIcon);
-			diviler = itemView.findViewById(R.id.diviler);
+			
 
 			if (getPosition() == 0) {
 				LayoutParams l = (LayoutParams) ((RelativeLayout) itemView)
@@ -151,12 +153,6 @@ public class DrawerRecyclerViewAdapter extends
 			return false;
 		}
 		return true;
-	}
-
-	@Override
-	public int dividerColor(int position, RecyclerView parent) {
-		
-		return context.getResources().getColor(R.color.Orange);
 	}
 
 	@Override

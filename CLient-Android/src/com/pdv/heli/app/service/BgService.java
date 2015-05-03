@@ -7,12 +7,14 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.pdv.heli.activity.SplashActivity;
+import com.pdv.heli.manager.MessageQueue;
 import com.pdv.heli.manager.TcpClientManager;
 
 public class BgService extends Service implements Runnable {
 
 	private volatile Thread runner;
-	public static final String CONNECT_TO_SERVER = "com.phamvinh.alo.NetworkService.CONNECT_TO_SERVER";
+	public static final String CONNECT_TO_SERVER = BgService.class.getName()+".CONNECT_TO_SERVER";
+	public static final String RECONNECT_BY_USER = BgService.class.getName()+".RECONNECT_BY_USER";
 
 	@Override
 	public IBinder onBind(Intent intent) {
@@ -21,10 +23,10 @@ public class BgService extends Service implements Runnable {
 
 	@Override
 	public synchronized int onStartCommand(Intent intent, int flags, int startId) {
-		super.onStartCommand(intent, flags, startId);
-		startThread();
-		
+		super.onStartCommand(intent, flags, startId);		
+		startThread();		
 		return START_STICKY_COMPATIBILITY;
+		
 	}
 
 
@@ -44,6 +46,7 @@ public class BgService extends Service implements Runnable {
 	}
 
 	public synchronized void stopThread() {
+	//	MessageQueue.getInstance().stopDeQueueTask();
 		if (runner != null) {
 			Thread moribund = runner;
 			runner = null;
@@ -57,6 +60,7 @@ public class BgService extends Service implements Runnable {
 //		while (Thread.currentThread() == runner) {
 //			
 //		}
+		MessageQueue.getInstance().startDeQueueTask();
 		Intent intent = new Intent();
 		intent.setAction(SplashActivity.ACTION_UPDATE_STATUS);
 		Bundle bundle = new Bundle();

@@ -5,4 +5,10 @@
     <color name="selected_color_1">#CCEEEEEE</color>
     <color name="app_deviler_light">#8a000000</color>
     <color name="app_deviler_light_l">#CCCCCC</color>
+    
+    <color name="app_setting_primaty_darnk">#303F9F</color>
+    <color name="app_setting_primary">#3F51B5</color>
+    
+    <color name="red_primary">#D50000</color>
+    <color name="snackbar_eror">#CCFF0000</color>
 </resources>

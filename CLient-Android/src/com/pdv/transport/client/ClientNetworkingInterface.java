@@ -15,4 +15,5 @@ public interface ClientNetworkingInterface {
     void onSending(Object sender);
     void onSentSuccess(Object sender);
     void onSentFail(Object sender);
+    void onConnectError(Object sender, Exception ex);
 }

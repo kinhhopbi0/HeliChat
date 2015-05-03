@@ -4,22 +4,15 @@
     <style name="Heli.Theme.Light" parent="@style/Theme.AppCompat.Light">
         <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
     </style>
-	<style name="Heli.Theme.Home" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="toolbarStyle">@style/Widget.AppCompat.Toolbar</item>
-        <item name="@android:colorPrimaryDark">#EF6C00</item>
-        <item name="android:colorPrimary">@color/Orange</item>    
-     	<item name="android:statusBarColor">#B2EF6C00</item>
-     	<item name="@android:windowTranslucentStatus">false</item>
-     	<item name="android:windowTranslucentNavigation">true</item>   
-    </style>
+
     
-    <style name="Heli.Theme.StartFirstActivity" parent="@android:style/Theme.Material.Light.NoActionBar">
+    <style name="Heli.Theme.StartFirstActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:textAllCaps">false</item>        
         <item name="android:colorPrimary">@color/first_activity_colorPrimary</item>
         <item name="android:colorPrimaryDark">#D81B60</item>
         <item name="android:colorAccent">#E65100</item>
     </style>
-
+	
     <style name="PinkButton" parent="@android:style/Widget.Material.Button">     
         
     </style>

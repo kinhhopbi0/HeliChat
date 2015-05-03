@@ -6,17 +6,20 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pdv.heli.R;
 import com.pdv.heli.activity.home.HomeActivity;
 import com.pdv.heli.activity.startup.StartFirstActivity;
 import com.pdv.heli.app.service.BgService;
+import com.pdv.heli.app.service.SignInStateReceiver;
+import com.pdv.heli.app.service.SignInStateReceiver.ReceiveCallBack;
 import com.pdv.heli.manager.BackgroundManager;
 import com.pdv.heli.manager.SharedPreferencesManager;
 import com.pdv.heli.manager.TcpClientManager;
 import com.pdv.heli.manager.TcpClientManager.State;
 
-public class SplashActivity extends BaseActivity {
+public class SplashActivity extends BaseActivity implements ReceiveCallBack {
 	public static final String ACTION_UPDATE_STATUS = BCReceiver.class.getName()
 			+ ".action.LOADING";
 	public static final String ACTION_CONNECT_FAIL = BCReceiver.class.getName()
@@ -30,7 +33,7 @@ public class SplashActivity extends BaseActivity {
 	private boolean isVisible;
 	private boolean isConnectFail;	
 	private String lastest_status;
-
+	com.pdv.heli.app.service.SignInStateReceiver inStateReceiver;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +45,10 @@ public class SplashActivity extends BaseActivity {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
+				
 				Intent intent = new Intent(SplashActivity.this, BgService.class);
 				if (!BackgroundManager.isServiceRunning(BgService.class)) {
+					intent.setAction(BgService.CONNECT_TO_SERVER);
 					startService(intent);
 				} else {
 					TcpClientManager.State state = TcpClientManager
@@ -55,8 +60,8 @@ public class SplashActivity extends BaseActivity {
 						if (TcpClientManager.getInstance().isLogined()) {
 							gotoHomeActivity();
 						} else {							
-							if (SharedPreferencesManager.getLoginUserId() > 0) {								
-								TcpClientManager.getInstance().reLoginFromCookie();
+							if (SharedPreferencesManager.getLocalPhone() != null) {								
+								TcpClientManager.getInstance().loginByCookie();
 							} else {
 								gotoSigninAcivity();
 							}
@@ -66,6 +71,9 @@ public class SplashActivity extends BaseActivity {
 				}
 			}
 		}).start();
+		inStateReceiver = new SignInStateReceiver();
+		inStateReceiver.register(getApplicationContext());
+		inStateReceiver.setCallBack(this);
 	}
 
 	public void startNetWorkService() {
@@ -79,7 +87,12 @@ public class SplashActivity extends BaseActivity {
 		startActivity(homeIntent);
 		this.finish();
 	}
-
+	
+	@Override
+	public void finish() {
+		super.finish();
+			
+	}
 	public void gotoSigninAcivity() {
 		Intent signInActivity = new Intent(getApplicationContext(),
 				StartFirstActivity.class);
@@ -123,7 +136,7 @@ public class SplashActivity extends BaseActivity {
 				}
 				if (action.equals(ACTION_CONNECT_FAIL)) {
 					if (isVisible) {
-						if(SharedPreferencesManager.getLoginUserId()>0){
+						if(SharedPreferencesManager.getLocalPhone()!=null){
 							gotoHomeActivity();
 						}else{
 							gotoSigninAcivity();
@@ -134,7 +147,7 @@ public class SplashActivity extends BaseActivity {
 
 				}
 				if (action.equals(ACTION_CONNECT_SUCCESS)) {					
-					if (SharedPreferencesManager.getLoginUserId() > 0) {						
+					if (SharedPreferencesManager.getLocalPhone() !=null) {						
 						
 					} else {
 						if(isVisible){
@@ -158,7 +171,7 @@ public class SplashActivity extends BaseActivity {
 		super.onResume();
 		isVisible = true;
 		if(isConnectFail){
-			if(SharedPreferencesManager.getLoginUserId()>0){
+			if(SharedPreferencesManager.getLocalPhone()!=null){
 				gotoHomeActivity();
 			}else{
 				gotoSigninAcivity();
@@ -179,6 +192,22 @@ public class SplashActivity extends BaseActivity {
 	protected void onDestroy() {
 		super.onDestroy();
 		unregisterReceiver(receiver);
+		inStateReceiver.unregister(getApplicationContext());
+	}
+
+	@Override
+	public void onReciveCallBack(Context context, Intent intent) {
+		if(intent.getAction().equals(SignInStateReceiver.ACTION_ON_SIGIN_SUCCESS)){
+			Intent intent2 = new Intent(this, HomeActivity.class);
+			startActivity(intent2);			
+		}
+		if(intent.getAction().equals(SignInStateReceiver.ACTION_ON_SIGIN_FAIL)){			
+			Toast.makeText(getApplicationContext(), intent.getExtras().getString("error"), Toast.LENGTH_LONG).show();
+			Intent intent2 = new Intent(getApplicationContext(), StartFirstActivity.class);
+			startActivity(intent2);
+			
+		}
+		this.finish();
 	}
 
 }

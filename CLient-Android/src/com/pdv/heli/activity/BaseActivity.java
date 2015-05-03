@@ -1,10 +1,10 @@
 package com.pdv.heli.activity;
 
-import com.pdv.heli.app.ActivitiesManager;
+import android.support.v7.app.ActionBarActivity;
 
-import android.app.Activity;
+import com.pdv.heli.manager.ActivitiesManager;
 
-public class BaseActivity extends Activity{
+public class BaseActivity extends ActionBarActivity{
 	@Override
 	protected void onPause() {		
 		super.onPause();

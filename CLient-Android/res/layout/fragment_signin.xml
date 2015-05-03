@@ -68,6 +68,7 @@
             android:imeActionLabel="Done"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
+           
             android:singleLine="true" />
 
         <Button
@@ -79,6 +80,8 @@
             android:layout_gravity="center_horizontal"
             android:text="@string/lb_sign_in"
            />
+
+
     </LinearLayout>
 
 </ScrollView>

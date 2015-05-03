@@ -1,5 +1,7 @@
 package com.pdv.heli.app;
 
+import java.util.HashMap;
+
 import android.app.Application;
 import android.app.Service;
 import android.content.Intent;
@@ -8,16 +10,13 @@ import android.os.Looper;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.pdv.heli.activity.startup.StartFirstActivity;
-import com.pdv.heli.component.CustomNotification;
-import com.pdv.heli.message.detail.TextMessage;
-
 /**
  * Created by vinhanh on 12/01/2015.
  */
 public class HeliApplication extends Application {
 	private static HeliApplication _instance;
 	private Handler handler;
+	private HashMap<String, Integer> onlineState = new HashMap<>(); 
 
 	public static HeliApplication getInstance() {
 		return _instance;
@@ -59,5 +58,16 @@ public class HeliApplication extends Application {
 	public void stopService(Class<? extends Service> backgroundServiceClass) {
 		Intent intent = new Intent(this, backgroundServiceClass);
 		stopService(intent);
+	}
+	public Handler getHandler(){
+		return new Handler(getMainLooper());
+	}
+
+	public HashMap<String, Integer> getOnlineState() {
+		return onlineState;
+	}
+
+	public void setOnlineState(HashMap<String, Integer> onlineState) {
+		this.onlineState = onlineState;
 	}
 }

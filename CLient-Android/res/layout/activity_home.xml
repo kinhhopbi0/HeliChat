@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" 
     tools:context=".activity.home.HomeActivity"
-    android:background="@color/DarkOrange"
+    android:background="@color/WhiteSmoke"
     >
 
     <RelativeLayout
@@ -13,19 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:theme="@style/Heli.Theme.Home"
-        android:fitsSystemWindows="true"
+        android:theme="@style/Heli.Theme.Home"       
          >
 
-        <include
+        <!-- <include
             android:id="@+id/app_bar"
-            layout="@layout/c_home_toolbar" />
+            layout="@layout/c_home_toolbar" /> -->
 
         <RelativeLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/app_bar"            
+                      
            
             >
         </RelativeLayout>
@@ -35,7 +34,7 @@
         android:id="@+id/left_slide"
         android:name="com.pdv.heli.activity.home.FragmentNavigationDrawer"
         android:layout_width="280dp"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent"        
         android:layout_gravity="start" />
 
 </android.support.v4.widget.DrawerLayout>
